@@ -1,262 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Ecoply Ltd – Real Estate, Import & Export, General Sales" />
-    <title>Ecoply Ltd</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&display=swap" rel="stylesheet" />
-
-    <!-- Core Styles -->
-    <link rel="stylesheet" href="styles.css" />
-
-    <!-- Swiper & AOS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecomakes</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <!-- ── Navigation ──────────────────────────────────────────── -->
-    <nav class="navbar" data-aos="fade-down">
-        <div class="container nav-flex">
-            <h1 class="logo">Ecoply<span class="accent">Ltd</span></h1>
+  <header class="hero">
+    <h1>Building Connections. <br>Moving Markets.</h1>
+    <p>A business homepage for your real estate, import & export, and general sales company.</p>
+    <a href="#booking" class="cta-button">Book a Service</a>
+  </header>
 
-            <div class="nav-actions">
-                <button class="search-toggle" aria-label="Open search">🔍</button>
-                <button class="mobile-toggle" aria-label="Open menu">☰</button>
-            </div>
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Ecomakes is committed to excellence in real estate, import & export, and general sales. We help people and businesses thrive with quality services and reliable partnerships.</p>
+  </section>
 
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#booking" class="btn-nav">Book</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- ── Search Overlay ──────────────────────────────────────── -->
-    <div class="search-overlay">
-        <button class="search-close" aria-label="Close search">×</button>
-        <div class="search-container">
-            <input type="search" placeholder="Search services…" />
-        </div>
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card"><h3>🏘 Real Estate</h3><p>Comprehensive property solutions.</p></div>
+      <div class="card"><h3>🌍 Import & Export</h3><p>Reliable and global trade services.</p></div>
+      <div class="card"><h3>🛒 General Sales</h3><p>Wide range of quality products.</p></div>
     </div>
+  </section>
 
-    <!-- ── Hero ────────────────────────────────────────────────── -->
-    <header class="hero" data-aos="fade-down">
-        <div class="container hero-content" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Building Connections.<br />Moving Markets.</h1>
-            <p>Your trusted partner in Real Estate, Import & Export, and General Sales.</p>
-            <a href="#booking" class="cta-button">Get Started</a>
-        </div>
-    </header>
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>
+      “Ecomakes has been instrumental in our business growth. Their expertise and dedication are unmatched.”
+    </blockquote>
+  </section>
 
-    <!-- ── Services ────────────────────────────────────────────── -->
-    <section id="services" class="services" data-aos="fade-up">
-        <div class="container">
-            <h2 data-aos="fade-right">Our Services</h2>
+  <section class="contact" id="booking">
+    <h2>Book a Service</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <select>
+        <option value="">Select a Service</option>
+        <option>Real Estate</option>
+        <option>Import & Export</option>
+        <option>General Sales</option>
+      </select>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-            <div class="service-grid">
-                <div class="service-box" data-aos="flip-left" data-aos-delay="100">
-                    <h3>🏘 Real Estate</h3>
-                    <p>Buy, sell or manage properties with confidence.</p>
-                </div>
-
-                <div class="service-box" data-aos="flip-left" data-aos-delay="200">
-                    <h3>🌍 Import & Export</h3>
-                    <p>Efficient trade solutions tailored to your needs.</p>
-                </div>
-
-                <div class="service-box" data-aos="flip-left" data-aos-delay="300">
-                    <h3>🛒 General Sales</h3>
-                    <p>Quality products delivered reliably.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Process ─────────────────────────────────────────────── -->
-    <section id="process" class="process" data-aos="fade-up">
-        <div class="container">
-            <h2 data-aos="fade-right">How We Work</h2>
-
-            <div class="process-steps">
-                <div class="step" data-aos="fade-up" data-aos-delay="100">
-                    <span>1</span>
-                    <h4>Consultation</h4>
-                    <p>Discuss goals and needs.</p>
-                </div>
-
-                <div class="step" data-aos="fade-up" data-aos-delay="200">
-                    <span>2</span>
-                    <h4>Planning</h4>
-                    <p>Craft a tailored strategy.</p>
-                </div>
-
-                <div class="step" data-aos="fade-up" data-aos-delay="300">
-                    <span>3</span>
-                    <h4>Execution</h4>
-                    <p>Deliver with excellence.</p>
-                </div>
-
-                <div class="step" data-aos="fade-up" data-aos-delay="400">
-                    <span>4</span>
-                    <h4>Support</h4>
-                    <p>Continuous follow-up.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Products (Swiper) ───────────────────────────────────── -->
-    <section id="products" class="products" data-aos="fade-up">
-        <div class="container">
-            <h2 data-aos="fade-right">Featured Products</h2>
-
-            <!-- Swiper carousel (slides are injected by script.js) -->
-            <div class="swiper-container" data-aos="zoom-in" data-aos-delay="150">
-                <div class="swiper-wrapper"></div>
-
-                <!-- Swiper UI -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev" aria-label="Prev"></div>
-                <div class="swiper-button-next" aria-label="Next"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Testimonials ────────────────────────────────────────── -->
-    <section id="testimonials" class="testimonials" data-aos="fade-up">
-        <div class="container">
-            <h2 data-aos="fade-right">What Our Clients Say</h2>
-
-            <div class="testimonial-grid">
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="100">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kofi Asante"
-                        class="testimonial-img" />
-                    <blockquote>“Ecoply Ltd transformed our business with professional, reliable service.”</blockquote>
-                    <cite>– Kofi Asante, Ghana</cite>
-                </div>
-
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="200">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria González"
-                        class="testimonial-img" />
-                    <blockquote>“Their international trade team navigated complex regulations seamlessly.”</blockquote>
-                    <cite>– Maria González, Spain</cite>
-                </div>
-
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="300">
-                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Liam O’Connor"
-                        class="testimonial-img" />
-                    <blockquote>“Exceptional property management—our assets have never been in better hands.”
-                    </blockquote>
-                    <cite>– Liam O’Connor, Ireland</cite>
-                </div>
-
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="400">
-                    <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Priya Patel"
-                        class="testimonial-img" />
-                    <blockquote>“The booking process was effortless, and support was 24/7. Highly recommended!”
-                    </blockquote>
-                    <cite>– Priya Patel, India</cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Booking ─────────────────────────────────────────────── -->
-    <section id="booking" class="booking" data-aos="fade-up">
-        <div class="container">
-            <h2 data-aos="fade-right">Book a Service</h2>
-
-            <div class="booking-card" data-aos="zoom-in" data-aos-delay="150">
-                <form class="booking-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input id="name" type="text" placeholder="John Doe" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input id="email" type="email" placeholder="john@example.com" required />
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input id="phone" type="tel" placeholder="+233 24 123 4567" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Select Service</label>
-                            <select id="service" required>
-                                <option value="" disabled selected>Choose one…</option>
-                                <option>Real Estate</option>
-                                <option>Import & Export</option>
-                                <option>General Sales</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" placeholder="Tell us how we can help you…" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Submit Request</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Footer ──────────────────────────────────────────────── -->
-    <footer class="footer" data-aos="fade-up">
-        <div class="container footer-top">
-            <div class="footer-col">
-                <h4>Ecoply Ltd</h4>
-                <p>🏢 12 Gold Coast Avenue</p>
-                <p>Airport Residential, Accra</p>
-            </div>
-
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>✉️ <a href="mailto:info@ecoply.com">info@ecoply.com</a></p>
-                <p>📞 +233 24 123 4567</p>
-            </div>
-
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <p><a href="#">Privacy Policy</a></p>
-                <p><a href="#">Terms of Service</a></p>
-            </div>
-
-            <div class="footer-col">
-                <h4>Follow Us</h4>
-                <ul class="social-list">
-                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container footer-bottom">
-            <div class="footer-col">© 2025 Ecoply Ltd</div>
-            <div class="footer-col"><a href="#">Sitemap</a></div>
-            <div class="footer-col"><a href="#">Cookie Policy</a></div>
-            <div class="footer-col"><a href="#">Support</a></div>
-        </div>
-    </footer>
-
-    <!-- ── JS Libraries ────────────────────────────────────────── -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Ecomakes. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>
