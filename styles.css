@@ -130,6 +130,8 @@ body {
   font-size: 1.3rem;
 }
 
+
+
 :root {
   --primary-color: #0a2540;
   --accent-color: #f1b500;
@@ -159,12 +161,22 @@ body {
   border-radius: 2px;
 }
 
+/* All six cards in a single row, with hidden scrollbar and padding */
 .process-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
   gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: nowrap;            /* prevent wrapping */
+  overflow-x: auto;             /* allow horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch; /* smooth momentum scroll */
+  -ms-overflow-style: none;     /* hide IE scrollbar */
+  scrollbar-width: none;        /* hide Firefox scrollbar */
   max-width: 1200px;
   margin: auto;
+  padding: 0 1rem;              /* small side padding */
+}
+.process-steps::-webkit-scrollbar {
+  display: none;                /* hide Chrome scrollbar */
 }
 
 .step {
@@ -174,6 +186,8 @@ body {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 calc((100% - (5 * 2rem)) / 6);
+  /* Ensures six equal-width cards with five gaps of 2rem each */
 }
 
 /* Accent stripe on the left */
@@ -216,6 +230,18 @@ body {
   color: var(--text-muted);
   line-height: 1.6;
 }
+
+/* Optional: ensure full visibility on very narrow screens */
+@media (max-width: 480px) {
+  .process-steps {
+    padding: 0;
+  }
+  .step {
+    flex: 0 0 100%;
+  }
+}
+
+
 
 
 /* Products (Swiper) */
