@@ -131,24 +131,25 @@ body {
 }
 
 
-
 :root {
   --primary-color: #0a2540;
   --accent-color: #f1b500;
   --light-bg: #fafafa;
-  --text-dark: #1f1f1f;
   --text-muted: #555;
 }
 
+/* Process wrapper with reduced vertical padding */
 .process {
   background: #fff;
-  padding: 80px 20px 100px;
+  padding: 40px 20px;        /* half the previous top/bottom padding */
 }
+
+/* Centered title stays the same */
 .process h2 {
   color: var(--primary-color);
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;     /* slightly tighter margin */
   position: relative;
 }
 .process h2::after {
@@ -161,85 +162,78 @@ body {
   border-radius: 2px;
 }
 
-/* All six cards in a single row, with hidden scrollbar and padding */
+/* Flex row that never wraps, with visible scrollbar */
 .process-steps {
   display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  flex-wrap: nowrap;            /* prevent wrapping */
-  overflow-x: auto;             /* allow horizontal scroll on small screens */
-  -webkit-overflow-scrolling: touch; /* smooth momentum scroll */
-  -ms-overflow-style: none;     /* hide IE scrollbar */
-  scrollbar-width: none;        /* hide Firefox scrollbar */
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 1rem;              /* small side padding */
-}
-.process-steps::-webkit-scrollbar {
-  display: none;                /* hide Chrome scrollbar */
+  gap: 1.5rem;               /* a touch tighter */
+  overflow-x: auto;          /* horizontal scrolling on overflow */
+  padding: 0 1rem;           /* padding so cards aren’t flush to edges */
+  max-width: 100%;           /* allow full-width flow */
 }
 
+/* Optional styling for the scrollbar—feel free to tweak or remove */
+.process-steps::-webkit-scrollbar {
+  height: 6px;
+}
+.process-steps::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* Each card a fixed width, shorter padding */
 .step {
   position: relative;
   background: var(--light-bg);
-  padding: 2rem 1.5rem;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 0 0 calc((100% - (5 * 2rem)) / 6);
-  /* Ensures six equal-width cards with five gaps of 2rem each */
+  padding: 1.5rem 1rem;       /* less vertical padding */
+  border-radius: 8px;
+  flex: 0 0 260px;            /* fixed card width for consistent flow */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Accent stripe on the left */
+/* Accent stripe and hover unchanged */
 .step::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
   background: var(--accent-color);
 }
-
 .step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .step span {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
+  align-items: center; justify-content: center;
+  width: 36px; height: 36px;
   background: var(--accent-color);
-  color: #fff;
-  font-weight: 700;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+  color: #fff; font-weight:700;
+  border-radius:50%;
+  margin-bottom: 0.75rem;
 }
 
 .step h4 {
-  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   color: var(--primary-color);
-  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
 }
 
 .step p {
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* Optional: ensure full visibility on very narrow screens */
+/* On very narrow screens, still allow horizontal scroll */
 @media (max-width: 480px) {
   .process-steps {
     padding: 0;
   }
   .step {
-    flex: 0 0 100%;
+    flex: 0 0 220px;
   }
 }
+
 
 
 
