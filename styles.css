@@ -37,6 +37,13 @@ body {
   font-size: 1.5em;
   color: #0a2540;
 }
+.logo-img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 .accent {
   color: #f1b500;
 }
