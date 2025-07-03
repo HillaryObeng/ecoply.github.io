@@ -1,4 +1,3 @@
-Hello World
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,28 +6,18 @@ Hello World
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Ecoply Ltd – Real Estate, Import & Export, General Sales">
     <title>Ecoply Ltd</title>
-
-    <!-- Fonts & Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
-
-    <!-- AOS Animations CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar" data-aos="fade-down">
+    <nav class="navbar">
         <div class="container nav-flex">
             <h1 class="logo">Ecoply<span class="accent">Ltd</span></h1>
-            <div class="nav-actions">
-                <button class="search-toggle" aria-label="Search">🔍</button>
-                <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
-            </div>
+            <button class="mobile-toggle">☰</button>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#process">Our Process</a></li>
@@ -39,17 +28,9 @@ Hello World
         </div>
     </nav>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay">
-        <button class="search-close" aria-label="Close search">×</button>
-        <div class="search-container">
-            <input type="search" placeholder="Search services…" />
-        </div>
-    </div>
-
     <!-- Hero -->
-    <header class="hero" data-aos="fade-down">
-        <div class="container hero-content" data-aos="zoom-in" data-aos-delay="200">
+    <header class="hero">
+        <div class="container hero-content">
             <h1>Building Connections. <br>Moving Markets.</h1>
             <p>Your trusted partner in Real Estate, Import & Export, and General Sales.</p>
             <a href="#booking" class="cta-button">Get Started</a>
@@ -57,19 +38,19 @@ Hello World
     </header>
 
     <!-- Services -->
-    <section id="services" class="services" data-aos="fade-up">
+    <section id="services" class="services">
         <div class="container">
-            <h2 data-aos="fade-right">Our Services</h2>
+            <h2>Our Services</h2>
             <div class="service-grid">
-                <div class="service-box" data-aos="flip-left" data-aos-delay="100">
+                <div class="service-box">
                     <h3>🏘 Real Estate</h3>
                     <p>Buy, sell, or manage properties with confidence.</p>
                 </div>
-                <div class="service-box" data-aos="flip-left" data-aos-delay="200">
+                <div class="service-box">
                     <h3>🌍 Import & Export</h3>
                     <p>Efficient trade solutions tailored to your needs.</p>
                 </div>
-                <div class="service-box" data-aos="flip-left" data-aos-delay="300">
+                <div class="service-box">
                     <h3>🛒 General Sales</h3>
                     <p>Quality products delivered reliably.</p>
                 </div>
@@ -78,27 +59,23 @@ Hello World
     </section>
 
     <!-- Process -->
-    <section id="process" class="process" data-aos="fade-up">
+    <section id="process" class="process">
         <div class="container">
-            <h2 data-aos="fade-right">How We Work</h2>
+            <h2>How We Work</h2>
             <div class="process-steps">
-                <div class="step" data-aos="fade-up" data-aos-delay="100">
-                    <span>1</span>
+                <div class="step"><span>1</span>
                     <h4>Consultation</h4>
                     <p>Discuss goals and needs.</p>
                 </div>
-                <div class="step" data-aos="fade-up" data-aos-delay="200">
-                    <span>2</span>
+                <div class="step"><span>2</span>
                     <h4>Planning</h4>
                     <p>Craft a tailored strategy.</p>
                 </div>
-                <div class="step" data-aos="fade-up" data-aos-delay="300">
-                    <span>3</span>
+                <div class="step"><span>3</span>
                     <h4>Execution</h4>
                     <p>Deliver with excellence.</p>
                 </div>
-                <div class="step" data-aos="fade-up" data-aos-delay="400">
-                    <span>4</span>
+                <div class="step"><span>4</span>
                     <h4>Support</h4>
                     <p>Continuous follow-up.</p>
                 </div>
@@ -107,60 +84,13 @@ Hello World
     </section>
 
     <!-- Products Slider -->
-    <section id="products" class="products" data-aos="fade-up">
+    <section id="products" class="products">
         <div class="container">
-            <h2 data-aos="fade-right">Featured Products</h2>
-            <div class="swiper-container" data-aos="zoom-in" data-aos-delay="200">
+            <h2>Featured Products</h2>
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <!-- Real Estate 1 -->
-                    <div class="swiper-slide">
-                        <div class="product-card" data-aos="zoom-in">
-                            <img src="https://source.unsplash.com/300x200/?beach-villa" alt="Beachfront Villa">
-                            <h4>Beachfront Villa</h4>
-                            <p class="price">GHS 4,200,000</p>
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!-- Real Estate 2 -->
-                    <div class="swiper-slide">
-                        <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="https://source.unsplash.com/300x200/?penthouse" alt="City Penthouse">
-                            <h4>City Penthouse</h4>
-                            <p class="price">GHS 2,800,000</p>
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!-- Import & Export 1 -->
-                    <div class="swiper-slide">
-                        <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-                            <img src="https://source.unsplash.com/300x200/?vintage-furniture"
-                                alt="Vintage Furniture Set">
-                            <h4>Vintage Furniture Set</h4>
-                            <p class="price">$5,500</p>
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!-- Import & Export 2 -->
-                    <div class="swiper-slide">
-                        <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
-                            <img src="https://source.unsplash.com/300x200/?industrial-machinery"
-                                alt="Industrial Machinery">
-                            <h4>Industrial Machinery</h4>
-                            <p class="price">$12,000</p>
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!-- Import & Export 3 -->
-                    <div class="swiper-slide">
-                        <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
-                            <img src="https://source.unsplash.com/300x200/?spices" alt="Organic Spices Collection">
-                            <h4>Organic Spices Collection</h4>
-                            <p class="price">$1,200</p>
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
+                    <!-- Slides will be injected by script.js -->
                 </div>
-                <!-- pagination & arrows -->
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -168,119 +98,46 @@ Hello World
         </div>
     </section>
 
-
     <!-- Testimonials -->
-    <section id="testimonials" class="testimonials" data-aos="fade-up">
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 data-aos="fade-right">What Our Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="200">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kofi Asante"
-                        class="testimonial-img" />
-                    <blockquote>“Ecoply Ltd transformed our business with professional, reliable service.”</blockquote>
-                    <cite>– Kofi Asante, Ghana</cite>
-                </div>
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="300">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria González"
-                        class="testimonial-img" />
-                    <blockquote>“Their international trade team navigated complex regulations seamlessly.”</blockquote>
-                    <cite>– Maria González, Spain</cite>
-                </div>
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="400">
-                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Liam O’Connor"
-                        class="testimonial-img" />
-                    <blockquote>“Exceptional property management—our assets have never been in better hands.”
-                    </blockquote>
-                    <cite>– Liam O’Connor, Ireland</cite>
-                </div>
-                <div class="testimonial-item" data-aos="fade-left" data-aos-delay="500">
-                    <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Priya Patel"
-                        class="testimonial-img" />
-                    <blockquote>“The booking process was effortless, and support was 24/7. Highly recommended!”
-                    </blockquote>
-                    <cite>– Priya Patel, India</cite>
-                </div>
-            </div>
+            <h2>What Our Clients Say</h2>
+            <blockquote>"Ecoply Ltd transformed our business with professional, reliable service."<cite>– Kofi
+                    Asante</cite></blockquote>
         </div>
     </section>
 
     <!-- Booking -->
-    <section id="booking" class="booking" data-aos="fade-up">
+    <section id="booking" class="booking">
         <div class="container">
-            <h2 data-aos="fade-right">Book a Service</h2>
-            <div class="booking-card" data-aos="zoom-in" data-aos-delay="200">
-                <form class="booking-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input id="name" type="text" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input id="email" type="email" placeholder="john@example.com" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input id="phone" type="tel" placeholder="+233 24 123 4567" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Select Service</label>
-                            <select id="service" required>
-                                <option value="" disabled selected>Choose one...</option>
-                                <option>Real Estate</option>
-                                <option>Import & Export</option>
-                                <option>General Sales</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" placeholder="Tell us how we can help you…" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Submit Request</button>
-                </form>
-            </div>
+            <h2>Book a Service</h2>
+            <form>
+                <div class="form-grid">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone" required>
+                    <select required>
+                        <option value="">Select a Service</option>
+                        <option>Real Estate</option>
+                        <option>Import & Export</option>
+                        <option>General Sales</option>
+                    </select>
+                    <textarea placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" data-aos="fade-up">
-        <!-- Top row: 4 columns -->
-        <div class="container footer-top">
-            <div class="footer-col">
-                <h4>Ecoply Ltd</h4>
-                <p>🏢 12 Gold Coast Avenue</p>
-                <p>Airport Residential, Accra</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>✉️ <a href="mailto:info@ecoply.com">info@ecoply.com</a></p>
-                <p>📞 +233 24 123 4567</p>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <p><a href="#">Privacy Policy</a></p>
-                <p><a href="#">Terms of Service</a></p>
-            </div>
-            <div class="footer-col">
-                <h4>Follow Us</h4>
-                <ul class="social-list">
-                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-                </ul>
-            </div>
-
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ecoply Ltd • Accra, Ghana</p>
+            <p><a href="mailto:info@ecoply.com">info@ecoply.com</a> | +233 24 123 4567</p>
         </div>
-
     </footer>
 
-
-
-    <!-- JS Libraries -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 
