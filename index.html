@@ -2,98 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Branch Furniture</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Include Google Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ecoply Ltd – Real Estate, Import & Export, General Sales">
+  <title>Ecoply Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <img src="logo.svg" alt="Branch Furniture">
-      </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Journal</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="menu-toggle" aria-label="Open Menu">☰</button>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <h1 class="logo">Ecoply<span class="accent">Ltd</span></h1>
+      <button class="mobile-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#booking" class="btn-nav">Book</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-content">
+      <h1>Building Connections. <br>Moving Markets.</h1>
+      <p>Your trusted partner in Real Estate, Import & Export, and General Sales.</p>
+      <a href="#booking" class="cta-button">Get Started</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Classic Furniture. Contemporary Design.</h1>
-      <a href="#collections" class="btn btn-primary">Shop the Collection</a>
-    </div>
-    <div class="hero-image">
-      <img src="hero.jpg" alt="Stylish living room setup">
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-box">
+          <h3>🏘 Real Estate</h3>
+          <p>Buy, sell, or manage properties with confidence.</p>
+        </div>
+        <div class="service-box">
+          <h3>🌍 Import & Export</h3>
+          <p>Efficient trade solutions tailored to your needs.</p>
+        </div>
+        <div class="service-box">
+          <h3>🛒 General Sales</h3>
+          <p>Quality products delivered reliably.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Collections -->
-  <section id="collections" class="collections">
+  <!-- Process -->
+  <section id="process" class="process">
     <div class="container">
-      <h2>Featured Collections</h2>
-      <div class="grid">
-        <div class="collection-item">
-          <img src="collection-living.jpg" alt="Living Room">
-          <h3>Living Room</h3>
-        </div>
-        <div class="collection-item">
-          <img src="collection-dining.jpg" alt="Dining Room">
-          <h3>Dining Room</h3>
-        </div>
-        <div class="collection-item">
-          <img src="collection-bedroom.jpg" alt="Bedroom">
-          <h3>Bedroom</h3>
-        </div>
+      <h2>How We Work</h2>
+      <div class="process-steps">
+        <div class="step"><span>1</span><h4>Consultation</h4><p>Discuss goals and needs.</p></div>
+        <div class="step"><span>2</span><h4>Planning</h4><p>Craft a tailored strategy.</p></div>
+        <div class="step"><span>3</span><h4>Execution</h4><p>Deliver with excellence.</p></div>
+        <div class="step"><span>4</span><h4>Support</h4><p>Continuous follow-up.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Products Slider -->
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slides will be injected by script.js -->
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <blockquote>"Ecoply Ltd transformed our business with professional, reliable service."<cite>– Kofi Asante</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="booking">
+    <div class="container">
+      <h2>Book a Service</h2>
+      <form>
+        <div class="form-grid">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="tel" placeholder="Your Phone" required>
+          <select required>
+            <option value="">Select a Service</option>
+            <option>Real Estate</option>
+            <option>Import & Export</option>
+            <option>General Sales</option>
+          </select>
+          <textarea placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="cta-button">Submit</button>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-links">
-        <div>
-          <h4>Shop</h4>
-          <ul>
-            <li><a href="#">All Furniture</a></li>
-            <li><a href="#">New Arrivals</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Journal</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@branchfurniture.com">info@branchfurniture.com</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Pinterest">Pinterest</a>
-      </div>
-      <p>&copy; 2025 Branch Furniture. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ecoply Ltd • Accra, Ghana</p>
+      <p><a href="mailto:info@ecoply.com">info@ecoply.com</a> | +233 24 123 4567</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
