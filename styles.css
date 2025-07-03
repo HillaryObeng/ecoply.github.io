@@ -259,9 +259,16 @@ textarea {
 .footer {
   background: #0a2540;
   color: #ccc;
-  text-align: center;
   padding: 25px 10px;
   font-size: 0.9em;
+}
+/* Reverse grid pattern: two rows, one column each */
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 0.5rem;
+  text-align: left;
 }
 .footer a {
   color: #f1b500;
