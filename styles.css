@@ -85,6 +85,9 @@ a, button {
   color: var(--text-dark);
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .nav-links a:hover {
   color: var(--accent-color);
@@ -95,6 +98,8 @@ a, button {
   padding: 8px 18px;
   border-radius: 5px;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .hero {
@@ -144,6 +149,9 @@ a, button {
   border-radius: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.3s;
 }
 .cta-button:hover {
   background: #ddb200;
