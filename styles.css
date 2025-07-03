@@ -276,14 +276,61 @@ textarea {
   margin: 0;
 }
 
-/* Footer headings */
-.footer h4 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-size: 1.1em;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Footer links & list items */
+/* …all your existing styles up through Booking… */
+
+/* Footer (made smaller) */
+.footer {
+  background: #0a2540;
+  color: #ccc;
+  padding: 20px 10px;        /* reduced vertical padding */
+  font-size: 0.8em;          /* slightly smaller text */
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* narrower min width */
+  gap: 1rem 1.5rem;           /* tighter gaps */
+  text-align: left;
+}
+
+.footer .container > * {
+  margin: 0;
+}
+
+.footer h4 {
+  color: #fff;
+  margin-bottom: 0.3rem;     /* smaller gap below headings */
+  font-size: 1em;            /* slightly smaller heading */
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.3rem 0;       /* tighter list spacing */
+}
+.footer li {
+  margin-bottom: 0.2rem;
+}
+
 .footer a {
   color: #f1b500;
   text-decoration: none;
@@ -291,14 +338,16 @@ textarea {
 .footer a:hover {
   text-decoration: underline;
 }
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0.5rem 0;
+
+/* on very small screens, stack */
+@media (max-width: 480px) {
+  .footer .container {
+    grid-template-columns: 1fr;
+  }
 }
-.footer li {
-  margin-bottom: 0.3rem;
-}
+
+/* …your responsive tweaks for the rest of the page… */
+
 
 /* On very small screens, stack all sections */
 @media (max-width: 480px) {
