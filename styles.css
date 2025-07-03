@@ -23,7 +23,7 @@ body {
   border-bottom: 1px solid #eee;
   padding: 20px 0;
   position: sticky;
-  position: -webkit-sticky; /* Safari fallback */
+  position: -webkit-sticky; /* Safari */
   top: 0;
   z-index: 1000;
 }
@@ -203,10 +203,10 @@ body {
   gap: 1rem;
   overflow-x: auto;
   padding: 1rem 0;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 .testimonials-row::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
+  display: none;
 }
 .testimonial-card {
   flex: 0 0 calc(20% - 1rem);
@@ -262,20 +262,28 @@ textarea {
   padding: 25px 10px;
   font-size: 0.9em;
 }
-/* Reverse grid pattern: two rows, one column each */
+
+/* reverse-grid: fill by column, two rows per column */
 .footer .container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-auto-flow: column;
   grid-template-rows: repeat(2, auto);
-  row-gap: 0.5rem;
-  text-align: left;
+  grid-auto-columns: minmax(200px, 1fr);
+  gap: 0.5rem 1.5rem;
+}
+.footer .container > * {
+  /* ensure direct children wrap nicely */
+  margin: 0;
 }
 .footer a {
   color: #f1b500;
   text-decoration: none;
 }
+.footer a:hover {
+  text-decoration: underline;
+}
 
-/* Responsive Breakpoints */
+/* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
@@ -299,5 +307,12 @@ textarea {
 @media (max-width: 480px) {
   .testimonial-card {
     flex: 0 0 100%;
+  }
+  .footer .container {
+    /* stack into one column on narrow screens */
+    grid-auto-flow: row;
+    grid-template-rows: none;
+    grid-auto-columns: none;
+    grid-template-columns: 1fr;
   }
 }
