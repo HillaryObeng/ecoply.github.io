@@ -130,37 +130,93 @@ body {
   font-size: 1.3rem;
 }
 
-/* Process */
+:root {
+  --primary-color: #0a2540;
+  --accent-color: #f1b500;
+  --light-bg: #fafafa;
+  --text-dark: #1f1f1f;
+  --text-muted: #555;
+}
+
 .process {
-  padding: 80px 20px;
   background: #fff;
-  text-align: center;
+  padding: 80px 20px 100px;
 }
 .process h2 {
-  font-size: 2rem;
-  margin-bottom: 50px;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
 }
-.process-steps {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-.step {
-  background: #f7f7f7;
-  border-left: 5px solid #f1b500;
-  padding: 20px;
-  width: 260px;
-  border-radius: 8px;
-  text-align: left;
-}
-.step span {
-  font-size: 1.5rem;
-  font-weight: bold;
+.process h2::after {
+  content: '';
   display: block;
-  margin-bottom: 10px;
-  color: #0a2540;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.step {
+  position: relative;
+  background: var(--light-bg);
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Accent stripe on the left */
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--accent-color);
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.step h4 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.step p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 
 /* Products (Swiper) */
 .products {
