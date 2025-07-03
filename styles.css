@@ -36,6 +36,45 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#1f1f1f;line-height:1.
 .testimonials h2{font-size:2rem;margin-bottom:30px;}
 .testimonials blockquote{font-style:italic;max-width:700px;margin:0 auto 10px;}
 .testimonials cite{display:block;font-weight:600;margin-top:10px;color:#333;}
+.testimonials-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.testimonial-card {
+  flex: 0 0 calc(20% - 1rem);
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card cite {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+}
+
 .booking{padding:80px 20px;background:#fff;}
 .booking h2{text-align:center;font-size:2rem;margin-bottom:40px;}
 .form-grid{display:grid;gap:20px;max-width:800px;margin:auto;}
