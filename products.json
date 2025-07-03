@@ -1,0 +1,5 @@
+[
+  {"id":1,"title":"Modern Sofa","price":"$799","image":"https://via.placeholder.com/300x200?text=Sofa"},
+  {"id":2,"title":"Dining Table","price":"$499","image":"https://via.placeholder.com/300x200?text=Table"},
+  {"id":3,"title":"Office Chair","price":"$199","image":"https://via.placeholder.com/300x200?text=Chair"}
+]
