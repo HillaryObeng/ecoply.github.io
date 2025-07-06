@@ -207,7 +207,6 @@ nav a:hover {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	padding-bottom: 1rem;
-	position: relative;
 }
 
 .horizontal-scroll::-webkit-scrollbar {
@@ -215,9 +214,15 @@ nav a:hover {
 }
 
 .horizontal-scroll::-webkit-scrollbar-thumb {
-	background: var(--scrollbar);
+	background: var(--gray);
 	border-radius: 4px;
 }
+
+.card {
+	min-width: 280px;
+	scroll-snap-align: start;
+}
+
 
 /* .pager {
 	position: absolute;
