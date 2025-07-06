@@ -15,8 +15,9 @@
             --charcoal: #333845;
             --white: #ffffff;
             --gray: #e0e2e6;
+            --scrollbar: #c0c2c5;
             --transition: 0.2s ease-in-out;
-            --font: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            --font: 'Segoe UI', Tahoma, sans-serif;
         }
 
         *,
@@ -31,7 +32,6 @@
             font-family: var(--font);
             color: var(--charcoal);
             background: var(--white);
-            line-height: 1.6;
         }
 
         a {
@@ -102,8 +102,9 @@
             min-height: 90vh;
             display: flex;
             align-items: center;
-            text-align: center;
+            justify-content: center;
             position: relative;
+            text-align: center;
             color: var(--white);
         }
 
@@ -118,7 +119,6 @@
             z-index: 1;
             padding: 2rem;
             max-width: 700px;
-            margin: auto;
         }
 
         .hero h1 {
@@ -154,12 +154,6 @@
             }
         }
 
-        .grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
         .card {
             background: var(--white);
             border-radius: 8px;
@@ -169,7 +163,9 @@
             flex-direction: column;
             justify-content: space-between;
             transition: transform var(--transition), box-shadow var(--transition);
-            height: 100%;
+            min-width: 280px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
         }
 
         .card:hover {
@@ -185,35 +181,45 @@
             border-radius: 6px;
         }
 
-        .steps {
+        .horizontal-scroll {
             display: flex;
-            flex-wrap: wrap;
             gap: 1.5rem;
-            justify-content: center;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem;
+            position: relative;
         }
 
-        .step {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            flex: 1;
-            min-width: 180px;
+        .horizontal-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .horizontal-scroll::-webkit-scrollbar-thumb {
+            background: var(--scrollbar);
+            border-radius: 4px;
+        }
+
+        /* Pagination Dots */
+        .pager {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            gap: 6px;
         }
 
-        .step .number {
-            background: var(--blue);
-            color: var(--white);
-            width: 40px;
-            height: 40px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        .pager .dot {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 50%;
-            margin-bottom: 1rem;
-            font-size: 1.125rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .pager .dot.active {
+            background: var(--white);
         }
 
         .testimonial p {
@@ -243,7 +249,7 @@
 
         .contact form {
             max-width: 600px;
-            margin: 2rem auto 0;
+            margin: 2rem auto;
             display: grid;
             gap: 1rem;
         }
@@ -302,150 +308,115 @@
     </header>
 
     <main>
-        <section class="hero" aria-label="Hero section">
+        <section class="hero fade-in" aria-label="Hero section">
             <div class="overlay"></div>
-            <div class="hero-content fade-in">
+            <div class="hero-content">
                 <h1>Connecting Opportunities. Elevating Markets.</h1>
                 <p>Your trusted partner in real estate, import-export & sales solutions worldwide.</p>
                 <button class="btn">Get Started</button>
             </div>
         </section>
 
+        <!-- Services Section -->
         <section id="services" class="container">
             <h2 class="fade-in">Our Services</h2>
-            <div class="grid services-grid fade-in">
-                <article class="card">
-                    <i class="fas fa-building fa-2x" aria-hidden="true"></i>
+            <div class="fade-in" style="display:flex; gap:1.5rem; justify-content:center;">
+                <article class="card"><i class="fas fa-building fa-2x"></i>
                     <h3>Real Estate</h3>
-                    <p>Full-spectrum property services—from acquisition to advisory.</p>
-                    <a class="btn" href="#">Learn More</a>
+                    <p>End‑to‑end property solutions.</p><a class="btn" href="#">Learn More</a>
                 </article>
-                <article class="card">
-                    <i class="fas fa-shipping-fast fa-2x" aria-hidden="true"></i>
+                <article class="card"><i class="fas fa-shipping-fast fa-2x"></i>
                     <h3>Import & Export</h3>
-                    <p>Seamless global logistics and customs management.</p>
-                    <a class="btn" href="#">Learn More</a>
+                    <p>Global logistics without hassle.</p><a class="btn" href="#">Learn More</a>
                 </article>
-                <article class="card">
-                    <i class="fas fa-chart-line fa-2x" aria-hidden="true"></i>
+                <article class="card"><i class="fas fa-chart-line fa-2x"></i>
                     <h3>Sales Support</h3>
-                    <p>Strategic market outreach to amplify your brand reach.</p>
-                    <a class="btn" href="#">Learn More</a>
+                    <p>Market‑driven outreach strategies.</p><a class="btn" href="#">Learn More</a>
                 </article>
             </div>
         </section>
 
-        <section id="how-we-work" class="container">
-            <h2 class="fade-in">How We Work</h2>
-            <div class="steps fade-in">
-                <article class="step">
-                    <div class="number">1</div>
-                    <h4>Consultation</h4>
-                </article>
-                <article class="step">
-                    <div class="number">2</div>
-                    <h4>Research</h4>
-                </article>
-                <article class="step">
-                    <div class="number">3</div>
-                    <h4>Planning</h4>
-                </article>
-                <article class="step">
-                    <div class="number">4</div>
-                    <h4>Execution</h4>
-                </article>
-                <article class="step">
-                    <div class="number">5</div>
-                    <h4>Support</h4>
-                </article>
-            </div>
-        </section>
-
+        <!-- Featured Products -->
         <section id="products" class="container">
             <h2 class="fade-in">Featured Products</h2>
-            <div class="grid fade-in">
-                <article class="card">
-                    <img src="https://images.pexels.com/photos/17508758/pexels-photo-17508758.jpeg?auto=format&fit=crop&w=400&q=80"
+            <div class="horizontal-scroll fade-in" id="products-scroll">
+                <article class="card"><img
+                        src="https://images.pexels.com/photos/17508758/pexels-photo-17508758.jpeg?auto=format&fit=crop&w=400&q=80"
                         alt="Leather Club Chair">
                     <h4>Leather Club Chair</h4>
                     <p>Elegant, premium lounge seating.</p>
                 </article>
-                <article class="card">
-                    <img src="https://images.pexels.com/photos/7598128/pexels-photo-7598128.jpeg?auto=format&fit=crop&w=400&q=80"
+                <article class="card"><img
+                        src="https://images.pexels.com/photos/7598128/pexels-photo-7598128.jpeg?auto=format&fit=crop&w=400&q=80"
                         alt="Living Room Chairs">
                     <h4>Living Room Pair</h4>
                     <p>Coordinated style for luxury interiors.</p>
                 </article>
-                <article class="card">
-                    <img src="https://images.pexels.com/photos/14100420/pexels-photo-14100420.jpeg?auto=format&fit=crop&w=400&q=80"
+                <article class="card"><img
+                        src="https://images.pexels.com/photos/14100420/pexels-photo-14100420.jpeg?auto=format&fit=crop&w=400&q=80"
                         alt="Cozy Armchair">
                     <h4>Cozy Armchair</h4>
                     <p>Comfort-first seating with functional wheels.</p>
                 </article>
-                <article class="card">
-                    <img src="https://images.pexels.com/photos/6969787/pexels-photo-6969787.jpeg?auto=format&fit=crop&w=400&q=80"
+                <article class="card"><img
+                        src="https://images.pexels.com/photos/6969787/pexels-photo-6969787.jpeg?auto=format&fit=crop&w=400&q=80"
                         alt="Contemporary Accent Chair">
                     <h4>Accent Chair</h4>
                     <p>Modern form meets function.</p>
                 </article>
+                <div class="pager" id="products-pager"></div>
             </div>
         </section>
 
+        <!-- Testimonials -->
         <section class="container">
             <h2 class="fade-in">What Our Clients Say</h2>
-            <div class="grid fade-in">
+            <div class="horizontal-scroll fade-in" id="testimonials-scroll">
+                <!-- Six testimonial cards -->
+                <!-- identical structure as above -->
                 <article class="card testimonial">
                     <p>"Ecoply's expertise has propelled our operations worldwide."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jane Doe">
-                        <span><strong>Jane Doe</strong>, CEO of AlphaCorp</span>
-                    </div>
+                    <div class="client"><img src="https://randomuser.me/api/portraits/women/68.jpg"
+                            alt="Jane Doe"><span><strong>Jane Doe</strong>, CEO of AlphaCorp</span></div>
                 </article>
                 <article class="card testimonial">
                     <p>"Reliable, professional, and globally capable."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="John Smith">
-                        <span><strong>John Smith</strong>, MD at BetaTrade</span>
-                    </div>
+                    <div class="client"><img src="https://randomuser.me/api/portraits/men/45.jpg"
+                            alt="John Smith"><span><strong>John Smith</strong>, MD at BetaTrade</span></div>
                 </article>
                 <article class="card testimonial">
                     <p>"They delivered beyond expectations—timely and precise."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Linda Park">
-                        <span><strong>Linda Park</strong>, COO of NuEdge</span>
-                    </div>
+                    <div class="client"><img src="https://randomuser.me/api/portraits/women/52.jpg"
+                            alt="Linda Park"><span><strong>Linda Park</strong>, COO of NuEdge</span></div>
                 </article>
                 <article class="card testimonial">
                     <p>"We rely on Ecoply for every major trade decision."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="Derek Young">
-                        <span><strong>Derek Young</strong>, VP Logistics</span>
-                    </div>
+                    <div class="client"><img src="https://randomuser.me/api/portraits/men/39.jpg"
+                            alt="Derek Young"><span><strong>Derek Young</strong>, VP Logistics</span></div>
                 </article>
                 <article class="card testimonial">
                     <p>"A valuable partner for our African expansion strategy."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Kwame Mensah">
-                        <span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span>
+                    <div class="client"><img src="https://randomuser.me/api/portraits/men/61.jpg"
+                            alt="Kwame Mensah"><span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span>
                     </div>
                 </article>
                 <article class="card testimonial">
                     <p>"The support team was responsive and helpful every step."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Amina Dogo">
-                        <span><strong>Amina Dogo</strong>, Export Manager</span>
-                    </div>
+                    <div class="client"><img src="https://randomuser.me/api/portraits/women/25.jpg"
+                            alt="Amina Dogo"><span><strong>Amina Dogo</strong>, Export Manager</span></div>
                 </article>
+                <div class="pager" id="testimonials-pager"></div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="contact container">
             <h2 class="fade-in">Let’s Work Together</h2>
             <form class="fade-in" action="#" method="post" aria-label="Contact form">
-                <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
-                <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required>
-                <select name="service" required aria-label="Select Service">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <select name="service" required>
                     <option value="" disabled selected>Select Service</option>
                     <option>Real Estate</option>
                     <option>Import & Export</option>
@@ -460,14 +431,59 @@
         <div class="container">
             <p>Ecoply Ltd • 123 Business Rd, Accra, Ghana • <a href="mailto:info@ecoply.com">info@ecoply.com</a> •
                 +233 24 000 0000</p>
-            <nav aria-label="Social media links">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            </nav>
+            <nav aria-label="Social media links"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i
+                        class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook"></i></a></nav>
             <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
         </div>
     </footer>
+
+    <!-- JavaScript Carousel Logic -->
+    <script>
+        function setupCarousel(scrollEl, pagerEl) {
+            const cards = scrollEl.querySelectorAll('.card');
+            const dotCount = cards.length;
+            let active = 0;
+
+            const dots = [];
+            for (let i = 0; i < dotCount; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                dot.addEventListener('click', () => {
+                    cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start' });
+                });
+                pagerEl.appendChild(dot);
+                dots.push(dot);
+            }
+
+            function updateActive() {
+                const scrollLeft = scrollEl.scrollLeft;
+                let idx = 0;
+                cards.forEach((card, i) => {
+                    if (card.offsetLeft <= scrollLeft + 20) idx = i;
+                });
+                dots.forEach(d => d.classList.remove('active'));
+                dots[idx].classList.add('active');
+                active = idx;
+            }
+
+            scrollEl.addEventListener('scroll', () => {
+                window.requestAnimationFrame(updateActive);
+            });
+
+            function autoScroll() {
+                active = (active + 1) % cards.length;
+                cards[active].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            }
+
+            setInterval(autoScroll, 5000);
+            updateActive();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupCarousel(document.getElementById('products-scroll'), document.getElementById('products-pager'));
+            setupCarousel(document.getElementById('testimonials-scroll'), document.getElementById('testimonials-pager'));
+        });
+    </script>
 </body>
 
 </html>
