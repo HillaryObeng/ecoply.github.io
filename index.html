@@ -9,7 +9,7 @@
     <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="hero-animation.js"></script>
+
 </head>
 
 <body>
@@ -154,74 +154,7 @@
         </div>
     </footer>
 
-    <script>
-        function setupCarousel(scrollEl, pagerEl) {
-            const cards = scrollEl.querySelectorAll('.card');
-            const dots = [];
-            let active = 0;
-
-            cards.forEach((card, i) => {
-                const dot = document.createElement('div');
-                dot.className = 'dot';
-                dot.addEventListener('click', () => {
-                    card.scrollIntoView({ behavior: 'smooth', inline: 'start' });
-                });
-                pagerEl.appendChild(dot);
-                dots.push(dot);
-            });
-
-            function updateActive() {
-                let idx = 0;
-                const scrollLeft = scrollEl.scrollLeft;
-                cards.forEach((card, i) => {
-                    if (card.offsetLeft <= scrollLeft + 20) idx = i;
-                });
-                dots.forEach(dot => dot.classList.remove('active'));
-                dots[idx].classList.add('active');
-                active = idx;
-            }
-
-            scrollEl.addEventListener('scroll', () => {
-                window.requestAnimationFrame(updateActive);
-            });
-
-            function autoScroll() {
-                if (!scrollEl.autoStarted || !scrollEl.isIntersecting) return;
-                active = (active + 1) % cards.length;
-                cards[active].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        scrollEl.isIntersecting = true;
-                        if (!scrollEl.autoStarted) {
-                            scrollEl.autoStarted = true;
-                            setInterval(autoScroll, 5000);
-                        }
-                    } else {
-                        scrollEl.isIntersecting = false;
-                    }
-                });
-            }, { threshold: 0.6 });
-
-
-            observer.observe(scrollEl);
-            updateActive();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setupCarousel(
-                document.getElementById('products-scroll'),
-                document.getElementById('products-pager')
-            );
-            setupCarousel(
-                document.getElementById('testimonials-scroll'),
-                document.getElementById('testimonials-pager')
-            );
-        });
-    </script>
+    <script src="hero-animation.js"></script>
 </body>
 
 </html>
