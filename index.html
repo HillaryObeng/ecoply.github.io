@@ -53,7 +53,7 @@
                 </article>
             </div>
         </section>
-        
+
         <section id="products" class="container">
             <h2 class="fade-in">Featured Products</h2>
             <div class="horizontal-scroll fade-in" id="products-scroll">
@@ -84,7 +84,7 @@
                 <div class="pager" id="products-pager"></div>
             </div>
         </section>
-        
+
         <section class="container">
             <h2 class="fade-in">What Our Clients Say</h2>
             <div class="horizontal-scroll fade-in" id="testimonials-scroll">
@@ -111,7 +111,8 @@
                 <article class="card testimonial">
                     <p>"A valuable partner for our African expansion strategy."</p>
                     <div class="client"><img src="https://randomuser.me/api/portraits/men/61.jpg"
-                            alt="Kwame Mensah"><span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span></div>
+                            alt="Kwame Mensah"><span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span>
+                    </div>
                 </article>
                 <article class="card testimonial">
                     <p>"The support team was responsive and helpful every step."</p>
@@ -121,7 +122,7 @@
                 <div class="pager" id="testimonials-pager"></div>
             </div>
         </section>
-        
+
         <section id="contact" class="contact container">
             <h2 class="fade-in">Let’s Work Together</h2>
             <form class="fade-in" action="#" method="post" aria-label="Contact form">
@@ -137,82 +138,89 @@
                 <button type="submit" class="btn">Submit Inquiry</button>
             </form>
         </section>
-        </main>
-        
-        <footer>
-            <div class="container">
-                <p>Ecoply Ltd • 123 Business Rd, Accra, Ghana • <a href="mailto:info@ecoply.com">info@ecoply.com</a> •
-                    +233 24 000 0000</p>
-                <nav aria-label="Social media links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </nav>
-                <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
-            </div>
-        </footer>
-        
-        <script>
-            function setupCarousel(scrollEl, pagerEl) {
-                const cards = scrollEl.querySelectorAll('.card');
-                const dots = [];
-                let active = 0;
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>Ecoply Ltd • 123 Business Rd, Accra, Ghana • <a href="mailto:info@ecoply.com">info@ecoply.com</a> •
+                +233 24 000 0000</p>
+            <nav aria-label="Social media links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </nav>
+            <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function setupCarousel(scrollEl, pagerEl) {
+            const cards = scrollEl.querySelectorAll('.card');
+            const dots = [];
+            let active = 0;
+
+            cards.forEach((card, i) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                dot.addEventListener('click', () => {
+                    card.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+                });
+                pagerEl.appendChild(dot);
+                dots.push(dot);
+            });
+
+            function updateActive() {
+                let idx = 0;
+                const scrollLeft = scrollEl.scrollLeft;
                 cards.forEach((card, i) => {
-                    const dot = document.createElement('div');
-                    dot.className = 'dot';
-                    dot.addEventListener('click', () => {
-                        card.scrollIntoView({ behavior: 'smooth', inline: 'start' });
-                    });
-                    pagerEl.appendChild(dot);
-                    dots.push(dot);
+                    if (card.offsetLeft <= scrollLeft + 20) idx = i;
                 });
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[idx].classList.add('active');
+                active = idx;
+            }
 
-                function updateActive() {
-                    let idx = 0;
-                    const scrollLeft = scrollEl.scrollLeft;
-                    cards.forEach((card, i) => {
-                        if (card.offsetLeft <= scrollLeft + 20) idx = i;
-                    });
-                    dots.forEach(dot => dot.classList.remove('active'));
-                    dots[idx].classList.add('active');
-                    active = idx;
-                }
+            scrollEl.addEventListener('scroll', () => {
+                window.requestAnimationFrame(updateActive);
+            });
 
-                scrollEl.addEventListener('scroll', () => {
-                    window.requestAnimationFrame(updateActive);
-                });
+            function autoScroll() {
+                if (!scrollEl.autoStarted || !scrollEl.isIntersecting) return;
+                active = (active + 1) % cards.length;
+                cards[active].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
 
-                function autoScroll() {
-                    active = (active + 1) % cards.length;
-                    cards[active].scrollIntoView({ behavior: 'smooth', inline: 'center' });
-                }
 
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting && !scrollEl.autoStarted) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        scrollEl.isIntersecting = true;
+                        if (!scrollEl.autoStarted) {
                             scrollEl.autoStarted = true;
                             setInterval(autoScroll, 5000);
                         }
-                    });
-                }, { threshold: 0.5 });
+                    } else {
+                        scrollEl.isIntersecting = false;
+                    }
+                });
+            }, { threshold: 0.6 });
 
-                observer.observe(scrollEl);
-                updateActive();
-            }
 
-            document.addEventListener('DOMContentLoaded', () => {
-                setupCarousel(
-                    document.getElementById('products-scroll'),
-                    document.getElementById('products-pager')
-                );
-                setupCarousel(
-                    document.getElementById('testimonials-scroll'),
-                    document.getElementById('testimonials-pager')
-                );
-            });
-        </script>
-        </body>
-        
-        </html>
-      
+            observer.observe(scrollEl);
+            updateActive();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupCarousel(
+                document.getElementById('products-scroll'),
+                document.getElementById('products-pager')
+            );
+            setupCarousel(
+                document.getElementById('testimonials-scroll'),
+                document.getElementById('testimonials-pager')
+            );
+        });
+    </script>
+</body>
+
+</html>
