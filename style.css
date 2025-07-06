@@ -342,7 +342,7 @@ footer nav a {
 	.service-cards {
 		display: flex;
 		gap: 1.5rem;
-		flex-wrap: nowrap;
+		/* flex-wrap: nowrap; */
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 		padding-bottom: 1rem;
@@ -350,7 +350,7 @@ footer nav a {
 	}
 
 	.service-cards::-webkit-scrollbar {
-		height: 6px;
+		height: 8px;
 	}
 
 	.service-cards::-webkit-scrollbar-thumb {
@@ -361,5 +361,7 @@ footer nav a {
 	.service-cards .card {
 		flex: 0 0 auto;
 		scroll-snap-align: start;
+		scroll-snap-align: start;
+		flex-shrink: 0;
 	}
 }
