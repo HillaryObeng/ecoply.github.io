@@ -89,6 +89,9 @@ nav a:hover {
 	color: var(--blue);
 }
 
+
+/* Hero slideshow */
+/* Remove previous .hero background rule */
 .hero {
 	position: relative;
 	min-height: 45vh;
