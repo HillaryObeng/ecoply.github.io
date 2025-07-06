@@ -7,6 +7,7 @@
     <meta name="description"
         content="Ecoply Ltd – expert real estate, import-export, and sales support with global expertise." />
     <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         :root {
             --blue: #1a73e8;
@@ -18,7 +19,9 @@
             --font: 'Segoe UI', Tahoma, Geneva, sans-serif;
         }
 
-        * {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -55,12 +58,12 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            transition: background var(--transition);
-            font-size: 1rem;
+            transition: background var(--transition), transform var(--transition);
         }
 
         .btn:hover {
             background: #1558c7;
+            transform: translateY(-2px);
         }
 
         header {
@@ -261,7 +264,7 @@
     <header>
         <div class="nav-container container">
             <div class="logo">Ecoply Ltd</div>
-            <nav>
+            <nav aria-label="Primary navigation">
                 <ul>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#how-we-work">How We Work</a></li>
@@ -273,140 +276,141 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content fade-in">
-            <h1>Connecting Opportunities. Elevating Markets.</h1>
-            <p>Expert real estate, import‑export solutions & strategic sales support worldwide.</p>
-            <button class="btn">Get Started</button>
-        </div>
-    </section>
+    <main>
+        <section class="hero" aria-label="Hero section">
+            <div class="overlay"></div>
+            <div class="hero-content fade-in">
+                <h1>Connecting Opportunities. Elevating Markets.</h1>
+                <p>Your trusted partner in real estate, import-export & sales solutions worldwide.</p>
+                <button class="btn">Get Started</button>
+            </div>
+        </section>
 
-    <section id="services" class="container">
-        <h2 class="fade-in">Our Services</h2>
-        <div class="grid">
-            <div class="card fade-in">
-                <img src="https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=format&fit=crop&w=400&q=80"
-                    alt="Real Estate">
-                <h3>Real Estate</h3>
-                <p>Comprehensive property services for buyers, sellers, and investors.</p>
-                <a class="btn" href="#">Learn More</a>
+        <section id="services" class="container">
+            <h2 class="fade-in">Our Services</h2>
+            <div class="grid services-grid fade-in">
+                <article class="card">
+                    <i class="fas fa-building fa-2x" aria-hidden="true"></i>
+                    <h3>Real Estate</h3>
+                    <p>Full-spectrum property services—from acquisition to advisory.</p>
+                    <a class="btn" href="#">Learn More</a>
+                </article>
+                <article class="card">
+                    <i class="fas fa-shipping-fast fa-2x" aria-hidden="true"></i>
+                    <h3>Import & Export</h3>
+                    <p>Seamless global logistics and customs management.</p>
+                    <a class="btn" href="#">Learn More</a>
+                </article>
+                <article class="card">
+                    <i class="fas fa-chart-line fa-2x" aria-hidden="true"></i>
+                    <h3>Sales Support</h3>
+                    <p>Strategic market outreach to amplify your brand reach.</p>
+                    <a class="btn" href="#">Learn More</a>
+                </article>
             </div>
-            <div class="card fade-in">
-                <img src="https://images.pexels.com/photos/977213/pexels-photo-977213.jpeg?auto=format&fit=crop&w=400&q=80"
-                    alt="Import Export">
-                <h3>Import & Export</h3>
-                <p>End-to-end logistics and shipping solutions for global trade.</p>
-                <a class="btn" href="#">Learn More</a>
-            </div>
-            <div class="card fade-in">
-                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=format&fit=crop&w=400&q=80"
-                    alt="Sales">
-                <h3>General Sales</h3>
-                <p>Strategic sales processes tailored to diverse markets.</p>
-                <a class="btn" href="#">Learn More</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="how-we-work" class="container">
-        <h2 class="fade-in">How We Work</h2>
-        <div class="steps fade-in">
-            <div class="step">
-                <div class="number">1</div>
-                <h4>Consultation</h4>
+        <section id="how-we-work" class="container">
+            <h2 class="fade-in">How We Work</h2>
+            <div class="steps fade-in">
+                <article class="step">
+                    <div class="number">1</div>
+                    <h4>Consultation</h4>
+                </article>
+                <article class="step">
+                    <div class="number">2</div>
+                    <h4>Research</h4>
+                </article>
+                <article class="step">
+                    <div class="number">3</div>
+                    <h4>Planning</h4>
+                </article>
+                <article class="step">
+                    <div class="number">4</div>
+                    <h4>Execution</h4>
+                </article>
+                <article class="step">
+                    <div class="number">5</div>
+                    <h4>Support</h4>
+                </article>
             </div>
-            <div class="step">
-                <div class="number">2</div>
-                <h4>Research</h4>
-            </div>
-            <div class="step">
-                <div class="number">3</div>
-                <h4>Planning</h4>
-            </div>
-            <div class="step">
-                <div class="number">4</div>
-                <h4>Execution</h4>
-            </div>
-            <div class="step">
-                <div class="number">5</div>
-                <h4>Support</h4>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="products" class="container">
-        <h2 class="fade-in">Featured Products</h2>
-        <div class="grid">
-            <div class="card fade-in">
-                <img src="https://images.pexels.com/photos/17508758/pexels-photo-17508758.jpeg?auto=format&fit=crop&w=400&q=80"
-                    alt="Leather Armchair">
-                <h4>Leather Club Chair</h4>
-                <p>Elegant and comfortable seating for lounge areas.</p>
+        <section id="products" class="container">
+            <h2 class="fade-in">Featured Products</h2>
+            <div class="grid fade-in">
+                <article class="card">
+                    <img src="https://images.pexels.com/photos/17508758/pexels-photo-17508758.jpeg?auto=format&fit=crop&w=400&q=80"
+                        alt="Leather Club Chair">
+                    <h4>Leather Club Chair</h4>
+                    <p>Elegant, premium lounge seating.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.pexels.com/photos/7598128/pexels-photo-7598128.jpeg?auto=format&fit=crop&w=400&q=80"
+                        alt="Modern Living Room Chairs">
+                    <h4>Living Room Pair</h4>
+                    <p>Coordinated style for luxury interiors.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.pexels.com/photos/14100420/pexels-photo-14100420.jpeg?auto=format&fit=crop&w=400&q=80"
+                        alt="Cozy Wheeled Armchair">
+                    <h4>Cozy Armchair</h4>
+                    <p>Comfort-first seating with mobility.</p>
+                </article>
+                <article class="card">
+                    <img src="https://images.pexels.com/photos/6969787/pexels-photo-6969787.jpeg?auto=format&fit=crop&w=400&q=80"
+                        alt="Contemporary Accent Chair">
+                    <h4>Accent Chair</h4>
+                    <p>Modern form meets function.</p>
+                </article>
             </div>
-            <div class="card fade-in">
-                <img src="https://images.pexels.com/photos/7598128/pexels-photo-7598128.jpeg?auto=format&fit=crop&w=400&q=80"
-                    alt="Modern Living Room">
-                <h4>Modern Living Chair Pair</h4>
-                <p>Stylish seating perfect for high-end interiors.</p>
-            </div>
-            <div class="card fade-in">
-                <img src="https://images.pexels.com/photos/14100420/pexels-photo-14100420.jpeg?auto=format&fit=crop&w=400&q=80"
-                    alt="Wheeled Armchair">
-                <h4>Cozy Armchair</h4>
-                <p>Warm and inviting design with functional wheels.</p>
-            </div>
-            <div class="card fade-in">
-                <img src="https://images.pexels.com/photos/6969787/pexels-photo-6969787.jpeg?auto=format&fit=crop&w=400&q=80"
-                    alt="Glass Table and Chairs">
-                <h4>Contemporary Accent Chair</h4>
-                <p>Perfect blend of comfort and modern aesthetics.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="container">
-        <h2 class="fade-in">What Our Clients Say</h2>
-        <div class="grid fade-in">
-            <div class="card testimonial">
-                <p>"Ecoply's expertise has propelled our operations worldwide."</p>
-                <div class="client">
-                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jane Doe">
-                    <span>Jane Doe, CEO of AlphaCorp</span>
-                </div>
+        <section class="container">
+            <h2 class="fade-in">What Our Clients Say</h2>
+            <div class="grid fade-in">
+                <article class="card testimonial">
+                    <p>"Ecoply's expertise has propelled our operations worldwide."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jane Doe">
+                        <span><strong>Jane Doe</strong>, CEO of AlphaCorp</span>
+                    </div>
+                </article>
+                <article class="card testimonial">
+                    <p>"Reliable, professional, and globally capable."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="John Smith">
+                        <span><strong>John Smith</strong>, MD at BetaTrade</span>
+                    </div>
+                </article>
             </div>
-            <div class="card testimonial">
-                <p>"Reliable, professional, and globally capable."</p>
-                <div class="client">
-                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="John Smith">
-                    <span>John Smith, Managing Director at BetaTrade</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact container">
-        <h2 class="fade-in">Let’s Work Together</h2>
-        <form class="fade-in" action="#" method="post">
-            <input type="text" name="name" placeholder="Full Name" required />
-            <input type="email" name="email" placeholder="Email Address" required />
-            <input type="tel" name="phone" placeholder="Phone Number" required />
-            <select name="service" required>
-                <option value="" disabled selected>Select Service</option>
-                <option>Real Estate</option>
-                <option>Import & Export</option>
-                <option>General Sales</option>
-            </select>
-            <button type="submit" class="btn">Submit Inquiry</button>
-        </form>
-    </section>
+        <section id="contact" class="contact container">
+            <h2 class="fade-in">Let’s Work Together</h2>
+            <form class="fade-in" action="#" method="post" aria-label="Contact form">
+                <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" aria-label="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required>
+                <select name="service" required aria-label="Select Service">
+                    <option value="" disabled selected>Select Service</option>
+                    <option>Real Estate</option>
+                    <option>Import & Export</option>
+                    <option>Sales Support</option>
+                </select>
+                <button type="submit" class="btn">Submit Inquiry</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <p>Ecoply Ltd • 123 Business Rd, Accra, Ghana • <a href="mailto:info@ecoply.com">info@ecoply.com</a> •
                 +233 24 000 0000</p>
-            <nav>
-                <a href="#">LinkedIn</a> • <a href="#">Twitter</a> • <a href="#">Facebook</a>
+            <nav aria-label="Social media links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             </nav>
             <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
         </div>
