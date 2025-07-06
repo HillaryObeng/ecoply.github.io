@@ -337,23 +337,29 @@ footer nav a {
 		align-items: center;
 	} */
 
+
+
 	.service-cards {
 		display: flex;
 		gap: 1.5rem;
-		justify-content: flex-start;
-		/* Start alignment for better scroll */
 		flex-wrap: nowrap;
 		overflow-x: auto;
-		padding-bottom: 1rem;
 		scroll-snap-type: x mandatory;
+		padding-bottom: 1rem;
+		scroll-behavior: smooth;
 	}
 
 	.service-cards::-webkit-scrollbar {
-		height: 8px;
+		height: 6px;
 	}
 
 	.service-cards::-webkit-scrollbar-thumb {
 		background: var(--scrollbar);
 		border-radius: 4px;
+	}
+
+	.service-cards .card {
+		flex: 0 0 auto;
+		scroll-snap-align: start;
 	}
 }
