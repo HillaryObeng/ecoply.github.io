@@ -5,30 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="Ecoply Ltd – Professional real estate, import-export, and sales support with global expertise." />
+        content="Ecoply Ltd – expert real estate, import-export, and sales support with global expertise." />
     <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
     <style>
-        /* === Variables & Resets === */
         :root {
             --blue: #1a73e8;
             --navy: #1b2431;
             --charcoal: #333845;
             --white: #ffffff;
-            --gray-light: #f5f6f8;
             --gray: #e0e2e6;
-            --transition-200: 0.2s ease-in-out;
+            --transition: 0.2s ease-in-out;
             --font: 'Segoe UI', Tahoma, Geneva, sans-serif;
-            --max-width: 1200px;
         }
 
-        *,
-        *::before,
-        *::after {
+        * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: var(--font);
             color: var(--charcoal);
             background: var(--white);
@@ -36,8 +32,8 @@
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
         img {
@@ -46,9 +42,8 @@
             display: block;
         }
 
-        /* === Container & Buttons === */
         .container {
-            max-width: var(--max-width);
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
         }
@@ -60,7 +55,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            transition: background var(--transition-200);
+            transition: background var(--transition);
             font-size: 1rem;
         }
 
@@ -68,7 +63,6 @@
             background: #1558c7;
         }
 
-        /* === Navigation === */
         header {
             background: var(--white);
             border-bottom: 1px solid var(--gray);
@@ -100,9 +94,8 @@
             color: var(--blue);
         }
 
-        /* === Hero === */
         .hero {
-            background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            background: url('https://images.pexels.com/photos/3278104/pexels-photo-3278104.jpeg?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
             color: var(--white);
             min-height: 90vh;
             display: flex;
@@ -122,7 +115,7 @@
             z-index: 1;
             padding: 2rem;
             max-width: 700px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         .hero h1 {
@@ -135,7 +128,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* === Sections === */
         section {
             padding: 4rem 0;
         }
@@ -159,13 +151,10 @@
             }
         }
 
-        /* === Grids === */
-        .services-grid,
-        .products-grid,
-        .testimony-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
         .card {
@@ -174,7 +163,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             padding: 1.5rem;
             text-align: center;
-            transition: transform var(--transition-200), box-shadow var(--transition-200);
+            transition: transform var(--transition), box-shadow var(--transition);
         }
 
         .card:hover {
@@ -182,7 +171,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* === Work Steps === */
         .steps {
             display: flex;
             flex-wrap: wrap;
@@ -193,14 +181,14 @@
         .step {
             flex: 1;
             min-width: 180px;
+            background: #fff;
             padding: 2rem;
-            background: var(--white);
             border-radius: 8px;
         }
 
         .step .number {
             background: var(--blue);
-            color: var(--white);
+            color: #fff;
             width: 40px;
             height: 40px;
             display: inline-flex;
@@ -211,7 +199,6 @@
             font-size: 1.125rem;
         }
 
-        /* === Testimonials === */
         .testimonial p {
             font-style: italic;
             margin-bottom: 1rem;
@@ -224,7 +211,6 @@
             gap: 1rem;
         }
 
-        /* === Contact Form === */
         .contact {
             background: var(--blue);
             color: var(--white);
@@ -246,7 +232,6 @@
             font-size: 1rem;
         }
 
-        /* === Footer === */
         footer {
             background: var(--navy);
             color: #aaa;
@@ -260,26 +245,23 @@
             margin: 0 0.5rem;
         }
 
-        /* === Responsive === */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
             nav ul {
                 display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Header & Nav -->
     <header>
         <div class="nav-container container">
-            <div class="logo">Ecoply Ltd</div>
-            <nav aria-label="Primary">
+            <div class="logo">Ecoply Ltd</div>
+            <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#how-we-work">How We Work</a></li>
@@ -291,46 +273,42 @@
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content fade-in">
             <h1>Connecting Opportunities. Elevating Markets.</h1>
-            <p>Expert real estate services, global import‑export solutions & strategic sales support across continents.
-            </p>
+            <p>Expert real estate, import‑export solutions & strategic sales support worldwide.</p>
             <button class="btn">Get Started</button>
         </div>
     </section>
 
-    <!-- Services -->
     <section id="services" class="container">
         <h2 class="fade-in">Our Services</h2>
-        <div class="services-grid">
+        <div class="grid">
             <div class="card fade-in">
-                <img src="https://images.unsplash.com/photo-1560185127-6a846ce74851?fit=crop&w=400&q=80"
-                    alt="Real estate services">
+                <img src="https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=format&fit=crop&w=400&q=80"
+                    alt="Real Estate">
                 <h3>Real Estate</h3>
-                <p>Comprehensive property services including acquisition, sales, and investment advisory.</p>
+                <p>Comprehensive property services for buyers, sellers, and investors.</p>
                 <a class="btn" href="#">Learn More</a>
             </div>
             <div class="card fade-in">
-                <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?fit=crop&w=400&q=80"
-                    alt="Import and export logistics">
+                <img src="https://images.pexels.com/photos/977213/pexels-photo-977213.jpeg?auto=format&fit=crop&w=400&q=80"
+                    alt="Import Export">
                 <h3>Import & Export</h3>
-                <p>End-to-end international logistics and supply chain management for global trade.</p>
+                <p>End-to-end logistics and shipping solutions for global trade.</p>
                 <a class="btn" href="#">Learn More</a>
             </div>
             <div class="card fade-in">
-                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?fit=crop&w=400&q=80"
-                    alt="Strategic sales support">
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=format&fit=crop&w=400&q=80"
+                    alt="Sales">
                 <h3>General Sales</h3>
-                <p>Targeted sales strategies and market outreach solutions for accelerating business growth.</p>
+                <p>Strategic sales processes tailored to diverse markets.</p>
                 <a class="btn" href="#">Learn More</a>
             </div>
         </div>
     </section>
 
-    <!-- How We Work -->
     <section id="how-we-work" class="container">
         <h2 class="fade-in">How We Work</h2>
         <div class="steps fade-in">
@@ -357,44 +335,48 @@
         </div>
     </section>
 
-    <!-- Featured Products -->
     <section id="products" class="container">
         <h2 class="fade-in">Featured Products</h2>
-        <div class="products-grid">
+        <div class="grid">
             <div class="card fade-in">
-                <img src="https://images.unsplash.com/photo-1581091870627-3e8dc8ab24a6?fit=crop&w=400&q=80"
-                    alt="Electronic product">
-                <h4>Electronic Device</h4>
-                <p>High-performance tech designed for modern professionals.</p>
+                <img src="https://images.pexels.com/photos/17508758/pexels-photo-17508758.jpeg?auto=format&fit=crop&w=400&q=80"
+                    alt="Leather Armchair">
+                <h4>Leather Club Chair</h4>
+                <p>Elegant and comfortable seating for lounge areas.</p>
             </div>
             <div class="card fade-in">
-                <img src="https://images.unsplash.com/photo-1598300051742-f8afdfb614a9?fit=crop&w=400&q=80"
-                    alt="Furniture product">
-                <h4>Modern Furniture</h4>
-                <p>Elegant, functional furnishings for contemporary environments.</p>
+                <img src="https://images.pexels.com/photos/7598128/pexels-photo-7598128.jpeg?auto=format&fit=crop&w=400&q=80"
+                    alt="Modern Living Room">
+                <h4>Modern Living Chair Pair</h4>
+                <p>Stylish seating perfect for high-end interiors.</p>
             </div>
             <div class="card fade-in">
-                <img src="https://images.unsplash.com/photo-1611599537932-92e76c7a0425?fit=crop&w=400&q=80"
-                    alt="Apparel product">
-                <h4>Fashion Apparel</h4>
-                <p>Quality garments tailored to global style trends.</p>
+                <img src="https://images.pexels.com/photos/14100420/pexels-photo-14100420.jpeg?auto=format&fit=crop&w=400&q=80"
+                    alt="Wheeled Armchair">
+                <h4>Cozy Armchair</h4>
+                <p>Warm and inviting design with functional wheels.</p>
+            </div>
+            <div class="card fade-in">
+                <img src="https://images.pexels.com/photos/6969787/pexels-photo-6969787.jpeg?auto=format&fit=crop&w=400&q=80"
+                    alt="Glass Table and Chairs">
+                <h4>Contemporary Accent Chair</h4>
+                <p>Perfect blend of comfort and modern aesthetics.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="container">
         <h2 class="fade-in">What Our Clients Say</h2>
-        <div class="testimony-grid fade-in">
+        <div class="grid fade-in">
             <div class="card testimonial">
-                <p>"Ecoply's expertise has propelled our operations to new heights."</p>
+                <p>"Ecoply's expertise has propelled our operations worldwide."</p>
                 <div class="client">
                     <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jane Doe">
                     <span>Jane Doe, CEO of AlphaCorp</span>
                 </div>
             </div>
             <div class="card testimonial">
-                <p>"Reliable, professional, and globally capable. Truly a game‑changer."</p>
+                <p>"Reliable, professional, and globally capable."</p>
                 <div class="client">
                     <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="John Smith">
                     <span>John Smith, Managing Director at BetaTrade</span>
@@ -403,10 +385,9 @@
         </div>
     </section>
 
-    <!-- Contact CTA -->
     <section id="contact" class="contact container">
         <h2 class="fade-in">Let’s Work Together</h2>
-        <form class="fade-in" style="animation-delay: .3s;" action="#" method="post" aria-label="Service inquiry form">
+        <form class="fade-in" action="#" method="post">
             <input type="text" name="name" placeholder="Full Name" required />
             <input type="email" name="email" placeholder="Email Address" required />
             <input type="tel" name="phone" placeholder="Phone Number" required />
@@ -420,15 +401,12 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>Ecoply Ltd • 123 Business Rd, Accra, Ghana • <a href="mailto:info@ecoply.com">info@ecoply.com</a> •
                 +233 24 000 0000</p>
-            <nav aria-label="Social">
-                <a href="#" aria-label="LinkedIn">LinkedIn</a> •
-                <a href="#" aria-label="Twitter">Twitter</a> •
-                <a href="#" aria-label="Facebook">Facebook</a>
+            <nav>
+                <a href="#">LinkedIn</a> • <a href="#">Twitter</a> • <a href="#">Facebook</a>
             </nav>
             <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
         </div>
