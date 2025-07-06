@@ -40,9 +40,9 @@
         }
 
         img {
-            max-width: 100%;
-            border-radius: 4px;
             display: block;
+            width: 100%;
+            border-radius: 4px;
         }
 
         .container {
@@ -76,8 +76,8 @@
 
         .nav-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             padding: 1rem;
         }
 
@@ -88,9 +88,9 @@
         }
 
         nav ul {
-            list-style: none;
             display: flex;
             gap: 1.5rem;
+            list-style: none;
         }
 
         nav a:hover {
@@ -99,12 +99,12 @@
 
         .hero {
             background: url('https://images.pexels.com/photos/3278104/pexels-photo-3278104.jpeg?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-            color: var(--white);
             min-height: 90vh;
             display: flex;
             align-items: center;
             text-align: center;
             position: relative;
+            color: var(--white);
         }
 
         .overlay {
@@ -136,9 +136,9 @@
         }
 
         h2 {
+            text-align: center;
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            text-align: center;
         }
 
         .fade-in {
@@ -165,13 +165,24 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             padding: 1.5rem;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             transition: transform var(--transition), box-shadow var(--transition);
+            height: 100%;
         }
 
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 6px;
         }
 
         .steps {
@@ -182,16 +193,19 @@
         }
 
         .step {
-            flex: 1;
-            min-width: 180px;
-            background: #fff;
+            background: var(--white);
             padding: 2rem;
             border-radius: 8px;
+            flex: 1;
+            min-width: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .step .number {
             background: var(--blue);
-            color: #fff;
+            color: var(--white);
             width: 40px;
             height: 40px;
             display: inline-flex;
@@ -214,6 +228,13 @@
             gap: 1rem;
         }
 
+        .client img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
         .contact {
             background: var(--blue);
             color: var(--white);
@@ -230,8 +251,8 @@
         .contact input,
         .contact select {
             padding: 0.75rem;
-            border-radius: 4px;
             border: none;
+            border-radius: 4px;
             font-size: 1rem;
         }
 
@@ -248,7 +269,11 @@
             margin: 0 0.5rem;
         }
 
-        @media (max-width: 768px) {
+        footer nav a {
+            margin: 0 0.25rem;
+        }
+
+        @media (max-width:768px) {
             nav ul {
                 display: none;
             }
@@ -347,15 +372,15 @@
                 </article>
                 <article class="card">
                     <img src="https://images.pexels.com/photos/7598128/pexels-photo-7598128.jpeg?auto=format&fit=crop&w=400&q=80"
-                        alt="Modern Living Room Chairs">
+                        alt="Living Room Chairs">
                     <h4>Living Room Pair</h4>
                     <p>Coordinated style for luxury interiors.</p>
                 </article>
                 <article class="card">
                     <img src="https://images.pexels.com/photos/14100420/pexels-photo-14100420.jpeg?auto=format&fit=crop&w=400&q=80"
-                        alt="Cozy Wheeled Armchair">
+                        alt="Cozy Armchair">
                     <h4>Cozy Armchair</h4>
-                    <p>Comfort-first seating with mobility.</p>
+                    <p>Comfort-first seating with functional wheels.</p>
                 </article>
                 <article class="card">
                     <img src="https://images.pexels.com/photos/6969787/pexels-photo-6969787.jpeg?auto=format&fit=crop&w=400&q=80"
@@ -383,6 +408,34 @@
                         <span><strong>John Smith</strong>, MD at BetaTrade</span>
                     </div>
                 </article>
+                <article class="card testimonial">
+                    <p>"They delivered beyond expectations—timely and precise."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Linda Park">
+                        <span><strong>Linda Park</strong>, COO of NuEdge</span>
+                    </div>
+                </article>
+                <article class="card testimonial">
+                    <p>"We rely on Ecoply for every major trade decision."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="Derek Young">
+                        <span><strong>Derek Young</strong>, VP Logistics</span>
+                    </div>
+                </article>
+                <article class="card testimonial">
+                    <p>"A valuable partner for our African expansion strategy."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Kwame Mensah">
+                        <span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span>
+                    </div>
+                </article>
+                <article class="card testimonial">
+                    <p>"The support team was responsive and helpful every step."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Amina Dogo">
+                        <span><strong>Amina Dogo</strong>, Export Manager</span>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -390,7 +443,7 @@
             <h2 class="fade-in">Let’s Work Together</h2>
             <form class="fade-in" action="#" method="post" aria-label="Contact form">
                 <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" aria-label="Email" required>
+                <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
                 <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required>
                 <select name="service" required aria-label="Select Service">
                     <option value="" disabled selected>Select Service</option>
