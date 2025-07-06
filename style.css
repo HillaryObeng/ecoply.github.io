@@ -90,7 +90,7 @@ nav a:hover {
 }
 
 
-.hero {
+/* .hero {
 	background: url('https://images.pexels.com/photos/7108701/pexels-photo-7108701.jpeg') center/cover no-repeat;
 	min-height: 45vh;
 	display: flex;
@@ -100,8 +100,25 @@ nav a:hover {
 	text-align: center;
 	color: var(--white);
 	transition: background-image 1s ease-in-out;
+} */
+.hero {
+	position: relative;
+	min-height: 45vh;
+	overflow: hidden;
 }
 
+.hero-bg {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.hero-bg.current {
+	opacity: 1;
+}
 .overlay {
 	position: absolute;
 	inset: 0;
