@@ -1,32 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-  setupCarousel(
-    document.getElementById("products-scroll"),
-    document.getElementById("products-pager")
-  );
-  setupCarousel(
-    document.getElementById("testimonials-scroll"),
-    document.getElementById("testimonials-pager")
-  );
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hero = document.querySelector('.hero');
+  const bgCurrent = hero.querySelector('.hero-bg.current');
+  const bgNext = hero.querySelector('.hero-bg.next');
 
-  // Hero background switch
-  const hero = document.querySelector(".hero");
   const images = [
-    "https://images.pexels.com/photos/7108701/pexels-photo-7108701.jpeg",
-    "https://images.pexels.com/photos/1004682/pexels-photo-1004682.jpeg",
+    'https://images.pexels.com/photos/7108701/pexels-photo-7108701.jpeg',
+    'https://images.pexels.com/photos/1004682/pexels-photo-1004682.jpeg',
+    'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg'
   ];
-  let index = 0;
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    hero.style.backgroundImage = `url('${images[index]}')`;
-  }, 2000);
+  let idx = 0;
 
-  // Extra hero image fade-in
-  setTimeout(() => {
-    const img = document.createElement("img");
-    img.src = "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg";
-    img.alt = "Business Team";
-    img.className = "extra-hero";
-    document.querySelector(".hero-content").appendChild(img);
-    setTimeout(() => img.classList.add("visible"), 50);
+  // Initialize backgrounds
+  bgCurrent.style.backgroundImage = `url('${images[0]}')`;
+  bgNext.style.backgroundImage = `url('${images[1]}')`;
+
+  setInterval(() => {
+    idx = (idx + 1) % images.length;
+    // swap div roles
+    bgNext.style.backgroundImage = `url('${images[(idx + 1) % images.length]}')`;
+    bgCurrent.classList.remove('current');
+    bgNext.classList.add('current');
+
+    // rotate roles:
+    [bgCurrent.className, bgNext.className] = [bgNext.className, bgCurrent.className];
+    [bgCurrent, bgNext] = [bgNext, bgCurrent];
   }, 2000);
 });
+</script>
