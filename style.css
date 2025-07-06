@@ -340,16 +340,18 @@ footer nav a {
 
 
 	.service-cards-wrapper {
-		position: relative;
 		overflow-x: auto;
+		padding-bottom: 1rem;
 	}
 
 	.service-cards {
 		display: flex;
 		gap: 1.5rem;
+		flex-wrap: nowrap;
 		scroll-snap-type: x mandatory;
 		overflow-x: auto;
 		padding-bottom: 2rem;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.service-cards::-webkit-scrollbar {
