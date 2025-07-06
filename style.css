@@ -99,7 +99,17 @@ nav a:hover {
 	text-align: center;
 	color: var(--white);
 }
+.hero-content img.extra-hero {
+	max-width: 200px;
+	margin-top: 1rem;
+	border-radius: 8px;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
 
+.hero-content img.extra-hero.visible {
+	opacity: 1;
+}
 .overlay {
 	position: absolute;
 	inset: 0;
