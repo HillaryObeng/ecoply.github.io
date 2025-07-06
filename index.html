@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Ecoply Ltd – Expert real estate services, global import-export solutions & strategic sales support." />
+    <meta name="description" content="Ecoply Ltd – Expert real estate, import-export, and sales support." />
     <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
     <style>
         :root {
@@ -27,7 +26,7 @@
         body {
             font-family: var(--font-sans);
             color: var(--charcoal);
-            background-color: var(--white);
+            background: var(--white);
             line-height: 1.6;
         }
 
@@ -39,6 +38,7 @@
         img {
             max-width: 100%;
             border-radius: 4px;
+            display: block;
         }
 
         .container {
@@ -49,7 +49,6 @@
 
         button,
         .btn {
-            display: inline-block;
             padding: 0.75rem 1.5rem;
             background: var(--blue);
             color: var(--white);
@@ -83,9 +82,8 @@
             }
         }
 
-        /* Hero Section */
         .hero {
-            background: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            background: url('https://thumbs.dreamstime.com/b/global-trade-cargo-shipping-cityscape-airplane-logistics-import-export-transportation-industry-349854043.jpg') center/cover no-repeat;
             color: var(--white);
             min-height: 80vh;
             display: flex;
@@ -100,12 +98,7 @@
             border-radius: 8px;
         }
 
-        /* Services */
-        .services,
-        .how-we-work,
-        .products,
-        .testimonials,
-        .contact {
+        section {
             padding: 4rem 0;
         }
 
@@ -127,7 +120,6 @@
             text-align: center;
         }
 
-        /* How We Work */
         .steps {
             display: flex;
             flex-wrap: wrap;
@@ -156,7 +148,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Testimonials */
         .testimonial p {
             font-style: italic;
             margin-bottom: 1rem;
@@ -174,7 +165,6 @@
             width: 50px;
         }
 
-        /* Contact */
         .contact {
             background: var(--blue);
             color: #fff;
@@ -183,7 +173,7 @@
 
         .contact form {
             max-width: 600px;
-            margin: 2rem auto 0;
+            margin: 2rem auto;
             display: grid;
             gap: 1rem;
         }
@@ -195,7 +185,6 @@
             border-radius: 4px;
         }
 
-        /* Footer */
         footer {
             background: var(--charcoal);
             color: #ccc;
@@ -209,7 +198,7 @@
             margin: 0 0.5rem;
         }
 
-        @media (max-width: 768px) {
+        @media(max-width:768px) {
             .steps {
                 flex-direction: column;
             }
@@ -229,25 +218,25 @@
     </section>
 
     <!-- Services -->
-    <section class="services container">
+    <section class="container">
         <h2 class="fade-in">Our Services</h2>
         <div class="services-grid">
             <div class="service-card fade-in">
-                <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                <img src="https://thumbs.dreamstime.com/b/global-logistics-network-futuristic-cityscape-350107760.jpg"
                     alt="Real Estate" />
                 <h3>Real Estate</h3>
                 <p>End‑to‑end property solutions for buyers, sellers, and investors worldwide.</p>
                 <a href="#">Learn More →</a>
             </div>
             <div class="service-card fade-in">
-                <img src="https://images.unsplash.com/photo-1618831042243-6e4c5a0d9d64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                <img src="https://thumbs.dreamstime.com/b/global-logistics-network-visualized-shipping-air-freight-ground-349009640.jpg"
                     alt="Import & Export" />
                 <h3>Import & Export</h3>
                 <p>Seamless logistics and global shipping for imports and exports.</p>
                 <a href="#">Learn More →</a>
             </div>
             <div class="service-card fade-in">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8fc10341?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                <img src="https://thumbs.dreamstime.com/b/container-ship-sunset-cityscape-global-trade-logistics-350511558.jpg"
                     alt="General Sales" />
                 <h3>General Sales</h3>
                 <p>Strategic sales support tailored to your product and market needs.</p>
@@ -257,7 +246,7 @@
     </section>
 
     <!-- How We Work -->
-    <section class="how-we-work container">
+    <section class="container">
         <h2 class="fade-in">How We Work</h2>
         <div class="steps fade-in">
             <div class="step">
@@ -283,24 +272,24 @@
         </div>
     </section>
 
-    <!-- Products -->
-    <section class="products container">
+    <!-- Featured Products -->
+    <section class="container">
         <h2 class="fade-in">Featured Products</h2>
         <div class="products-grid">
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1580910051071-38962c013ffe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                <img src="https://images.unsplash.com/photo-1580910051071-38962c013ffe?auto=format&fit=crop&w=400"
                     alt="Product A" />
                 <h4>Product A</h4>
-                <p>High-quality electronic gadget optimized for modern markets.</p>
+                <p>High‑quality electronic gadget optimized for modern markets.</p>
             </div>
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1616627986520-3f4d76e8c377?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                <img src="https://images.unsplash.com/photo-1616627986520-3f4d76e8c377?auto=format&fit=crop&w=400"
                     alt="Product B" />
                 <h4>Product B</h4>
                 <p>Stylish furniture designed for comfort and elegance.</p>
             </div>
             <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1618354691227-4aa61d4d45b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                <img src="https://images.unsplash.com/photo-1618354691227-4aa61d4d45b6?auto=format&fit=crop&w=400"
                     alt="Product C" />
                 <h4>Product C</h4>
                 <p>Trendsetting apparel tailored for global audiences.</p>
@@ -309,7 +298,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials container">
+    <section class="container">
         <h2 class="fade-in">What Our Clients Say</h2>
         <div class="testimony-grid fade-in">
             <div class="testimonial">
