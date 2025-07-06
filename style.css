@@ -368,6 +368,22 @@ footer nav a {
 
 
 
+	@media (max-width: 768px) {
+		.service-cards-wrapper {
+			padding-bottom: 1rem;
+		}
+
+		.service-cards {
+			gap: 1rem;
+		}
+
+		.card {
+			min-width: 240px;
+		}
+	}
+
+
+
 	.service-cards-wrapper {
 		overflow-x: auto;
 		padding-bottom: 1rem;
