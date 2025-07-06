@@ -173,6 +173,7 @@ nav a:hover {
 	display: flex;
 	gap: 1.5rem;
 	flex-wrap: nowrap;
+	justify-content: center;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
@@ -382,6 +383,7 @@ footer nav a {
 	.service-cards-wrapper {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		overflow-x: auto;
 		padding-bottom: 1rem;
