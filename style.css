@@ -164,13 +164,37 @@ nav a:hover {
 	}
 }
 
+.service-cards-wrapper {
+	overflow-x: auto;
+	padding-bottom: 1rem;
+}
+
 .service-cards {
 	display: flex;
 	gap: 1.5rem;
-	justify-content: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 1rem;
 }
+
+.service-cards::-webkit-scrollbar {
+	height: 8px;
+}
+
+.service-cards::-webkit-scrollbar-thumb {
+	background: var(--scrollbar);
+	border-radius: 4px;
+}
+
+.service-cards .card {
+	flex: 0 0 auto;
+	min-width: 280px;
+	scroll-snap-align: start;
+}
+
+
 
 .card {
 	background: var(--white);
