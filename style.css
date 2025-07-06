@@ -307,8 +307,16 @@ footer nav a {
 		font-size: 2rem;
 	}
 
-	.service-cards {
+	/* .service-cards {
 		flex-direction: column;
 		align-items: center;
+	} */
+
+	.service-cards {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: nowrap;
+		overflow-x: auto;
 	}
 }
