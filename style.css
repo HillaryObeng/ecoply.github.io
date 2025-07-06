@@ -219,7 +219,7 @@ nav a:hover {
 	border-radius: 4px;
 }
 
-.pager {
+/* .pager {
 	position: absolute;
 	bottom: 8px;
 	left: 50%;
@@ -238,9 +238,34 @@ nav a:hover {
 }
 
 .pager .dot.active {
-	background: var(--white);
+	background: var(--blue);
+} */
+
+
+.pager {
+	text-align: center;
+	margin-top: 0.5rem;
+	display: flex;
+	justify-content: center;
+	gap: 6px;
 }
 
+.pager .dot {
+	width: 10px;
+	height: 10px;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.3s ease-in-out;
+}
+
+.pager .dot.active {
+	background: var(--blue);
+	transform: scale(1.4);
+}
+
+
+/* Testimonials */
 .testimonial p {
 	font-style: italic;
 	margin-bottom: 1rem;
@@ -315,8 +340,20 @@ footer nav a {
 	.service-cards {
 		display: flex;
 		gap: 1.5rem;
-		justify-content: center;
+		justify-content: flex-start;
+		/* Start alignment for better scroll */
 		flex-wrap: nowrap;
 		overflow-x: auto;
+		padding-bottom: 1rem;
+		scroll-snap-type: x mandatory;
+	}
+
+	.service-cards::-webkit-scrollbar {
+		height: 8px;
+	}
+
+	.service-cards::-webkit-scrollbar-thumb {
+		background: var(--scrollbar);
+		border-radius: 4px;
 	}
 }
