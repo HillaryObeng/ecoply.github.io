@@ -151,41 +151,34 @@
             </div>
         </section>
 
+
         <section id="contact" class="contact container">
             <h2 class="fade-in">Let’s Work Together</h2>
-            <form class="fade-in" action="#" method="post" aria-label="Contact form">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required>
-                <select name="service" required>
-                    <option value="" disabled selected>Select Service</option>
-                    <option>Real Estate</option>
-                    <option>Import & Export</option>
-                    <option>Agriculture</option>
-                </select>
-                <button type="submit" class="btn">Submit Inquiry</button>
+          
+            <form class="fade-in" id="contact-form">
+              <input type="text" name="from_name" placeholder="Full Name" required />
+              <input type="email" name="reply_to" placeholder="Email Address" required />
+              <input type="tel" name="phone" placeholder="Phone Number" required />
+              
+              <select name="service" required>
+                <option value="" disabled selected>Select Service</option>
+                <option>Real Estate</option>
+                <option>Import & Export</option>
+                <option>Agribusiness</option>
+              </select>
+          
+              <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+          
+              <button type="submit" class="btn">Submit Inquiry</button>
             </form>
-        </section>
-    </main>
+          
+            <div id="success-msg" style="display:none; color: green; margin-top: 10px;">
+              Message sent successfully!
+            </div>
+          </section>
+          
 
-
-    <form id="contact-form">
-        <label for="from_name">Name:</label><br />
-        <input type="text" name="from_name" id="from_name" required /><br /><br />
-
-        <label for="reply_to">Email:</label><br />
-        <input type="email" name="reply_to" id="reply_to" required /><br /><br />
-
-        <label for="message">Message:</label><br />
-        <textarea name="message" id="message" rows="5" required></textarea><br /><br />
-
-        <button type="submit">Send</button>
-    </form>
-
-    <!-- Optional success message -->
-    <div id="success-msg" style="display:none; color: green;">
-        Message sent successfully!
-    </div>
+  
 
 
     <footer>
