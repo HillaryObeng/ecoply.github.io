@@ -40,3 +40,8 @@ ul {
 .back-btn:hover {
     background-color: #153c6d;
 }
+
+.top-nav-btn {
+    margin-bottom: 2rem;
+    text-align: left;
+}
