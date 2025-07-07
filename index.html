@@ -43,10 +43,6 @@
   </script>
   <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
 
-
-
-
-
 </head>
 
 <body>
@@ -66,7 +62,12 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="btn">Get Started</button>
+      <!-- <button class="btn">Get Started</button> -->
+
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+        Get Started
+      </button>
+
     </div>
   </header>
 
@@ -78,11 +79,16 @@
       <div class="hero-content">
         <h1>Connecting Opportunities. Elevating Markets.</h1>
         <p>Your trusted partner in real estate, import-export & sales solutions worldwide.</p>
-        <button class="btn">Get Started</button>
+        <!-- <button class="btn">Get Started</button> -->
+
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+          Get Started
+        </button>
+
       </div>
     </section>
 
-
+    <!-- Our Services -->
     <section id="services" class="container">
       <h2 class="fade-in" style="text-align: center;">Our Services</h2>
       <div class="service-cards-wrapper fade-in">
@@ -104,12 +110,12 @@
       </div>
     </section>
 
-
+    <!-- Featured Products -->
     <section id="products" class="container">
       <h2 class="fade-in" style="text-align: center;">Featured Products</h2>
       <div class="horizontal-scroll fade-in" id="products-scroll">
 
-        <!-- 🏠 Real Estate -->
+        <!--  Real Estate -->
         <article class="card">
           <img
             src="https://images.pexels.com/photos/32821643/pexels-photo-32821643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
@@ -117,6 +123,7 @@
           <h4>Colonial-Era Estate</h4>
           <p>Charming heritage home nestled in lush greenery.</p>
         </article>
+
         <article class="card">
           <img
             src="https://images.pexels.com/photos/8134753/pexels-photo-8134753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
@@ -124,6 +131,7 @@
           <h4>Beachfront Villa</h4>
           <p>Luxurious coastal property with ocean views.</p>
         </article>
+
         <article class="card">
           <img
             src="https://images.pexels.com/photos/7061672/pexels-photo-7061672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
@@ -131,6 +139,7 @@
           <h4>Modern Townhouse</h4>
           <p>Urban living in a well-designed townhouse setting.</p>
         </article>
+
         <article class="card">
           <img
             src="https://www.gardenparkresort.com/images/affordable-hotel-akosombo-garden-903.jpg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
@@ -148,7 +157,7 @@
         </article>
 
 
-        <!-- 🌾 Agribusiness -->
+        <!--  Agribusiness -->
         <article class="card">
           <img
             src="https://images.pexels.com/photos/31148393/pexels-photo-31148393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
@@ -156,6 +165,7 @@
           <h4>Cocoa Drying Racks</h4>
           <p>Traditional post-harvest drying under the sun.</p>
         </article>
+
         <article class="card">
           <img
             src="https://images.pexels.com/photos/10615954/pexels-photo-10615954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
@@ -163,6 +173,7 @@
           <h4>Cashew Farm</h4>
           <p>Cashew fruit in a tropical setting.</p>
         </article>
+
         <article class="card">
           <img
             src="https://images.pexels.com/photos/11568567/pexels-photo-11568567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
@@ -170,7 +181,6 @@
           <h4>Coconut Plantation</h4>
           <p>A well maintained plantation.</p>
         </article>
-
 
         <article class="card">
           <img
@@ -195,7 +205,7 @@
         </article>
 
 
-        <!-- 🚢 Import & Export -->
+        <!--  Import & Export -->
 
         <article class="card">
           <img
@@ -212,17 +222,11 @@
           <p>Packaged goods awaiting shipment.</p>
         </article>
 
-
+        <!-- Pager -->
 
         <div class="pager" id="products-pager"></div>
       </div>
     </section>
-
-
-
-
-
-
 
 
 

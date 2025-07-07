@@ -1,6 +1,5 @@
-/* ================================ */
 /* Root Variables               */
-/* ================================ */
+
 :root {
 	--blue: #1a73e8;
 	--navy: #1b2431;
@@ -12,9 +11,9 @@
 	--font: 'Segoe UI', Tahoma, sans-serif;
 }
 
-/* ================================ */
+
 /* Cookie Consent Banner + Fade */
-/* ================================ */
+
 .cookie-banner {
 	position: fixed;
 	bottom: 0;
@@ -60,9 +59,9 @@
 	background: #f0f0f0;
 }
 
-/* ================================ */
+
 /* Global Base Styles           */
-/* ================================ */
+
 *,
 *::before,
 *::after {
@@ -91,9 +90,9 @@ img {
 	border-radius: 4px;
 }
 
-/* ================================ */
+
 /* Products Scroll Section      */
-/* ================================ */
+
 #products-scroll {
 	display: flex;
 	overflow-x: auto;
@@ -119,9 +118,9 @@ img {
 	transform: scale(1.02);
 }
 
-/* ================================ */
+
 /* Containers & Buttons         */
-/* ================================ */
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -143,9 +142,9 @@ img {
 	transform: translateY(-2px);
 }
 
-/* ================================ */
+
 /* Header & Navigation          */
-/* ================================ */
+
 header {
 	background: var(--white);
 	border-bottom: 1px solid var(--gray);
@@ -187,9 +186,9 @@ nav a:hover {
 	color: var(--blue);
 }
 
-/* ================================ */
+
 /*  Hero Slideshow               */
-/* ================================ */
+
 .hero {
 	position: relative;
 	min-height: 50vh;
@@ -246,9 +245,9 @@ nav a:hover {
 	}
 }
 
-/* ================================ */
+
 /* Service Cards Section        */
-/* ================================ */
+
 .service-cards-wrapper {
 	overflow-x: auto;
 	padding-bottom: 1rem;
@@ -309,9 +308,9 @@ nav a:hover {
 	border-radius: 6px;
 }
 
-/* ================================ */
+
 /* Scrollable Cards & Pager     */
-/* ================================ */
+
 .horizontal-scroll {
 	display: flex;
 	gap: 1.5rem;
@@ -351,9 +350,9 @@ nav a:hover {
 	transform: scale(1.4);
 }
 
-/* ================================ */
+
 /* Testimonials Section         */
-/* ================================ */
+
 .testimonial p {
 	font-style: italic;
 	margin-bottom: 1rem;
@@ -373,9 +372,9 @@ nav a:hover {
 	object-fit: cover;
 }
 
-/* ================================ */
+
 /* Contact Section              */
-/* ================================ */
+
 .contact {
 	background: var(--blue);
 	color: var(--white);
@@ -397,9 +396,9 @@ nav a:hover {
 	font-size: 1rem;
 }
 
-/* ================================ */
+
 /* Footer                       */
-/* ================================ */
+
 footer {
 	background: var(--navy);
 	color: #aaa;
@@ -417,9 +416,9 @@ footer nav a {
 	margin: 0 0.15rem;
 }
 
-/* ================================ */
+
 /* Modal Styles                 */
-/* ================================ */
+
 .modal {
 	display: none;
 	position: fixed;
@@ -457,9 +456,9 @@ footer nav a {
 	background-color: #1558c7;
 }
 
-/* ================================ */
+
 /* Media Queries Cleanup        */
-/* ================================ */
+
 @media (max-width: 768px) {
 	nav ul {
 		display: none;
