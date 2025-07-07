@@ -80,15 +80,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const thankYouModal = document.getElementById("thankYouModal");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      form.reportValidity();
+      return; // stop the process if invalid
+    }
 
+    e.preventDefault();
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
     if (typeof emailjs !== "undefined") {
       emailjs.sendForm("service_z957ggi", "template_ke6fp2j", form).then(
         function (response) {
-          console.log("✅ Email sent!", response.status, response.text);
+          console.log(" Email sent!", response.status, response.text);
           form.reset();
           submitButton.disabled = false;
           submitButton.textContent = "Submit Inquiry";
@@ -115,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     thankYouModal.style.display = "none";
   };
 
-  // ✅ Cookie banner logic
+  //  Cookie banner logic
   const cookieBanner = document.getElementById("cookieBanner");
   const acceptBtn = document.getElementById("AcceptCookies");
 
