@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hero slideshow logic
   const images = [
     "https://images.pexels.com/photos/7108701/pexels-photo-7108701.jpeg",
+    "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
     "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
     "https://images.pexels.com/photos/1004682/pexels-photo-1004682.jpeg",
     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
     "https://images.pexels.com/photos/3775121/pexels-photo-3775121.jpeg",
-    "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
   ];
 
   let currentIndex = 0;
