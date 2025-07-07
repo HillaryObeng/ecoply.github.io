@@ -69,21 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("services-pager")
   );
 
-
-
-  
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const form = this;
-    const submitButton = form.querySelector("button[type='submit']");
-    const successMsg = document.getElementById("success-msg");
-
-    // Disable button to prevent double-clicks
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
-
-document.addEventListener("DOMContentLoaded", () => {
+  // Contact form and modal handling
   const form = document.getElementById("contact-form");
   const submitButton = form.querySelector("button[type='submit']");
   const thankYouModal = document.getElementById("thankYouModal");
@@ -91,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Disable button to prevent multiple clicks
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
@@ -99,34 +84,27 @@ document.addEventListener("DOMContentLoaded", () => {
       function (response) {
         console.log("✅ Email sent!", response.status, response.text);
 
-        // Show the thank-you modal
-        thankYouModal.style.display = "block";
-
-        // Reset form and button
+        // Reset form and re-enable button
         form.reset();
         submitButton.disabled = false;
         submitButton.textContent = "Submit Inquiry";
+
+        // Show Thank You modal
+        thankYouModal.style.display = "block";
       },
       function (error) {
         console.error("❌ Email failed to send:", error);
         alert("Oops! Something went wrong. Please try again or contact us at info@ecoplyltd.com.");
 
-        // Re-enable button
         submitButton.disabled = false;
         submitButton.textContent = "Submit Inquiry";
       }
     );
   });
-});
 
-// This function closes the modal — include it globally
-function closeModal() {
-  const thankYouModal = document.getElementById("thankYouModal");
-  thankYouModal.style.display = "none";
-}
-
-
-  });
-  
+  // Close modal globally
+  window.closeModal = function () {
+    thankYouModal.style.display = "none";
+  };
 });
 
