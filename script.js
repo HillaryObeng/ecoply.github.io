@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ✅ Cookie banner logic
   const cookieBanner = document.getElementById("cookieBanner");
-  const acceptBtn = document.getElementById("acceptCookies");
+  const acceptBtn = document.getElementById("AcceptCookies");
 
   if (cookieBanner && acceptBtn) {
     if (!localStorage.getItem("cookiesAccepted")) {
