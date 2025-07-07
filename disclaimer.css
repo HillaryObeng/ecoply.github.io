@@ -39,12 +39,12 @@ ul {
     padding: 0.5rem 1rem;
 }
 
-.back-btn:hover {
-    background-color: #153c6d;
-}
-
-
 .top-nav-btn {
+    width: 100%;
     text-align: right;
     margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+    background-color: #153c6d;
 }
