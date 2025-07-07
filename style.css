@@ -24,35 +24,23 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	font-size: 1rem;
-	transition: border-color 0.3s, background-color 0.3s;
+	transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 input:invalid,
 select:invalid,
 textarea:invalid {
-	border-color: red;
+	border-color: #e74c3c;
 	background-color: #fff5f5;
 }
 
 input:valid,
 select:valid,
 textarea:valid {
-	border-color: green;
+	border-color: #2ecc71;
 	background-color: #f5fff5;
 }
 
-.error-message {
-	display: none;
-	font-size: 0.75rem;
-	color: red;
-	margin-top: 4px;
-}
-
-input:invalid+.error-message,
-select:invalid+.error-message,
-textarea:invalid+.error-message {
-	display: block;
-}
 
 
 /* Cookie Consent Banner + Fade */

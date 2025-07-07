@@ -277,25 +277,20 @@
 
     <section id="contact" class="contact container">
       <h2 class="fade-in">Let’s Work Together</h2>
-
-      <!-- Form -->
       <form id="contact-form" class="fade-in" novalidate>
         <!-- Full Name -->
         <div class="form-group">
           <input type="text" name="from_name" id="from_name" placeholder="Full Name" required pattern=".{2,}" />
-          <span class="error-message">Please enter your full name (at least 2 characters).</span>
         </div>
 
         <!-- Email -->
         <div class="form-group">
           <input type="email" name="reply_to" id="reply_to" placeholder="Email Address" required />
-          <span class="error-message">Please enter a valid email address.</span>
         </div>
 
         <!-- Phone -->
         <div class="form-group">
           <input type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="[\d\s\-\+\(\)]{7,}" />
-          <span class="error-message">Please enter a valid phone number.</span>
         </div>
 
         <!-- Service -->
@@ -306,17 +301,19 @@
             <option>Import & Export</option>
             <option>Agribusiness</option>
           </select>
-          <span class="error-message">Please select a service type.</span>
         </div>
 
         <!-- Message -->
         <div class="form-group">
           <textarea name="message" id="message" placeholder="Your message" rows="5" required minlength="10"></textarea>
-          <span class="error-message">Message must be at least 10 characters.</span>
         </div>
 
-        <!-- Submit Button -->
         <button type="submit" class="btn">Submit Inquiry</button>
+      </form>
+
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn">Submit Inquiry</button>
       </form>
 
 
