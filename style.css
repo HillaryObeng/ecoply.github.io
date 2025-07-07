@@ -447,27 +447,27 @@ nav a:hover {
 	background-color: #ffffff;
 }
 
-#contact-form button.btn {
-	background-color: #155cc0;
-	color: #3d60ec;
+.btn {
+	background-color: #1a73e8;
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.75rem 1.5rem;
 	border: none;
-	padding: 1.8rem;
-	font-size: .7rem;
-	border-radius: 1.4rem;
+	border-radius: 8px;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 4px 10px rgba(26, 115, 232, 0.15);
 }
 
-#contact-form button.btn:hover {
-	background-color: #155cc0;
+.btn:hover {
+	background-color: #1558c0;
+	transform: translateY(-1px);
 }
 
-
-.error-message {
-	color: #e74c3c;
-	font-size: 0.8rem;
-	margin-top: 0.25rem;
-	display: none;
+.btn:active {
+	transform: scale(0.98);
+	background-color: #0f47a1;
 }
 
 input:invalid+.error-message,
