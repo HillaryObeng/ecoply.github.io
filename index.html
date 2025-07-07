@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Ecoply Ltd – expert real estate, import-export, and sales support with global expertise." />
-    <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/images/ecoply-logo.png" type="image/png" />
-    <!-- Load EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("-IAyUSdee-IJBRS9p"); // Replace with your actual Public Key
-        })();
-    </script>
-    <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ecoply Ltd – expert real estate, import-export, and sales support with global expertise." />
+  <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/images/ecoply-logo.png" type="image/png" />
+  <!-- Load EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("-IAyUSdee-IJBRS9p"); // Replace with your actual Public Key
+    })();
+  </script>
+  <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
 
 
 
@@ -26,266 +26,292 @@
 </head>
 
 <body>
-    <header>
-        <div class="nav-container container">
-            <!-- <div class="logo">Ecoply Ltd</div> -->
-            <div class="logo">
-                <img src="assets/images/ecoply-logo.png" alt="Ecoply Ltd Logo" style="height: 40px;" />
-                <!-- <span class="logo-text">Ecoply Ltd</span> -->
-            </div>
+  <header>
+    <div class="nav-container container">
+      <!-- <div class="logo">Ecoply Ltd</div> -->
+      <div class="logo">
+        <img src="assets/images/ecoply-logo.png" alt="Ecoply Ltd Logo" style="height: 40px;" />
+        <!-- <span class="logo-text">Ecoply Ltd</span> -->
+      </div>
 
-            <nav aria-label="Primary navigation">
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#how-we-work">How We Work</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="btn">Get Started</button>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how-we-work">How We Work</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn">Get Started</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero fade-in" aria-label="Hero section">
+      <div class="hero-bg current"></div>
+      <div class="hero-bg next"></div>
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Connecting Opportunities. Elevating Markets.</h1>
+        <p>Your trusted partner in real estate, import-export & sales solutions worldwide.</p>
+        <button class="btn">Get Started</button>
+      </div>
+    </section>
+
+
+    <section id="services" class="container">
+      <h2 class="fade-in" style="text-align: center;">Our Services</h2>
+      <div class="service-cards-wrapper fade-in">
+        <div class="fade-in service-cards" id="services-scroll">
+          <article class="card"><i class="fas fa-building fa-2x"></i>
+            <h3>Real Estate</h3>
+            <p>End‑to‑end property solutions.</p><a class="btn" href="#">Learn More</a>
+          </article>
+          <article class="card"><i class="fas fa-shipping-fast fa-2x"></i>
+            <h3>Import & Export</h3>
+            <p>Global logistics without hassle.</p><a class="btn" href="#">Learn More</a>
+          </article>
+          <article class="card"><i class="fas fa-seedling fa-2x"></i>
+            <h3>Agribusiness</h3>
+            <p>Sustainable market‑driven food strategies.</p><a class="btn" href="#">Learn More</a>
+          </article>
         </div>
-    </header>
-
-    <main>
-        <section class="hero fade-in" aria-label="Hero section">
-            <div class="hero-bg current"></div>
-            <div class="hero-bg next"></div>
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <h1>Connecting Opportunities. Elevating Markets.</h1>
-                <p>Your trusted partner in real estate, import-export & sales solutions worldwide.</p>
-                <button class="btn">Get Started</button>
-            </div>
-        </section>
+        <div class="pager" id="services-pager"></div>
+      </div>
+    </section>
 
 
-        <section id="services" class="container">
-            <h2 class="fade-in" style="text-align: center;">Our Services</h2>
-            <div class="service-cards-wrapper fade-in">
-                <div class="fade-in service-cards" id="services-scroll">
-                    <article class="card"><i class="fas fa-building fa-2x"></i>
-                        <h3>Real Estate</h3>
-                        <p>End‑to‑end property solutions.</p><a class="btn" href="#">Learn More</a>
-                    </article>
-                    <article class="card"><i class="fas fa-shipping-fast fa-2x"></i>
-                        <h3>Import & Export</h3>
-                        <p>Global logistics without hassle.</p><a class="btn" href="#">Learn More</a>
-                    </article>
-                    <article class="card"><i class="fas fa-seedling fa-2x"></i>
-                        <h3>Agribusiness</h3>
-                        <p>Sustainable market‑driven food strategies.</p><a class="btn" href="#">Learn More</a>
-                    </article>
-                </div>
-                <div class="pager" id="services-pager"></div>
-            </div>
-        </section>
+    <section id="products" class="container">
+      <h2 class="fade-in" style="text-align: center;">Featured Products</h2>
+      <div class="horizontal-scroll fade-in" id="products-scroll">
+
+        <!-- 🏠 Real Estate -->
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/32821643/pexels-photo-32821643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Colonial-era house in Eastern Region, Ghana">
+          <h4>Colonial-Era Estate</h4>
+          <p>Charming heritage home nestled in lush greenery.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/8134753/pexels-photo-8134753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Beachfront villa in Ghana">
+          <h4>Beachfront Villa</h4>
+          <p>Luxurious coastal property with ocean views.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/7061672/pexels-photo-7061672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Modern townhouse Ghana">
+          <h4>Modern Townhouse</h4>
+          <p>Urban living in a well-designed townhouse setting.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://www.gardenparkresort.com/images/affordable-hotel-akosombo-garden-903.jpg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Luxury home garden Ghana">
+          <h4>Luxury Garden Home</h4>
+          <p>Spacious greenery and refined architecture.</p>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/19199134/pexels-photo-19199134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Interior modern living room">
+          <h4>Modern Interior View</h4>
+          <p>Stylish living room with contemporary decor.</p>
+        </article>
 
 
-<section id="products" class="container">
-  <h2 class="fade-in" style="text-align: center;">Featured Products</h2>
-  <div class="horizontal-scroll fade-in" id="products-scroll">
-
-    <!-- 🏠 Real Estate -->
-    <article class="card">
-      <img src="https://images.pexels.com/photos/32821643/pexels-photo-32821643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Colonial-era house in Eastern Region, Ghana">
-      <h4>Colonial-Era Estate</h4>
-      <p>Charming heritage home nestled in lush greenery.</p>
-    </article>
-    <article class="card">
-      <img src="https://images.pexels.com/photos/8134753/pexels-photo-8134753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Beachfront villa in Ghana">
-      <h4>Beachfront Villa</h4>
-      <p>Luxurious coastal property with ocean views.</p>
-    </article>
-    <article class="card">
-      <img src="https://images.pexels.com/photos/7061672/pexels-photo-7061672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Modern townhouse Ghana">
-      <h4>Modern Townhouse</h4>
-      <p>Urban living in a well-designed townhouse setting.</p>
-    </article>
-    <article class="card">
-      <img src="https://www.gardenparkresort.com/images/affordable-hotel-akosombo-garden-903.jpg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Luxury home garden Ghana">
-      <h4>Luxury Garden Home</h4>
-      <p>Spacious greenery and refined architecture.</p>
-    </article>
-   
-    <article class="card">
-      <img src="https://images.pexels.com/photos/19199134/pexels-photo-19199134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Interior modern living room">
-      <h4>Modern Interior View</h4>
-      <p>Stylish living room with contemporary decor.</p>
-    </article>
- 
-
-    <!-- 🌾 Agribusiness -->
-    <article class="card">
-      <img src="https://images.pexels.com/photos/31148393/pexels-photo-31148393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Cocoa beans drying">
-      <h4>Cocoa Drying Racks</h4>
-      <p>Traditional post-harvest drying under the sun.</p>
-    </article>
-    <article class="card">
-      <img src="https://images.pexels.com/photos/10615954/pexels-photo-10615954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Cashew">
-      <h4>Cashew Farm</h4>
-      <p>Cashew fruit in a tropical setting.</p>
-    </article>
- <article class="card">
-      <img src="https://images.pexels.com/photos/11568567/pexels-photo-11568567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Coconut Plantation">
-      <h4>Coconut Plantation</h4>
-      <p>A well maintained plantation.</p>
-    </article>
+        <!-- 🌾 Agribusiness -->
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/31148393/pexels-photo-31148393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Cocoa beans drying">
+          <h4>Cocoa Drying Racks</h4>
+          <p>Traditional post-harvest drying under the sun.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/10615954/pexels-photo-10615954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Cashew">
+          <h4>Cashew Farm</h4>
+          <p>Cashew fruit in a tropical setting.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/11568567/pexels-photo-11568567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Coconut Plantation">
+          <h4>Coconut Plantation</h4>
+          <p>A well maintained plantation.</p>
+        </article>
 
 
-    <article class="card">
-      <img src="https://images.pexels.com/photos/28359724/pexels-photo-28359724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Rice paddies">
-      <h4>Irrigated Rice Field</h4>
-      <p>Flooded paddies ready for cultivation.</p>
-    </article>
-    <article class="card">
-      <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Greenhouse Farm">
-      <h4>Greenhouse Farming</h4>
-      <p>Controlled-environment vegetable production.</p>
-    </article>
-    <article class="card">
-      <img src="https://images.pexels.com/photos/1100636/pexels-photo-1100636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Palm plantation">
-      <h4>Palm Plantation</h4>
-      <p>Expansive palm oil farm in West Africa.</p>
-    </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/28359724/pexels-photo-28359724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Rice paddies">
+          <h4>Irrigated Rice Field</h4>
+          <p>Flooded paddies ready for cultivation.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Greenhouse Farm">
+          <h4>Greenhouse Farming</h4>
+          <p>Controlled-environment vegetable production.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/1100636/pexels-photo-1100636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Palm plantation">
+          <h4>Palm Plantation</h4>
+          <p>Expansive palm oil farm in West Africa.</p>
+        </article>
 
 
-    <!-- 🚢 Import & Export -->
-   
-    <article class="card">
-      <img src="https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Cargo containers at port">
-      <h4>Cargo Logistics</h4>
-      <p>Stacked containers ready for distribution.</p>
-    </article>
-    <article class="card">
-      <img src="https://images.pexels.com/photos/4483609/pexels-photo-4483609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" alt="Warehouse pallets ">
-      <h4>Export Warehouse</h4>
-      <p>Packaged goods awaiting shipment.</p>
-    </article>
-   
-   
+        <!-- 🚢 Import & Export -->
 
-    <div class="pager" id="products-pager"></div>
-  </div>
-</section>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Cargo containers at port">
+          <h4>Cargo Logistics</h4>
+          <p>Stacked containers ready for distribution.</p>
+        </article>
+        <article class="card">
+          <img
+            src="https://images.pexels.com/photos/4483609/pexels-photo-4483609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+            alt="Warehouse pallets ">
+          <h4>Export Warehouse</h4>
+          <p>Packaged goods awaiting shipment.</p>
+        </article>
+
+
+
+        <div class="pager" id="products-pager"></div>
+      </div>
+    </section>
 
 
 
 
 
-        
+
 
 
 
     <div class="pager" id="products-pager"></div>
-  </div>
-</section>
+    </div>
+    </section>
 
 
-        <section class="container">
-            <!-- <h2 class="fade-in">What Our Clients Say</h2> -->
-            <h2 class="fade-in" style="text-align: center;">What Our Clients Say</h2>
-            <div class="horizontal-scroll fade-in" id="testimonials-scroll">
-                <article class="card testimonial">
-                    <p>"Ecoply's expertise has propelled our operations worldwide."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/women/68.jpg"
-                            alt="Jane Doe"><span><strong>Jane Doe</strong>, CEO of AlphaCorp</span></div>
-                </article>
-                <article class="card testimonial">
-                    <p>"Reliable, professional, and globally capable."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/men/45.jpg"
-                            alt="John Smith"><span><strong>John Smith</strong>, MD at BetaTrade</span></div>
-                </article>
-                <article class="card testimonial">
-                    <p>"They delivered beyond expectations—timely and precise."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/women/52.jpg"
-                            alt="Linda Park"><span><strong>Linda Park</strong>, COO of NuEdge</span></div>
-                </article>
-                <article class="card testimonial">
-                    <p>"We rely on Ecoply for every major trade decision."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/men/39.jpg"
-                            alt="Derek Young"><span><strong>Derek Young</strong>, VP Logistics</span></div>
-                </article>
-                <article class="card testimonial">
-                    <p>"A valuable partner for our African expansion strategy."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/men/61.jpg"
-                            alt="Kwame Mensah"><span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span>
-                    </div>
-                </article>
-                <article class="card testimonial">
-                    <p>"The support team was responsive and helpful every step."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/women/25.jpg"
-                            alt="Amina Dogo"><span><strong>Amina Dogo</strong>, Export Manager</span></div>
-                </article>
-                <div class="pager" id="testimonials-pager"></div>
-            </div>
-        </section>
+    <section class="container">
+      <!-- <h2 class="fade-in">What Our Clients Say</h2> -->
+      <h2 class="fade-in" style="text-align: center;">What Our Clients Say</h2>
+      <div class="horizontal-scroll fade-in" id="testimonials-scroll">
+        <article class="card testimonial">
+          <p>"Ecoply's expertise has propelled our operations worldwide."</p>
+          <div class="client"><img src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt="Jane Doe"><span><strong>Jane Doe</strong>, CEO of AlphaCorp</span></div>
+        </article>
+        <article class="card testimonial">
+          <p>"Reliable, professional, and globally capable."</p>
+          <div class="client"><img src="https://randomuser.me/api/portraits/men/45.jpg"
+              alt="John Smith"><span><strong>John Smith</strong>, MD at BetaTrade</span></div>
+        </article>
+        <article class="card testimonial">
+          <p>"They delivered beyond expectations—timely and precise."</p>
+          <div class="client"><img src="https://randomuser.me/api/portraits/women/52.jpg"
+              alt="Linda Park"><span><strong>Linda Park</strong>, COO of NuEdge</span></div>
+        </article>
+        <article class="card testimonial">
+          <p>"We rely on Ecoply for every major trade decision."</p>
+          <div class="client"><img src="https://randomuser.me/api/portraits/men/39.jpg"
+              alt="Derek Young"><span><strong>Derek Young</strong>, VP Logistics</span></div>
+        </article>
+        <article class="card testimonial">
+          <p>"A valuable partner for our African expansion strategy."</p>
+          <div class="client"><img src="https://randomuser.me/api/portraits/men/61.jpg"
+              alt="Kwame Mensah"><span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span>
+          </div>
+        </article>
+        <article class="card testimonial">
+          <p>"The support team was responsive and helpful every step."</p>
+          <div class="client"><img src="https://randomuser.me/api/portraits/women/25.jpg"
+              alt="Amina Dogo"><span><strong>Amina Dogo</strong>, Export Manager</span></div>
+        </article>
+        <div class="pager" id="testimonials-pager"></div>
+      </div>
+    </section>
 
 
-        <section id="contact" class="contact container">
-            <h2 class="fade-in">Let’s Work Together</h2>
-          
-            <form class="fade-in" id="contact-form">
-              <input type="text" name="from_name" placeholder="Full Name" required />
-              <input type="email" name="reply_to" placeholder="Email Address" required />
-              <input type="tel" name="phone" placeholder="Phone Number" required />
-             <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
- 
-              <select name="service" required>
-                <option value="" disabled selected>Select Service</option>
-                <option>Real Estate</option>
-                <option>Import & Export</option>
-                <option>Agribusiness</option>
-              </select>
-          
-              <textarea name="message" placeholder="Your message" rows="5" required></textarea>
-          
-              <button type="submit" class="btn">Submit Inquiry</button>
-            </form>
-          
-            <div id="success-msg" style="display:none; color: green; margin-top: 10px;">
-              Message sent successfully!
-            </div>
-          </section>
-          
+    <section id="contact" class="contact container">
+      <h2 class="fade-in">Let’s Work Together</h2>
 
-  
+      <form class="fade-in" id="contact-form">
+        <input type="text" name="from_name" placeholder="Full Name" required />
+        <input type="email" name="reply_to" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
+
+        <select name="service" required>
+          <option value="" disabled selected>Select Service</option>
+          <option>Real Estate</option>
+          <option>Import & Export</option>
+          <option>Agribusiness</option>
+        </select>
+
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Submit Inquiry</button>
+      </form>
+
+      <div id="success-msg" style="display:none; color: green; margin-top: 10px;">
+        Message sent successfully!
+      </div>
+    </section>
 
 
+
+
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p> • Ecoply Ltd • Plot 007, 69 Trasacco Street, East Legon, Adjiringanor<a href="mailto:info@ecoply.com">•
-                    info@ecoply.com</a> •
-                +233 24 000 0000</p>
-            <nav aria-label="Social media links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-            </nav>
+      <div class="container">
+        <p>
+          &bull; <strong>Ecoply Ltd</strong> &bull; Plot 007, 69 Trasacco Street, East Legon, Adjiringanor &bull;
+          <a href="mailto:info@ecoply.com">info@ecoply.com</a> &bull; +233 24 000 0000
+        </p>
 
+        <nav aria-label="Social media links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </nav>
 
-
-
-<p>
-  &copy; 2025 Ecoply Ltd • 
-  <a href="terms.html">Terms of Service</a> • 
-  <a href="privacy-policy.html">Privacy Policy</a>
-</p>
-
-
-        </div>
+        <p>
+          &copy; 2025 Ecoply Ltd &bull;
+          <a href="terms.html">Terms of Service</a> &bull;
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
     </footer>
+
 
     <script src="script.js"></script>
 
-<!-- Thank You Modal -->
-  <div id="thankYouModal" class="modal">
-    <div class="modal-content">
-      <h2> Thank You!</h2>
-      <p>Your message has been received. Our team will get back to you shortly.</p>
-      <button class="close-modal" onclick="closeModal()">Close</button>
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+      <div class="modal-content">
+        <h2> Thank You!</h2>
+        <p>Your message has been received. Our team will get back to you shortly.</p>
+        <button class="close-modal" onclick="closeModal()">Close</button>
+      </div>
     </div>
-  </div>
 </body>
+
 </html>
 
 
