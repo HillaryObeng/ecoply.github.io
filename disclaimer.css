@@ -61,12 +61,12 @@ ul {
 
 /* Buttom Back to Homepage */
 
-
 .btn-container {
     width: 100%;
     text-align: right;
     margin-bottom: 2rem;
 }
+
 
 /* Optional: sticky effect */
 @media (min-width: 768px) {
@@ -79,6 +79,12 @@ ul {
     }
 }
 
+/* Responsive: center align on small screens */
+@media (max-width: 767px) {
+    .btn-container {
+        text-align: center;
+    }
+}
 
 .btn-container {
     display: inline-block;
