@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://images.pexels.com/photos/1004682/pexels-photo-1004682.jpeg",
     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
     "https://images.pexels.com/photos/3775121/pexels-photo-3775121.jpeg",
+    "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
   ];
 
   let currentIndex = 0;
