@@ -68,4 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".service-cards"),
     document.getElementById("services-pager")
   );
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_hoce1lf", "template_w439id9", this).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        document.getElementById("success-msg").style.display = "block";
+      },
+      function (error) {
+        console.log("FAILED...", error);
+        alert("Something went wrong. Please try again.");
+      }
+    );
+  });
 });

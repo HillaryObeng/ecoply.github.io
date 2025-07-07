@@ -9,7 +9,16 @@
     <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/png" />
+    <link rel="icon" href="assets/images/ecoply-logo.png" type="image/png" />
+    <!-- Load EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("-IAyUSdee-IJBRS9p"); // Replace with your actual Public Key
+        })();
+    </script>
+
+
 
 
 </head>
@@ -158,6 +167,26 @@
             </form>
         </section>
     </main>
+
+
+    <form id="contact-form">
+        <label for="from_name">Name:</label><br />
+        <input type="text" name="from_name" id="from_name" required /><br /><br />
+
+        <label for="reply_to">Email:</label><br />
+        <input type="email" name="reply_to" id="reply_to" required /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea name="message" id="message" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Send</button>
+    </form>
+
+    <!-- Optional success message -->
+    <div id="success-msg" style="display:none; color: green;">
+        Message sent successfully!
+    </div>
+
 
     <footer>
         <div class="container">
