@@ -63,7 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveDot();
   }
 
-  // Initialize the service cards pager
+  
+
+
+	// Initialize the service cards pager
   setupScrollPager(
     document.querySelector(".service-cards"),
     document.getElementById("services-pager")
@@ -79,8 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       function (error) {
         console.log("FAILED...", error);
-        alert("Something went wrong. Please try again IN GHANA.");
+        alert("Something went wrong. Check the console for details NEW Ghana.");
       }
     );
   });
 });
+
