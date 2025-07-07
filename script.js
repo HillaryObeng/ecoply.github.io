@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    emailjs.sendForm("service_hoce1lf", "template_w439id9", this).then(
+    emailjs.sendForm("service_z957ggi", "template_w439id9", this).then(
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
         document.getElementById("success-msg").style.display = "block";
