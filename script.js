@@ -83,38 +83,49 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const submitButton = form.querySelector("button[type='submit']");
+  const thankYouModal = document.getElementById("thankYouModal");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Disable button to prevent multiple clicks
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
     emailjs.sendForm("service_z957ggi", "template_w439id9", form).then(
       function (response) {
         console.log("✅ Email sent!", response.status, response.text);
 
-        // Show success message
-        // successMsg.style.display = "block";
-        // successMsg.textContent = "Message sent successfully!";
+        // Show the thank-you modal
+        thankYouModal.style.display = "block";
 
-	        // Redirect to thank-you page
-    window.location.href = "thank-you.html";
-
-
-        // Optionally reset form
+        // Reset form and button
         form.reset();
-
-        // Reset submit button
         submitButton.disabled = false;
         submitButton.textContent = "Submit Inquiry";
       },
       function (error) {
         console.error("❌ Email failed to send:", error);
-
-        // Show user-friendly error
-        alert(
-          "Oops! Something went wrong. Please try again or contact us directly at info@ecoplyltd.com."
-        );
+        alert("Oops! Something went wrong. Please try again or contact us at info@ecoplyltd.com.");
 
         // Re-enable button
         submitButton.disabled = false;
         submitButton.textContent = "Submit Inquiry";
       }
     );
+  });
+});
+
+// This function closes the modal — include it globally
+function closeModal() {
+  const thankYouModal = document.getElementById("thankYouModal");
+  thankYouModal.style.display = "none";
+}
+
+
   });
   
 });
