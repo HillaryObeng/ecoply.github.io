@@ -88,8 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("✅ Email sent!", response.status, response.text);
 
         // Show success message
-        successMsg.style.display = "block";
-        successMsg.textContent = "Message sent successfully!";
+        // successMsg.style.display = "block";
+        // successMsg.textContent = "Message sent successfully!";
+
+	        // Redirect to thank-you page
+    window.location.href = "thank-you.html";
+
 
         // Optionally reset form
         form.reset();
