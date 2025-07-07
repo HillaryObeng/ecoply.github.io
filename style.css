@@ -406,55 +406,70 @@ nav a:hover {
 
 /* Contact Section              */
 
-.contact {
-	background: var(--blue);
-	color: var(--white);
-	text-align: center;
-}
-
 .contact form {
 	max-width: 600px;
-	margin: 1.5rem auto;
+	margin: 2rem auto;
+	padding: 1.5rem;
+	background: #f9f9f9;
+	border-radius: 0.75rem;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	padding: 1.5rem;
-	background-color: #f9f9f9;
-	border-radius: 0.75rem;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.contact .form-group {
+.form-group {
 	display: flex;
 	flex-direction: column;
-	gap: 0.3rem;
 }
 
 .contact input,
 .contact select,
 .contact textarea {
 	padding: 0.6rem 0.75rem;
+	font-size: 1rem;
 	border: 1px solid #ccc;
 	border-radius: 0.4rem;
-	font-size: 0.95rem;
-	transition: border-color 0.2s ease-in-out;
+	background: #fff;
+	transition: border 0.2s ease, background-color 0.2s ease;
 }
 
 .contact input:focus,
 .contact select:focus,
 .contact textarea:focus {
-	border-color: #007acc;
 	outline: none;
+	border-color: #0077cc;
+	background-color: #f0faff;
 }
 
-.contact textarea {
-	resize: vertical;
-	min-height: 120px;
+.contact input:invalid,
+.contact select:invalid,
+.contact textarea:invalid {
+	border-color: #e74c3c;
+	background-color: #fff5f5;
 }
+
+.contact button.btn {
+	margin-top: 1rem;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	background-color: #0077cc;
+	color: #fff;
+	border: none;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.contact button.btn:hover {
+	background-color: #005fa3;
+}
+
 
 .error-message {
-	color: #d00;
-	font-size: 0.82rem;
+	color: #e74c3c;
+	font-size: 0.8rem;
+	margin-top: 0.25rem;
 	display: none;
 }
 
@@ -462,12 +477,6 @@ input:invalid+.error-message,
 select:invalid+.error-message,
 textarea:invalid+.error-message {
 	display: block;
-}
-
-input:invalid,
-select:invalid,
-textarea:invalid {
-	border-color: #e74c3c;
 }
 
 
