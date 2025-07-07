@@ -1,3 +1,4 @@
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   // Hero slideshow logic
   const images = [
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://images.pexels.com/photos/1004682/pexels-photo-1004682.jpeg",
     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
     "https://images.pexels.com/photos/3775121/pexels-photo-3775121.jpeg",
-    "https://images.pexels.com/photos/843266/pexels-photo-843266.jpeg",
+    "https://images.pexels.com/photos/843266/pexels-photo-843266.jpeg"
   ];
 
   let currentIndex = 0;
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 5000);
 
-  // Scroll pager logic
+  // Scroll pager logic for service cards
   function setupScrollPager(scrollEl, pagerEl) {
     const cards = scrollEl.querySelectorAll(".card");
     const dots = [];
@@ -69,46 +70,51 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveDot();
   }
 
-  setupScrollPager(
-    document.querySelector(".service-cards"),
-    document.getElementById("services-pager")
-  );
+  // Initialize the service cards pager
+  const serviceCards = document.querySelector(".service-cards");
+  const servicesPager = document.getElementById("services-pager");
+  if (serviceCards && servicesPager) {
+    setupScrollPager(serviceCards, servicesPager);
+  }
 
-  // Contact form and modal
+  // Contact form and modal handling
   const form = document.getElementById("contact-form");
-  const submitButton = form.querySelector("button[type='submit']");
+  const submitButton = form?.querySelector("button[type='submit']");
   const thankYouModal = document.getElementById("thankYouModal");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if (form && submitButton && thankYouModal) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
 
-    emailjs.sendForm("service_z957ggi", "template_ke6fp2j", form).then(
-      function (response) {
-        console.log("✅ Email sent!", response.status, response.text);
-        form.reset();
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit Inquiry";
-        thankYouModal.style.display = "block";
-      },
-      function (error) {
-        console.error("❌ Email failed to send:", error);
-        alert(
-          "Oops! Something went wrong. Please try again or contact us at info@ecoplyltd.com."
-        );
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit Inquiry";
-      }
-    );
-  });
+      emailjs.sendForm("service_z957ggi", "template_ke6fp2j", form).then(
+        function (response) {
+          console.log("✅ Email sent!", response.status, response.text);
 
-  window.closeModal = function () {
-    thankYouModal.style.display = "none";
-  };
+          form.reset();
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit Inquiry";
 
-  // ✅ Cookie banner logic
+          thankYouModal.style.display = "block";
+        },
+        function (error) {
+          console.error("❌ Email failed to send:", error);
+          alert("Oops! Something went wrong. Please try again or contact us at info@ecoplyltd.com.");
+
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit Inquiry";
+        }
+      );
+    });
+
+    window.closeModal = function () {
+      thankYouModal.style.display = "none";
+    };
+  }
+
+  // Cookie consent banner
   const cookieBanner = document.getElementById("cookieBanner");
   const acceptBtn = document.getElementById("acceptCookies");
 
@@ -123,3 +129,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+</script>
