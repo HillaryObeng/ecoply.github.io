@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   bg1.style.backgroundImage = `url('${images[0]}')`;
   bg2.style.backgroundImage = `url('${images[1]}')`;
-
   bg1.classList.add("current");
   bg2.classList.remove("current");
 
@@ -85,23 +84,30 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
-    emailjs.sendForm("service_z957ggi", "template_ke6fp2j", form).then(
-      function (response) {
-        console.log("✅ Email sent!", response.status, response.text);
-        form.reset();
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit Inquiry";
-        thankYouModal.style.display = "block";
-      },
-      function (error) {
-        console.error("❌ Email failed to send:", error);
-        alert(
-          "Oops! Something went wrong. Please try again or contact us at info@ecoplyltd.com."
-        );
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit Inquiry";
-      }
-    );
+    if (typeof emailjs !== "undefined") {
+      emailjs.sendForm("service_z957ggi", "template_ke6fp2j", form).then(
+        function (response) {
+          console.log("✅ Email sent!", response.status, response.text);
+          form.reset();
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit Inquiry";
+          thankYouModal.style.display = "block";
+          document.getElementById("success-msg").style.display = "block";
+        },
+        function (error) {
+          console.error("❌ Email failed to send:", error);
+          alert(
+            "Oops! Something went wrong. Please try again or contact us at info@ecoplyltd.com."
+          );
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit Inquiry";
+        }
+      );
+    } else {
+      alert("Email service is temporarily unavailable.");
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit Inquiry";
+    }
   });
 
   window.closeModal = function () {
@@ -119,7 +125,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     acceptBtn.addEventListener("click", () => {
       localStorage.setItem("cookiesAccepted", "true");
-      cookieBanner.style.display = "none";
+      cookieBanner.classList.add("hide");
+      setTimeout(() => {
+        cookieBanner.style.display = "none";
+      }, 400); // Match transition
     });
   }
 });

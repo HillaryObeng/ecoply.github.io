@@ -1,3 +1,6 @@
+/* ================================ */
+/* ✅ Root Variables               */
+/* ================================ */
 :root {
 	--blue: #1a73e8;
 	--navy: #1b2431;
@@ -9,9 +12,9 @@
 	--font: 'Segoe UI', Tahoma, sans-serif;
 }
 
-
-/* Cookies Consent Banner */
-
+/* ================================ */
+/* ✅ Cookie Consent Banner + Fade */
+/* ================================ */
 .cookie-banner {
 	position: fixed;
 	bottom: 0;
@@ -25,6 +28,13 @@
 	justify-content: space-between;
 	align-items: center;
 	z-index: 999;
+	transition: opacity 0.4s ease;
+	opacity: 1;
+}
+
+.cookie-banner.hide {
+	opacity: 0;
+	pointer-events: none;
 }
 
 .cookie-banner p {
@@ -50,7 +60,9 @@
 	background: #f0f0f0;
 }
 
-
+/* ================================ */
+/* ✅ Global Base Styles           */
+/* ================================ */
 *,
 *::before,
 *::after {
@@ -79,7 +91,9 @@ img {
 	border-radius: 4px;
 }
 
-/* Horizontal scroll wrapper with scroll snap */
+/* ================================ */
+/* ✅ Products Scroll Section      */
+/* ================================ */
 #products-scroll {
 	display: flex;
 	overflow-x: auto;
@@ -89,13 +103,11 @@ img {
 	scroll-behavior: smooth;
 }
 
-/* Each card should snap into place */
 #products-scroll .card {
 	flex: 0 0 auto;
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
 	width: 280px;
-	/* adjust as needed */
 	min-height: 350px;
 	border-radius: 8px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -103,11 +115,13 @@ img {
 	transition: transform 0.3s;
 }
 
-/* Optional: hover effect */
 #products-scroll .card:hover {
 	transform: scale(1.02);
 }
 
+/* ================================ */
+/* ✅ Containers & Buttons         */
+/* ================================ */
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -129,6 +143,9 @@ img {
 	transform: translateY(-2px);
 }
 
+/* ================================ */
+/* ✅ Header & Navigation          */
+/* ================================ */
 header {
 	background: var(--white);
 	border-bottom: 1px solid var(--gray);
@@ -143,12 +160,6 @@ header {
 	align-items: center;
 	padding: 1rem;
 }
-
-/* .logo {
-	font-weight: bold;
-	color: var(--navy);
-	font-size: 1.25rem;
-} */
 
 .logo {
 	display: flex;
@@ -176,9 +187,9 @@ nav a:hover {
 	color: var(--blue);
 }
 
-
-/* Hero slideshow */
-/* Remove previous .hero background rule */
+/* ================================ */
+/* ✅ Hero Slideshow               */
+/* ================================ */
 .hero {
 	position: relative;
 	min-height: 45vh;
@@ -235,6 +246,9 @@ nav a:hover {
 	}
 }
 
+/* ================================ */
+/* ✅ Service Cards Section        */
+/* ================================ */
 .service-cards-wrapper {
 	overflow-x: auto;
 	padding-bottom: 1rem;
@@ -266,8 +280,6 @@ nav a:hover {
 	scroll-snap-align: start;
 }
 
-
-
 .card {
 	background: var(--white);
 	border-radius: 8px;
@@ -297,6 +309,9 @@ nav a:hover {
 	border-radius: 6px;
 }
 
+/* ================================ */
+/* ✅ Scrollable Cards & Pager     */
+/* ================================ */
 .horizontal-scroll {
 	display: flex;
 	gap: 1.5rem;
@@ -313,35 +328,6 @@ nav a:hover {
 	background: var(--gray);
 	border-radius: 4px;
 }
-
-.card {
-	min-width: 280px;
-	scroll-snap-align: start;
-}
-
-
-/* .pager {
-	position: absolute;
-	bottom: 8px;
-	left: 50%;
-	transform: translateX(-50%);
-	display: flex;
-	gap: 6px;
-}
-
-.pager .dot {
-	width: 10px;
-	height: 10px;
-	background: rgba(255, 255, 255, 0.6);
-	border-radius: 50%;
-	cursor: pointer;
-	transition: background 0.3s;
-}
-
-.pager .dot.active {
-	background: var(--blue);
-} */
-
 
 .pager {
 	text-align: center;
@@ -365,8 +351,9 @@ nav a:hover {
 	transform: scale(1.4);
 }
 
-
-/* Testimonials */
+/* ================================ */
+/* ✅ Testimonials Section         */
+/* ================================ */
 .testimonial p {
 	font-style: italic;
 	margin-bottom: 1rem;
@@ -386,6 +373,9 @@ nav a:hover {
 	object-fit: cover;
 }
 
+/* ================================ */
+/* ✅ Contact Section              */
+/* ================================ */
 .contact {
 	background: var(--blue);
 	color: var(--white);
@@ -407,8 +397,9 @@ nav a:hover {
 	font-size: 1rem;
 }
 
-
-
+/* ================================ */
+/* ✅ Footer                       */
+/* ================================ */
 footer {
 	background: var(--navy);
 	color: #aaa;
@@ -426,11 +417,9 @@ footer nav a {
 	margin: 0 0.15rem;
 }
 
-
-/* ========================= */
-/* ✅ MODAL STYLES – GLOBAL */
-/* ========================= */
-
+/* ================================ */
+/* ✅ Modal Styles                 */
+/* ================================ */
 .modal {
 	display: none;
 	position: fixed;
@@ -440,7 +429,6 @@ footer nav a {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
-	/* dark overlay */
 }
 
 .modal-content {
@@ -469,7 +457,9 @@ footer nav a {
 	background-color: #1558c7;
 }
 
-
+/* ================================ */
+/* ✅ Media Queries Cleanup        */
+/* ================================ */
 @media (max-width: 768px) {
 	nav ul {
 		display: none;
@@ -479,33 +469,14 @@ footer nav a {
 		font-size: 2rem;
 	}
 
-
-
-	@media (max-width: 768px) {
-		.service-cards-wrapper {
-			padding-bottom: 1rem;
-		}
-
-		.service-cards {
-			gap: 1rem;
-		}
-
-		.card {
-			min-width: 240px;
-		}
-	}
-
-
-
 	.service-cards-wrapper {
+		padding-bottom: 1rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		overflow-x: auto;
-		padding-bottom: 1rem;
 	}
-
 
 	.service-cards {
 		display: flex;
@@ -515,10 +486,6 @@ footer nav a {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
 		justify-content: center;
-	}
-
-	#services h2 {
-		text-align: center;
 	}
 
 	.service-cards::-webkit-scrollbar {
@@ -531,10 +498,12 @@ footer nav a {
 	}
 
 	.card {
+		min-width: 240px;
 		scroll-snap-align: start;
 		flex: 0 0 auto;
-		min-width: 280px;
 	}
 
-
+	#services h2 {
+		text-align: center;
+	}
 }
