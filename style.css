@@ -36,6 +36,33 @@ img {
 	width: 100%;
 	border-radius: 4px;
 }
+/* Horizontal scroll wrapper with scroll snap */
+#products-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Each card should snap into place */
+#products-scroll .card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: 280px; /* adjust as needed */
+  min-height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s;
+}
+
+/* Optional: hover effect */
+#products-scroll .card:hover {
+  transform: scale(1.02);
+}
 
 .container {
 	max-width: 1200px;
