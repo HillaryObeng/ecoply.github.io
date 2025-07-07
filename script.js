@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       function (error) {
         console.log("FAILED...", error);
-        alert("Something went wrong. Please try again.");
+        alert("Something went wrong. Please try again IN GHANA.");
       }
     );
   });
