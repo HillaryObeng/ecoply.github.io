@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Hero slideshow logic
   const images = [
+    "https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg",
     "https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg",
     "https://images.pexels.com/photos/3861970/pexels-photo-3861970.jpeg",
     "https://images.pexels.com/photos/7108701/pexels-photo-7108701.jpeg",
