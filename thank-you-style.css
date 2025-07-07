@@ -1,0 +1,57 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a consistent font and center layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfdfd;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container */
+main.container {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+/* Thank You Heading */
+main h1 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    /* dark gray-blue */
+    margin-bottom: 1rem;
+}
+
+/* Paragraph message */
+main p {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #4b5563;
+    /* softer text color */
+}
+
+/* Button styling */
+a.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb;
+    /* blue-600 */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #1d4ed8;
+    /* blue-700 on hover */
+}
