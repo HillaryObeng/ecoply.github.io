@@ -99,3 +99,43 @@ ul {
 .back-btn:hover {
     background-color: #153c6d;
 }
+
+
+/* Cooker Consent Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0a2540;
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.cookie-banner p {
+    margin: 0;
+}
+
+.cookie-banner a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.cookie-banner button {
+    background: #fff;
+    color: #0a2540;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-banner button:hover {
+    background: #f0f0f0;
+}

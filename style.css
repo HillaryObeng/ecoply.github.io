@@ -9,6 +9,48 @@
 	--font: 'Segoe UI', Tahoma, sans-serif;
 }
 
+
+/* Cookies Consent Banner */
+
+.cookie-banner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #0a2540;
+	color: #fff;
+	padding: 1rem;
+	font-size: 0.9rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 999;
+}
+
+.cookie-banner p {
+	margin: 0;
+}
+
+.cookie-banner a {
+	color: #ffd700;
+	text-decoration: underline;
+}
+
+.cookie-banner button {
+	background: #fff;
+	color: #0a2540;
+	border: none;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.cookie-banner button:hover {
+	background: #f0f0f0;
+}
+
+
 *,
 *::before,
 *::after {
@@ -36,32 +78,34 @@ img {
 	width: 100%;
 	border-radius: 4px;
 }
+
 /* Horizontal scroll wrapper with scroll snap */
 #products-scroll {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding-bottom: 1rem;
-  scroll-behavior: smooth;
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	gap: 1rem;
+	padding-bottom: 1rem;
+	scroll-behavior: smooth;
 }
 
 /* Each card should snap into place */
 #products-scroll .card {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  width: 280px; /* adjust as needed */
-  min-height: 350px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  transition: transform 0.3s;
+	flex: 0 0 auto;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	width: 280px;
+	/* adjust as needed */
+	min-height: 350px;
+	border-radius: 8px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	background: #fff;
+	transition: transform 0.3s;
 }
 
 /* Optional: hover effect */
 #products-scroll .card:hover {
-  transform: scale(1.02);
+	transform: scale(1.02);
 }
 
 .container {
@@ -395,7 +439,8 @@ footer nav a {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+	background-color: rgba(0, 0, 0, 0.6);
+	/* dark overlay */
 }
 
 .modal-content {

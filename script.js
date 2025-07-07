@@ -1,3 +1,4 @@
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   // Hero slideshow logic
   const images = [
@@ -6,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://images.pexels.com/photos/1004682/pexels-photo-1004682.jpeg",
     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
     "https://images.pexels.com/photos/3775121/pexels-photo-3775121.jpeg",
+    "https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg",
+    "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
   ];
 
   let currentIndex = 0;
@@ -106,5 +109,20 @@ document.addEventListener("DOMContentLoaded", () => {
   window.closeModal = function () {
     thankYouModal.style.display = "none";
   };
-});
 
+  // Cookie banner logic
+  const cookieBanner = document.getElementById("cookieBanner");
+  const acceptBtn = document.getElementById("acceptCookies");
+
+  if (cookieBanner && acceptBtn) {
+    if (!localStorage.getItem("cookiesAccepted")) {
+      cookieBanner.style.display = "flex";
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookiesAccepted", "true");
+      cookieBanner.style.display = "none";
+    });
+  }
+});
+</script>
