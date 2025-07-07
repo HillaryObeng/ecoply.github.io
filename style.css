@@ -1,5 +1,5 @@
 /* ================================ */
-/* ✅ Root Variables               */
+/* Root Variables               */
 /* ================================ */
 :root {
 	--blue: #1a73e8;
@@ -13,7 +13,7 @@
 }
 
 /* ================================ */
-/* ✅ Cookie Consent Banner + Fade */
+/* Cookie Consent Banner + Fade */
 /* ================================ */
 .cookie-banner {
 	position: fixed;
@@ -61,7 +61,7 @@
 }
 
 /* ================================ */
-/* ✅ Global Base Styles           */
+/* Global Base Styles           */
 /* ================================ */
 *,
 *::before,
@@ -92,7 +92,7 @@ img {
 }
 
 /* ================================ */
-/* ✅ Products Scroll Section      */
+/* Products Scroll Section      */
 /* ================================ */
 #products-scroll {
 	display: flex;
@@ -120,7 +120,7 @@ img {
 }
 
 /* ================================ */
-/* ✅ Containers & Buttons         */
+/* Containers & Buttons         */
 /* ================================ */
 .container {
 	max-width: 1200px;
@@ -144,7 +144,7 @@ img {
 }
 
 /* ================================ */
-/* ✅ Header & Navigation          */
+/* Header & Navigation          */
 /* ================================ */
 header {
 	background: var(--white);
@@ -188,11 +188,11 @@ nav a:hover {
 }
 
 /* ================================ */
-/* ✅ Hero Slideshow               */
+/*  Hero Slideshow               */
 /* ================================ */
 .hero {
 	position: relative;
-	min-height: 45vh;
+	min-height: 50vh;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -247,7 +247,7 @@ nav a:hover {
 }
 
 /* ================================ */
-/* ✅ Service Cards Section        */
+/* Service Cards Section        */
 /* ================================ */
 .service-cards-wrapper {
 	overflow-x: auto;
@@ -310,7 +310,7 @@ nav a:hover {
 }
 
 /* ================================ */
-/* ✅ Scrollable Cards & Pager     */
+/* Scrollable Cards & Pager     */
 /* ================================ */
 .horizontal-scroll {
 	display: flex;
@@ -352,7 +352,7 @@ nav a:hover {
 }
 
 /* ================================ */
-/* ✅ Testimonials Section         */
+/* Testimonials Section         */
 /* ================================ */
 .testimonial p {
 	font-style: italic;
@@ -374,7 +374,7 @@ nav a:hover {
 }
 
 /* ================================ */
-/* ✅ Contact Section              */
+/* Contact Section              */
 /* ================================ */
 .contact {
 	background: var(--blue);
@@ -398,7 +398,7 @@ nav a:hover {
 }
 
 /* ================================ */
-/* ✅ Footer                       */
+/* Footer                       */
 /* ================================ */
 footer {
 	background: var(--navy);
@@ -418,7 +418,7 @@ footer nav a {
 }
 
 /* ================================ */
-/* ✅ Modal Styles                 */
+/* Modal Styles                 */
 /* ================================ */
 .modal {
 	display: none;
@@ -458,7 +458,7 @@ footer nav a {
 }
 
 /* ================================ */
-/* ✅ Media Queries Cleanup        */
+/* Media Queries Cleanup        */
 /* ================================ */
 @media (max-width: 768px) {
 	nav ul {
