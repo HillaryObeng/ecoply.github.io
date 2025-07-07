@@ -27,6 +27,12 @@ ul {
     margin-bottom: 2rem;
 }
 
+.btn-container {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
 /* Optional: sticky effect */
 @media (min-width: 768px) {
     .top-nav-btn.sticky {
@@ -38,9 +44,29 @@ ul {
     }
 }
 
+/* Optional: sticky effect */
+@media (min-width: 768px) {
+    .btn-container {
+        position: sticky;
+        top: 1rem;
+        z-index: 1000;
+        background: #f9f9f9;
+        padding-top: 0.5rem;
+    }
+}
+
 /* Responsive: center align on small screens */
 @media (max-width: 767px) {
     .top-nav-btn {
+        text-align: center;
+    }
+}
+
+
+
+/* Responsive: center align on small screens */
+@media (max-width: 767px) {
+    .btn-container {
         text-align: center;
     }
 }
