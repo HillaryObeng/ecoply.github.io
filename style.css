@@ -448,12 +448,12 @@ nav a:hover {
 }
 
 #contact-form button.btn {
-	background-color: #1a73e8;
-	color: #fff;
+	background-color: #155cc0;
+	color: #3d60ec;
 	border: none;
-	padding: 0.8rem;
+	padding: 1.8rem;
 	font-size: .7rem;
-	border-radius: 0.4rem;
+	border-radius: 1.4rem;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
