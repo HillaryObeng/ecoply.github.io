@@ -195,14 +195,15 @@ h2 {
     }
 
     /* ================================
-      Navigation Bar
+            Navigation Bar
       ================================ */
+
     .top-nav {
         position: sticky;
         top: 0;
         z-index: 998;
         background-color: #ffffff;
-        padding: 0.75rem 1.5rem;
+        padding: 0.75rem 1.0rem;
         display: flex;
         justify-content: center;
         gap: 2rem;
@@ -212,12 +213,12 @@ h2 {
     }
 
     .top-nav a {
-        color: #2e7d32;
+        color: #008080;
         text-decoration: none;
         font-size: 1rem;
         transition: color 0.3s ease;
     }
 
     .top-nav a:hover {
-        color: #1b5e20;
+        color: #005a4f;
     }
