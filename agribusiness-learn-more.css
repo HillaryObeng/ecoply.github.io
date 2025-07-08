@@ -22,7 +22,7 @@ body {
       ================================ */
 
 .container {
-    max-width: 68.75rem;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 1rem 1rem;
     background: #fff;
@@ -76,123 +76,110 @@ h1 {
 }
 
 h2 {
-    h2 {
-        font-size: 2rem;
-        margin-top: 4.5rem;
-        margin-bottom: .75rem;
-        border-left: 4px solid #2e7d32;
-        padding-left: 0.75rem;
-    }
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #2e7d32;
+    padding-left: 0.75rem;
+}
 
-    h3 {
-        font-size: 1.3rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
-    p {
-        margin-bottom: 1.25rem;
-        font-size: 1.05rem;
-    }
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
 
-    /* ================================
+/* ================================
       Lists and Images
       ================================ */
 
-    ul {
-        margin: 1rem 0 2rem 1.5rem;
-        padding-left: 1rem;
-        list-style: disc;
-    }
+ul {
+    margin: 1rem 0 2rem 1.5rem;
+    padding-left: 1rem;
+    list-style: disc;
+}
 
-    li {
-        padding: 0.25rem 0;
-        font-size: 1.05rem;
-    }
+li {
+    padding: 0.25rem 0;
+    font-size: 1.05rem;
+}
 
-    .section-img {
-        width: 100%;
-        max-height: 360px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin: 1rem 0 2rem;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    }
+.section-img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem 0 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
 
-    /* ================================
+/* ================================
       Buttons and Navigation
       ================================ */
 
-    .btn {
-        display: inline-block;
-        background-color: #2e7d32;
-        color: #fff;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 1rem;
-    }
+.btn {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
 
-    .btn:hover {
-        background-color: #1b5e20;
-    }
+.btn:hover {
+    background-color: #1b5e20;
+}
 
-    /* ================================
+/* ================================
       Navigation Bar
       ================================ */
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    background-color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
+
+.top-nav a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #1b5e20;
+}
 
 
-
-
-    .top-nav a:hover {
-        color: #1b5e20;
-    }
-
-
-    /* ================================
+/* ================================
       Footer
       ================================ */
 
-    footer {
-        background-color: #ededed;
-        color: #989797;
-        font-size: 0.75rem;
-        text-align: center;
-        border-radius: 0 0 12px 12px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* ================================
-                Navigation Bar
-          ================================ */
-
-    .top-nav {
-        position: sticky;
-        top: 0;
-        z-index: 998;
-        background-color: #ffffff;
-        padding: 0.75rem 1.0rem;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-        border-bottom: 1px solid #eee;
-        font-weight: 600;
-    }
-
-    .top-nav a {
-        color: #008080;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-    }
-
-    .top-nav a:hover {
-        color: #005a4f;
-    }
+footer {
+    background-color: #ffffff;
+    color: #989797;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
