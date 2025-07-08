@@ -7,9 +7,24 @@
     <meta name="description" content="Insights into Ghana's Real Estate Market for Global Investors" />
     <title>Ghana Real Estate – A Strategic Investment Hub</title>
     <link rel="stylesheet" href="real-estate-learn-more.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <a href="#market-overview">Market Overview</a>
+        <a href="#investment-drivers">Investment Drivers</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <!-- Header -->
     <header>
         <div class="container">
             <h1>Ghana's Real Estate Industry: A Gateway to African Growth</h1>
@@ -18,7 +33,8 @@
     </header>
 
     <main class="container">
-        <section>
+        <!-- Section 1 -->
+        <section id="market-overview" class="content-block">
             <h2>Market Overview</h2>
             <img src="https://images.pexels.com/photos/11601941/pexels-photo-11601941.jpeg" alt="Accra skyline"
                 class="section-img" />
@@ -36,7 +52,8 @@
             </p>
         </section>
 
-        <section>
+        <!-- Section 2 -->
+        <section id="investment-drivers" class="content-block">
             <h2>Key Investment Drivers</h2>
             <img src="https://images.pexels.com/photos/8134850/pexels-photo-8134850.jpeg"
                 alt="Modern residential buildings" class="section-img" />
@@ -52,7 +69,8 @@
             </ul>
         </section>
 
-        <section>
+        <!-- Section 3 -->
+        <section id="commercial" class="content-block">
             <h2>Commercial and Industrial Real Estate</h2>
             <img src="https://images.pexels.com/photos/8782666/pexels-photo-8782666.jpeg" alt="Warehouse and logistics"
                 class="section-img" />
@@ -67,7 +85,8 @@
             </p>
         </section>
 
-        <section>
+        <!-- Section 4 -->
+        <section id="opportunities" class="content-block">
             <h2>Opportunities for Investors</h2>
             <img src="https://images.pexels.com/photos/8470808/pexels-photo-8470808.jpeg"
                 alt="Real estate investment discussion" class="section-img" />
@@ -83,7 +102,8 @@
             </ul>
         </section>
 
-        <section>
+        <!-- Section 5 -->
+        <section id="conclusion" class="content-block">
             <h2>Conclusion</h2>
             <img src="https://images.pexels.com/photos/32889699/pexels-photo-32889699.jpeg"
                 alt="Cityscape with rising buildings" class="section-img" />
@@ -97,10 +117,25 @@
             </p>
         </section>
 
-        <footer style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+        <footer>
             <p>&copy; 2025 Ecoply Ltd. All rights reserved.</p>
         </footer>
     </main>
+
+    <!-- Scroll animation logic -->
+    <script>
+        const blocks = document.querySelectorAll('.content-block');
+        const revealOnScroll = () => {
+            blocks.forEach(block => {
+                const rect = block.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    block.classList.add('reveal');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
 </body>
 
 </html>

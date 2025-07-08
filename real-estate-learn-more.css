@@ -1,9 +1,15 @@
 /* ==========================
-   Real Estate Learn More Styles – Enhanced Layout with Block Sections
+   Real Estate Learn More Styles – Enhanced Layout with Block Sections + Scroll Animations + Navigation
    ========================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f7fb;
@@ -26,6 +32,14 @@ body {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.content-block.reveal {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .content-block:nth-of-type(even) {
@@ -124,6 +138,7 @@ blockquote {
     font-size: 1rem;
     transition: background-color 0.3s ease;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
 }
 
 .btn:hover {
@@ -139,4 +154,23 @@ footer {
     border-top: 1px solid #e0e0e0;
     background-color: #f9fafa;
     border-radius: 0 0 8px 8px;
+}
+
+/* Navigation */
+nav.top-nav {
+    background: #1a73e8;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+nav.top-nav a {
+    color: #fff;
+    margin: 0 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav.top-nav a:hover {
+    text-decoration: underline;
 }
