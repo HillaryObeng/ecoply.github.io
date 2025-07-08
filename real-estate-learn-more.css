@@ -211,3 +211,28 @@ footer {
     background-color: #1b5e20;
     transform: translateY(-2px);
 }
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
