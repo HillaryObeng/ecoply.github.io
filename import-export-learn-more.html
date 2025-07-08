@@ -12,57 +12,44 @@
             scroll-behavior: smooth;
         }
 
-        /* Scroll-to-top button styles */
+        #scrollTopBtn,
+        #backHomeBtn {
+            position: fixed;
+            z-index: 999;
+            background-color: #00796b;
+            color: #fff;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+
         #scrollTopBtn {
-            position: fixed;
             bottom: 25px;
             right: 25px;
-            z-index: 999;
-            background-color: #00796b;
-            color: #fff;
-            padding: 12px 18px;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            display: none;
-            transition: opacity 0.3s ease;
         }
 
-
-        /* Scroll-to-top button styles */
-        #scrollBottomBtn {
-            position: fixed;
-            bottom: 25px;
+        #backHomeBtn {
+            top: 25px;
             right: 25px;
-            z-index: 999;
-            background-color: #00796b;
-            color: #fff;
-            padding: 12px 18px;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            display: none;
-            transition: opacity 0.3s ease;
         }
 
-        #scrollBottomBtn:hover {
-            background-color: #005a4f;
-        }
-
-
-        #scrollTopBtn:hover {
+        #scrollTopBtn:hover,
+        #backHomeBtn:hover {
             background-color: #005a4f;
         }
     </style>
 </head>
-<!-- Scroll-to-top Button -->
-<button id="scrollBottomBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
 
 <body>
+    <!-- Back to Homepage Button -->
+    <button id="backHomeBtn" onclick="location.href='index.html'">Back to Homepage</button>
+
+    <!-- Navigation -->
     <nav class="top-nav">
         <a href="#overview">Overview</a>
         <a href="#export-growth">Export Drivers</a>
@@ -84,10 +71,13 @@
             <img src="https://images.pexels.com/photos/5025498/pexels-photo-5025498.jpeg" alt="Port operations in Ghana"
                 class="section-img" />
             <p>
-                Ghana has firmly established itself as a pivotal trade partner in West Africa...
+                Ghana has firmly established itself as a pivotal trade partner in West Africa. With over $17.1 billion
+                in total trade volume recorded in 2023, the country plays a central role in connecting landlocked
+                economies like Burkina Faso, Niger, and Mali to global markets.
             </p>
             <p>
-                Supported by trade facilitation reforms and the operationalization of AfCFTA...
+                Supported by trade facilitation reforms and the operationalization of AfCFTA, Ghana is a strategic
+                launchpad for regional and international commerce.
             </p>
         </section>
 
@@ -96,10 +86,12 @@
             <img src="https://images.pexels.com/photos/12165874/pexels-photo-12165874.jpeg" alt="Agricultural export"
                 class="section-img" />
             <ul>
-                <li><strong>Minerals:</strong> Gold remains Ghana's top export earner...</li>
-                <li><strong>Agribusiness:</strong> Cocoa, cashew, shea butter...</li>
-                <li><strong>Petroleum Exports:</strong> Refined petroleum...</li>
-                <li><strong>NTEs:</strong> Textiles, processed foods, and crafts...</li>
+                <li><strong>Minerals:</strong> Gold remains Ghana's top export earner at over $6.6 billion in 2023.</li>
+                <li><strong>Agribusiness:</strong> Cocoa, cashew, shea butter, and tropical fruits see strong demand
+                    globally.</li>
+                <li><strong>Petroleum Exports:</strong> Downstream investments are driving refined fuel exports.</li>
+                <li><strong>Non-Traditional Exports:</strong> Processed foods, textiles, and handmade goods contributed
+                    $3.5 billion in 2023.</li>
             </ul>
         </section>
 
@@ -107,12 +99,12 @@
             <h2>Key Import Sectors</h2>
             <img src="https://images.pexels.com/photos/9777462/pexels-photo-9777462.jpeg"
                 alt="Imported machinery and equipment" class="section-img" />
-            <p>Imports support Ghana's infrastructure and industrial growth...</p>
+            <p>Imports are crucial to Ghana’s infrastructure and industry:</p>
             <ul>
-                <li><strong>Machinery and Equipment</strong></li>
-                <li><strong>Automotive and Transport</strong></li>
-                <li><strong>Pharmaceuticals</strong></li>
-                <li><strong>Consumer Goods</strong></li>
+                <li><strong>Machinery & Equipment:</strong> Essential for energy, agriculture, and construction.</li>
+                <li><strong>Automotive:</strong> High demand for commercial and personal vehicles.</li>
+                <li><strong>Pharmaceuticals:</strong> Supported by Ghana’s universal healthcare goals.</li>
+                <li><strong>Consumer Goods:</strong> Electronics, homeware, and packaged food lead retail imports.</li>
             </ul>
         </section>
 
@@ -120,12 +112,11 @@
             <h2>Strategic Opportunities</h2>
             <img src="https://images.pexels.com/photos/12894470/pexels-photo-12894470.jpeg"
                 alt="Warehouse logistics and freight" class="section-img" />
-            <p>Ghana’s import-export sector offers dynamic entry points for global investors:</p>
             <ul>
-                <li>Free zone development for manufacturing and warehousing</li>
-                <li>Agro-processing and packaging plants for export</li>
-                <li>Joint ventures in logistics and freight</li>
-                <li>Digital trade and e-commerce logistics innovations</li>
+                <li>Developing logistics and cold chain infrastructure</li>
+                <li>Free zone investment for manufacturing & re-export</li>
+                <li>Agro-processing and packaging hubs</li>
+                <li>Customs tech and e-logistics innovation</li>
             </ul>
         </section>
 
@@ -134,11 +125,11 @@
             <img src="https://images.pexels.com/photos/5025515/pexels-photo-5025515.jpeg" alt="Global trade routes map"
                 class="section-img" />
             <p>
-                Ghana’s position as a trade facilitator and regional connector is undeniable...
+                Ghana’s central trade role, policy stability, and investment potential make it one of Africa’s most
+                strategic commerce platforms. Its ports, zones, and reforms support scalable international partnerships.
             </p>
             <p>
-                With the right partnerships and infrastructure alignment, trade ambitions across Africa can begin — and
-                flourish — from Ghana.
+                Start your Africa trade journey with Ghana — where infrastructure meets opportunity.
             </p>
         </section>
 
@@ -150,29 +141,28 @@
     <!-- Scroll-to-top Button -->
     <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
 
-    <!-- Scroll reveal animation -->
+    <!-- Reveal Animations and Scroll Logic -->
     <script>
         const blocks = document.querySelectorAll('.content-block');
-        const revealOnScroll = () => {
+        const topBtn = document.getElementById('scrollTopBtn');
+        const backHomeBtn = document.getElementById('backHomeBtn');
+
+        function revealOnScroll() {
             blocks.forEach(block => {
                 const rect = block.getBoundingClientRect();
                 if (rect.top < window.innerHeight - 100) {
                     block.classList.add('reveal');
                 }
             });
-        };
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
+        }
 
-        // Show scroll-to-top button
-        const topBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                topBtn.style.display = 'block';
-            } else {
-                topBtn.style.display = 'none';
-            }
+            revealOnScroll();
+            topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+            backHomeBtn.style.display = window.scrollY < window.innerHeight / 2 ? 'block' : 'none';
         });
+
+        window.addEventListener('load', revealOnScroll);
     </script>
 </body>
 
