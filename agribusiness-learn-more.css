@@ -144,7 +144,32 @@ li {
 /* ================================
       Navigation Bar
       ================================ */
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    background-color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
 
+.top-nav a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #1b5e20;
+}
+
+/* 
 nav.top-nav {
     background: #2e7d32;
     padding: 0.75rem 1rem;
@@ -162,6 +187,7 @@ nav.top-nav a {
 nav.top-nav a:hover {
     text-decoration: underline;
 }
+ */
 
 /* ================================
       Footer
