@@ -8,9 +8,174 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ==========================
-   Scroll-to-Top Button Styles
-   ========================== */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f9f8;
+    color: #2e2e2e;
+    line-height: 1.7;
+}
+
+/* ================================
+            Container and Blocks
+         ================================ */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0.75rem;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(255, 184, 184, 0.05);
+    border-radius: 8px;
+}
+
+.content-block {
+    padding: 1rem 1.rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.content-block.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-block:nth-of-type(even) {
+    background-color: #f5fbfb;
+}
+
+/* ================================
+            Headings and Typography
+         ================================ */
+
+h1,
+h2,
+h3 {
+    color: #008080;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 4.5rem;
+    margin-bottom: .75rem;
+    border-left: 4px solid #2e7d32;
+    padding-left: 0.75rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+/* ================================
+                  Lists and Images
+         ================================ */
+
+ul {
+    margin: 1rem 0 2rem 1.5rem;
+    padding-left: 1rem;
+    list-style: disc;
+}
+
+li {
+    padding: 0.25rem 0;
+    font-size: 1.05rem;
+}
+
+.section-img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem 0 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+            Blockquotes and Callouts
+         ================================ */
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #ccc;
+    background: #eef6f5;
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 6px;
+}
+
+.callout {
+    background-color: #e0f7f4;
+    padding: 1.25rem 1.5rem;
+    border-left: 6px solid #008080;
+    margin: 2.5rem 0;
+    border-radius: 6px;
+    color: #004d4d;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #008080;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #006666;
+}
+
+/* ================================
+                  Footer
+         ================================ */
+footer {
+    background-color: #ededed;
+    color: #989797;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ================================
+               Scroll-to-Top Button
+         ================================ */
 
 #scrollTopBtn {
     position: fixed;
@@ -33,192 +198,31 @@ html {
     background-color: #005a4f;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f9f8;
-    color: #2e2e2e;
-    line-height: 1.7;
-}
-
 /* ================================
-      Container and Blocks
-      ================================ */
+               Navigation Bar
+         ================================ */
 
-.container {
-    max-width: 68.75rem;
-    margin: 0 auto;
-    padding: 1rem 1rem;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-}
-
-.content-block {
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.75rem;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.content-block.reveal {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.content-block:nth-of-type(even) {
-    background-color: #f9fdfa;
-}
-
-/* ================================
-      Headings and Typography
-      ================================ */
-
-h1,
-h2,
-h3 {
-    color: #2e7d32;
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    background-color: #ffffff;
+    padding: 0.75rem 1.0rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #eee;
     font-weight: 600;
-    line-height: 1.3;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
+.top-nav a {
+    color: #008080;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.subheading {
-    text-align: center;
-    font-size: 1.25rem;
-    color: #555;
-    margin-bottom: 1rem;
+.top-nav a:hover {
+    color: #005a4f;
 }
-
-h2 {
-    h2 {
-        font-size: 2rem;
-        margin-top: 4.5rem;
-        margin-bottom: .75rem;
-        border-left: 4px solid #2e7d32;
-        padding-left: 0.75rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        margin-bottom: 1.25rem;
-        font-size: 1.05rem;
-    }
-
-    /* ================================
-            Lists and Images
-            ================================ */
-
-    ul {
-        margin: 1rem 0 2rem 1.5rem;
-        padding-left: 1rem;
-        list-style: disc;
-    }
-
-    li {
-        padding: 0.25rem 0;
-        font-size: 1.05rem;
-    }
-
-    .section-img {
-        width: 100%;
-        max-height: 360px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin: 1rem 0 2rem;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    }
-
-
-    blockquote {
-        font-style: italic;
-        color: #555;
-        padding-left: 1rem;
-        border-left: 4px solid #ccc;
-        margin: 2rem 0;
-        background: #eef6f5;
-        padding: 1.25rem;
-        border-radius: 6px;
-    }
-
-    .callout {
-        background-color: #e0f7f4;
-        padding: 1.25rem 1.5rem;
-        border-left: 6px solid #008080;
-        margin: 2.5rem 0;
-        border-radius: 6px;
-        color: #004d4d;
-    }
-
-    .btn {
-        display: inline-block;
-        background-color: #008080;
-        color: #fff;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 1rem;
-    }
-
-    .btn:hover {
-        background-color: #006666;
-    }
-
-    footer {
-        background-color: #ededed;
-        color: #989797;
-        font-size: 0.75rem;
-        text-align: center;
-        border-radius: 0 0 12px 12px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* ================================
-            Navigation Bar
-      ================================ */
-
-    .top-nav {
-        position: sticky;
-        top: 0;
-        z-index: 998;
-        background-color: #ffffff;
-        padding: 0.75rem 1.0rem;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-        border-bottom: 1px solid #eee;
-        font-weight: 600;
-    }
-
-    .top-nav a {
-        color: #008080;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-    }
-
-    .top-nav a:hover {
-        color: #005a4f;
-    }
