@@ -52,8 +52,8 @@ textarea:valid {
 	right: 0;
 	background: #0a2540;
 	color: #fff;
-	padding: 1rem;
-	font-size: 0.9rem;
+	padding: 0.5rem;
+	font-size: 0.8rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
