@@ -1,83 +1,179 @@
-< !DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Explore Ghana's booming Agribusiness sector – investment, trade, and export opportunities." /><title>Agribusiness in Ghana – Growing the Future</title><link rel="stylesheet" href="agribusiness-learn-more.css" /><style>html {
+/* ================================
+   Agribusiness Learn More Styles
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html {
     scroll-behavior: smooth;
 }
 
-#scrollTopBtn,
-#backHomeBtn {
-    position: fixed;
-    z-index: 999;
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4faf7;
+    color: #2e2e2e;
+    line-height: 1.7;
+}
+
+/* ================================
+      Container and Blocks
+      ================================ */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.content-block {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.content-block.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-block:nth-of-type(even) {
+    background-color: #f9fdfa;
+}
+
+/* ================================
+      Headings and Typography
+      ================================ */
+
+h1,
+h2,
+h3 {
+    color: #2e7d32;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    border-left: 4px solid #2e7d32;
+    padding-left: 0.75rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+/* ================================
+      Lists and Images
+      ================================ */
+
+ul {
+    margin: 1rem 0 2rem 1.5rem;
+    padding-left: 1rem;
+    list-style: disc;
+}
+
+li {
+    padding: 0.25rem 0;
+    font-size: 1.05rem;
+}
+
+.section-img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem 0 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+      Buttons and Navigation
+      ================================ */
+
+.btn {
+    display: inline-block;
     background-color: #2e7d32;
     color: #fff;
-    padding: 12px 18px;
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    display: none;
-    transition: opacity 0.3s ease;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
 }
 
-#scrollTopBtn {
-    bottom: 25px;
-    right: 25px;
-}
-
-#backHomeBtn {
-    top: 25px;
-    right: 25px;
-}
-
-#scrollTopBtn:hover,
-#backHomeBtn:hover {
+.btn:hover {
     background-color: #1b5e20;
 }
 
-</style></head><body><button id="backHomeBtn" onclick="location.href='index.html'">Back to Homepage</button><nav class="top-nav"><a href="#overview">Overview</a><a href="#valuechains">Key Value Chains</a><a href="#tech">Agri-Tech</a><a href="#opportunities">Investment</a><a href="#conclusion">Conclusion</a></nav><header><div class="container"><h1>Agribusiness in Ghana: Cultivating Growth & Global Trade</h1><p class="subheading">Modern farming,
-export-driven opportunities,
-and value chain transformation</p></div></header><main class="container"><section id="overview" class="content-block"><h2>Sector Overview</h2><video controls poster="https://images.pexels.com/photos/2123246/pexels-photo-2123246.jpeg" class="section-img" width="100%"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />Your browser does not support HTML video. </video><p>Agriculture remains the backbone of Ghana’s economy,
-employing over 33% of the population and contributing significantly to export earnings. The agribusiness sector spans production,
-processing,
-packaging,
-and export. </p><p>From cocoa to cashews,
-Ghana is transitioning from raw commodity exports to high-value processing and branding,
-leveraging initiatives under the Planting for Food and Jobs program. </p></section><section id="valuechains" class="content-block"><h2>Key Value Chains</h2><img src="https://images.pexels.com/photos/1419937/pexels-photo-1419937.jpeg" alt="Cocoa Processing" class="section-img" /><ul><li><strong>Cocoa:</strong>Ghana is the world’s second-largest exporter. Processing capacity is rapidly expanding for chocolate,
-powder,
-and liquor.</li><li><strong>Cashew:</strong>Booming in the northern regions. Exported raw and semi-processed to India and Vietnam.</li><li><strong>Fruits:</strong>Mangoes,
-pineapples,
-and citrus lead air-freight exports to the EU.</li><li><strong>Vegetables:</strong>Hot pepper,
-okra,
-and eggplant exported under EU phytosanitary protocols.</li></ul></section><section id="tech" class="content-block"><h2>Agri-Tech & Sustainability</h2><img src="https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg" alt="Agritech in Ghana" class="section-img" /><p>Smart farming,
-drone mapping,
-and data-driven weather solutions are reshaping how farmers work. Startups are deploying mobile-based apps to enhance planting,
-irrigation,
-and market access. </p><p>Sustainability practices in soil fertility,
-agroforestry,
-and climate adaptation are key pillars of Ghana’s Green Ghana policy. </p></section><section id="opportunities" class="content-block"><h2>Investment Opportunities</h2><img src="https://images.pexels.com/photos/4553117/pexels-photo-4553117.jpeg" alt="Agribusiness factory in Ghana" class="section-img" /><ul><li>Build food processing plants in Free Zones</li><li>Export branded Ghanaian spices,
-shea,
-and fruit derivatives</li><li>Develop irrigation infrastructure and greenhouse clusters</li><li>Finance farmer cooperatives and post-harvest tech startups</li></ul></section><section id="conclusion" class="content-block"><h2>Conclusion</h2><img src="https://images.pexels.com/photos/1979253/pexels-photo-1979253.jpeg" alt="Export crates of mangoes" class="section-img" /><p>Ghana’s agribusiness future lies in innovation,
-scale,
-and international market linkage. For investors and partners,
-the opportunity is ripe across the value chain. </p><p>From the farm to the shelf – Ghana is growing the future of food. </p></section><footer><p>&copy;
-2025 Ecoply Ltd. All rights reserved.</p></footer></main><button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button><script>const blocks=document.querySelectorAll('.content-block');
-const topBtn=document.getElementById('scrollTopBtn');
-const backHomeBtn=document.getElementById('backHomeBtn');
+/* ================================
+      Navigation Bar
+      ================================ */
 
-function revealOnScroll() {
-    blocks.forEach(block=> {
-            const rect=block.getBoundingClientRect();
-
-            if (rect.top < window.innerHeight - 100) {
-                block.classList.add('reveal');
-            }
-        });
+nav.top-nav {
+    background: #2e7d32;
+    padding: 0.75rem 1rem;
+    text-align: center;
 }
 
-window.addEventListener('scroll', ()=> {
-        revealOnScroll();
-        topBtn.style.display=window.scrollY > 200 ? 'block' : 'none';
-        backHomeBtn.style.display=window.scrollY < window.innerHeight / 2 ? 'block' : 'none';
-    });
+nav.top-nav a {
+    color: #fff;
+    margin: 0 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+}
 
-window.addEventListener('load', revealOnScroll);
-</script></body></html>
+nav.top-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+      Footer
+      ================================ */
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f9fafa;
+    border-radius: 0 0 8px 8px;
+}
