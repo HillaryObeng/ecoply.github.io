@@ -30,11 +30,37 @@
             transition: opacity 0.3s ease;
         }
 
+
+        /* Scroll-to-top button styles */
+        #scrollBottomBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            background-color: #00796b;
+            color: #fff;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #scrollBottomBtn:hover {
+            background-color: #005a4f;
+        }
+
+
         #scrollTopBtn:hover {
             background-color: #005a4f;
         }
     </style>
 </head>
+<!-- Scroll-to-top Button -->
+<button id="scrollBottomBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
 
 <body>
     <nav class="top-nav">
