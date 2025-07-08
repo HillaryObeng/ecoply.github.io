@@ -1,6 +1,6 @@
-/* ==========================
-   Import & Export Learn More Styles – Enhanced Layout with Scroll Animations & Navigation
-   ========================== */
+/* ================================
+   Agribusiness Learn More Styles
+   ================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
@@ -12,27 +12,27 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3f9f8;
+    background-color: #f4faf7;
     color: #2e2e2e;
     line-height: 1.7;
 }
 
 /* ================================
          Container and Blocks
-      ================================ */
+         ================================ */
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 1rem 0.75rem;
+    padding: 1rem 1rem;
     background: #fff;
-    box-shadow: 0 0 15px rgba(255, 184, 184, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
 }
 
 .content-block {
-    padding: 1rem 1.rem;
-    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -47,24 +47,24 @@ body {
 }
 
 .content-block:nth-of-type(even) {
-    background-color: #f5fbfb;
+    background-color: #f9fdfa;
 }
 
 /* ================================
          Headings and Typography
-      ================================ */
+         ================================ */
 
 h1,
 h2,
 h3 {
-    color: #008080;
+    color: #2e7d32;
     font-weight: 600;
     line-height: 1.3;
 }
 
 h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -95,8 +95,8 @@ p {
 }
 
 /* ================================
-               Lists and Images
-      ================================ */
+         Lists and Images
+         ================================ */
 
 ul {
     margin: 1rem 0 2rem 1.5rem;
@@ -119,63 +119,8 @@ li {
 }
 
 /* ================================
-         Blockquotes and Callouts
-      ================================ */
-
-blockquote {
-    font-style: italic;
-    color: #555;
-    border-left: 4px solid #ccc;
-    background: #eef6f5;
-    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
-    margin: 2rem 0;
-    border-radius: 6px;
-}
-
-.callout {
-    background-color: #e0f7f4;
-    padding: 1.25rem 1.5rem;
-    border-left: 6px solid #008080;
-    margin: 2.5rem 0;
-    border-radius: 6px;
-    color: #004d4d;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #008080;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
-}
-
-.btn:hover {
-    background-color: #006666;
-}
-
-/* ================================
-               Footer
-      ================================ */
-footer {
-    background-color: #ededed;
-    color: #989797;
-    font-size: 0.75rem;
-    text-align: center;
-    border-radius: 0 0 12px 12px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ================================
-      Buttons and Navigation
-      ================================ */
+         Buttons and Navigation
+         ================================ */
 
 .btn {
     display: inline-block;
@@ -196,9 +141,27 @@ footer {
     background-color: #1b5e20;
 }
 
+
+
+
 /* ================================
-            Navigation Bar
-      ================================ */
+         Footer
+         ================================ */
+
+footer {
+    background-color: #ededed;
+    color: #989797;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ================================
+               Navigation Bar
+         ================================ */
 
 .top-nav {
     position: sticky;
