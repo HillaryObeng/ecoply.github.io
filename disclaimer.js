@@ -14,15 +14,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleScroll() {
     revealOnScroll();
-    topBtn.style.display = window.scrollY > 200 ? "block" : "none";
-    backHomeBtn.style.display = "block"; // Always visible
+
+    // Show/hide "Top" button
+    if (window.scrollY > 200) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+
+    // Show/hide "Back to Homepage" button only at the top
+    if (window.scrollY === 0) {
+      backHomeBtn.style.display = "block";
+    } else {
+      backHomeBtn.style.display = "none";
+    }
   }
 
   window.addEventListener("scroll", handleScroll);
 
   window.addEventListener("load", () => {
     revealOnScroll();
-    topBtn.style.display = "none";
-    backHomeBtn.style.display = "block";
+
+    topBtn.style.display = "none"; // hidden on load
+    backHomeBtn.style.display = "block"; // visible at top
   });
 });
