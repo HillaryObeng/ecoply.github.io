@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy – Ecoply Ltd</title>
     <link rel="stylesheet" href="legal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -105,11 +106,24 @@
         </p>
     </section>
 
-    <div class="btn-container">
+
+    <!-- <div class="btn-container">
         <a href="index.html" class="back-btn">← Back to Homepage</a>
-    </div>
+    </div> -->
+
+    <!-- Back to Homepage Button -->
+    <button id="backHomeBtn" title="Back to Homepage" onclick="window.location.href='index.html'">
+        <i class="fas fa-home"></i>
+    </button>
+
+    <!-- Scroll-to-top Button -->
+    <button id="scrollTopBtn" title="Scroll to Top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
 
+
+    <script src="legal.js"></script>
     <!-- Cookies Consent Banner -->
 
     <div id="cookieBanner" class="cookie-banner">
@@ -119,6 +133,9 @@
         </p>
         <button id="AcceptCookies">Got it</button>
     </div>
+
+
+
 
 </body>
 

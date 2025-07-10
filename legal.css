@@ -6,6 +6,7 @@ body {
     padding: 2rem;
     max-width: 900px;
     margin: auto;
+    position: relative;
 }
 
 h1,
@@ -21,32 +22,10 @@ ul {
     margin-left: 1.5rem;
 }
 
-.top-nav-btn {
-    width: 100%;
-    text-align: right;
-    margin-bottom: 2rem;
-}
-
-.btn-container {
-    width: 100%;
-    text-align: right;
-    margin-bottom: 2rem;
-}
 
 /* Optional: sticky effect */
 @media (min-width: 768px) {
     .top-nav-btn.sticky {
-        position: sticky;
-        top: 1rem;
-        z-index: 1000;
-        background: #f9f9f9;
-        padding-top: 0.5rem;
-    }
-}
-
-/* Optional: sticky effect */
-@media (min-width: 768px) {
-    .btn-container {
         position: sticky;
         top: 1rem;
         z-index: 1000;
@@ -64,23 +43,31 @@ ul {
 
 
 
+/* Buttom Back to Homepage */
+
+.btn-container {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+
+/* Optional: sticky effect */
+@media (min-width: 768px) {
+    .btn-container {
+        position: sticky;
+        top: 1rem;
+        z-index: 1000;
+        background: #f9f9f9;
+        padding-top: 0.5rem;
+    }
+}
+
 /* Responsive: center align on small screens */
 @media (max-width: 767px) {
     .btn-container {
         text-align: center;
     }
-}
-
-.back-btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #0a2540;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-size: 0.85rem;
 }
 
 .btn-container {
@@ -100,42 +87,63 @@ ul {
     background-color: #153c6d;
 }
 
+/* ================================
+               Scroll-to-Top Button
+         ================================ */
 
-/* Cooker Consent Banner */
-.cookie-banner {
+#backHomeBtn,
+#scrollTopBtn {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #0a2540;
-    color: #fff;
-    padding: 1rem;
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 999;
-}
-
-.cookie-banner p {
-    margin: 0;
-}
-
-.cookie-banner a {
-    color: #ffd700;
-    text-decoration: underline;
-}
-
-.cookie-banner button {
-    background: #fff;
-    color: #0a2540;
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px;
     border: none;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    border-radius: 5px;
+    border-radius: 50%;
+    font-size: 16px;
     cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
-.cookie-banner button:hover {
-    background: #f0f0f0;
+/* Positioning */
+#backHomeBtn {
+    top: 20px;
+    right: 20px;
+}
+
+#scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+
+    #backHomeBtn,
+    #scrollTopBtn {
+        padding: 10px;
+        font-size: 14px;
+        right: 15px;
+    }
+
+    #backHomeBtn {
+        top: 15px;
+    }
+
+    #scrollTopBtn {
+        bottom: 15px;
+    }
+}
+
+/* Reveal animation */
+.content-block {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.content-block.reveal {
+    opacity: 1;
+    transform: translateY(0);
 }
