@@ -7,6 +7,7 @@
     <meta name="description" content="Strategic overview of Ghana's Import and Export sector for global investors" />
     <title>Ghana Import & Export – Unlocking Trade Potential</title>
     <link rel="stylesheet" href="import-export-learn-more.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -46,8 +47,7 @@
 </head>
 
 <body>
-    <!-- Back to Homepage Button -->
-    <button id="backHomeBtn" onclick="location.href='index.html'">Back to Homepage</button>
+
 
     <!-- Navigation -->
     <nav class="top-nav">
@@ -136,34 +136,26 @@
         <footer>
             <p>&copy; 2025 Ecoply Ltd. All rights reserved.</p>
         </footer>
-    </main>
 
-    <!-- Scroll-to-top Button -->
-    <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
+        <script src="import-export-learn-more.js"></script>
 
-    <!-- Reveal Animations and Scroll Logic -->
-    <script>
-        const blocks = document.querySelectorAll('.content-block');
-        const topBtn = document.getElementById('scrollTopBtn');
-        const backHomeBtn = document.getElementById('backHomeBtn');
+        <!-- Thank You Modal -->
+        <div id="thankYouModal" class="modal">
+            <div class="modal-content">
+                <h2> Thank You!</h2>
+                <p>Your message has been received. Our team will get back to you shortly.</p>
+                <button class="close-modal" onclick="closeModal()">Close</button>
+            </div>
+        </div>
 
-        function revealOnScroll() {
-            blocks.forEach(block => {
-                const rect = block.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    block.classList.add('reveal');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', () => {
-            revealOnScroll();
-            topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-            backHomeBtn.style.display = window.scrollY < window.innerHeight / 2 ? 'block' : 'none';
-        });
-
-        window.addEventListener('load', revealOnScroll);
-    </script>
+        <!-- Cookies Content Banner -->
+        <div id="cookieBanner" class="cookie-banner">
+            <p>
+                We use cookies to improve your experience on our site. By continuing, you accept our
+                <a href="privacy-policy.html">Privacy Policy</a>.
+            </p>
+            <button id="AcceptCookies">Accept</button>
+        </div>
 </body>
 
 </html>
