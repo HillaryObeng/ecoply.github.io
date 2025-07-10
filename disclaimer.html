@@ -10,9 +10,44 @@
 
 <body>
 
-    <div class="top-nav-btn">
-        <a href="index.html" class="back-btn">← Back to Homepage</a>
-    </div>
+
+
+    <!-- Back to Homepage Button -->
+    <button id="backHomeBtn" onclick="window.location.href='index.html'">Back to Homepage</button>
+
+    <!-- Scroll-to-top Button -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
+
+    <!-- Reveal Animations and Scroll Logic -->
+    <script>
+        const blocks = document.querySelectorAll('.content-block');
+        const topBtn = document.getElementById('scrollTopBtn');
+        const backHomeBtn = document.getElementById('backHomeBtn');
+
+        function revealOnScroll() {
+            blocks.forEach(block => {
+                const rect = block.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    block.classList.add('reveal');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            revealOnScroll();
+            topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+            // backHomeBtn always visible at the top right
+        });
+
+        window.addEventListener('load', () => {
+            revealOnScroll();
+            topBtn.style.display = 'none';
+            backHomeBtn.style.display = 'block';
+        });
+    </script>
+
+
+
 
     <h1>Disclaimer</h1>
     <p>Last Updated: July 7, 2025</p>
