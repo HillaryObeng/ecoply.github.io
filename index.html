@@ -1,380 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Ecoply Ltd – expert real estate, import-export, and sales support with global expertise." />
-
-  <!-- Primary Meta Tags -->
-  <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
-  <meta name="title" content="Ecoply Ltd – Connecting Opportunities. Elevating Markets.">
-  <meta name="description"
-    content="Delivering expert real estate services, seamless import-export solutions, and strategic sales support.">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ecoplyltd.com/">
-  <meta property="og:title" content="Ecoply Ltd – Connecting Opportunities. Elevating Markets.">
-  <meta property="og:description"
-    content="Expert real estate, import-export, and strategic sales support for growing businesses.">
-  <meta property="og:image" content="https://ecoplyltd.com/assets/images/ecoply-preview.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://ecoplyltd.com/">
-  <meta property="twitter:title" content="Ecoply Ltd – Connecting Opportunities. Elevating Markets.">
-  <meta property="twitter:description"
-    content="Expert real estate, import-export, and strategic sales support for growing businesses.">
-  <meta property="twitter:image" content="https://www.ecoplyltd.com/assets/images/ecoply-preview.jpg">
-
-  <!-- Preload Critical Resources -->
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/images/ecoply-logo.png" type="image/png" />
-
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("-IAyUSdee-IJBRS9p");
-    })();
-  </script>
-
-  <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoply Ltd | Premium Imported Cars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Skip to main content for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                Ecoply Ltd
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#inventory">Inventory</a></li>
+                    <li><a href="#brands">Brands</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-  <header role="banner">
-    <div class="nav-container container">
-      <div class="logo" aria-label="Ecoply Ltd">
-        <img src="assets/images/ecoply-logo.png" alt="Ecoply Ltd Logo" width="120" height="40" />
-      </div>
-
-      <nav aria-label="Primary navigation">
-        <ul role="menubar">
-          <li role="none"><a href="#services" role="menuitem">Services</a></li>
-          <li role="none"><a href="#how-we-work" role="menuitem">How We Work</a></li>
-          <li role="none"><a href="#products" role="menuitem">Products</a></li>
-          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-        </ul>
-      </nav>
-
-      <button class="btn btn-primary"
-        onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })"
-        aria-label="Get started with Ecoply Ltd">
-        Get Started
-      </button>
-    </div>
-  </header>
-
-  <main id="main-content">
     <!-- Hero Section -->
-    <section class="hero fade-in" aria-labelledby="hero-heading">
-      <div class="hero-bg current" role="presentation"></div>
-      <div class="hero-bg next" role="presentation"></div>
-      <div class="overlay" role="presentation"></div>
-
-      <div class="hero-content">
-        <h1 id="hero-heading">Connecting Opportunities. Elevating Markets.</h1>
-        <p>Your trusted partner in real estate, import-export & sales solutions worldwide.</p>
-
-        <div class="hero-actions">
-          <button class="btn btn-primary"
-            onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">
-            Get Started
-          </button>
-          <a href="#services" class="btn btn-secondary">Explore Services</a>
+    <section class="hero" id="home">
+        <!-- Multiple Background Images -->
+        <div class="hero-backgrounds">
+            <div class="background-slide bg-1 active"></div>
+            <div class="background-slide bg-2"></div>
+            <div class="background-slide bg-3"></div>
+            <div class="background-slide bg-4"></div>
+            <div class="background-slide bg-5"></div>
+            <div class="background-slide bg-6"></div>
+            <div class="background-slide bg-7"></div>
+            <div class="background-slide bg-8"></div>
+            <div class="background-slide bg-9"></div>
+            <div class="background-slide bg-10"></div>
         </div>
-      </div>
+        
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Floating Shapes -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            
+            <!-- Sparkle effects -->
+            <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+            <div class="sparkle" style="top: 70%; left: 25%; animation-delay: 1s;"></div>
+            <div class="sparkle" style="top: 40%; left: 75%; animation-delay: 2s;"></div>
+            <div class="sparkle" style="top: 85%; left: 60%; animation-delay: 3s;"></div>
+            <div class="sparkle" style="top: 30%; left: 45%; animation-delay: 4s;"></div>
+            
+            <!-- Pulse dots -->
+            <div class="pulse-dot" style="top: 25%; left: 90%;"></div>
+            <div class="pulse-dot" style="top: 90%; left: 10%;"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="container hero-content">
+            <h1>Premium Imported Cars by Ecoply Ltd</h1>
+            <p>Experience luxury, performance, and sophistication with our curated selection of imported vehicles from around the world.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" onclick="openModal('inventoryModal')">Browse Inventory</button>
+                <button class="btn btn-secondary" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section container" aria-labelledby="services-heading">
-      <header class="section-header">
-        <h2 id="services-heading" class="fade-in">Our Services</h2>
-        <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
-      </header>
-
-      <div class="service-cards-wrapper fade-in">
-        <div class="fade-in service-cards" id="services-scroll">
-          <article class="card service-card">
-            <div class="card-icon">
-              <i class="fas fa-building fa-2x" aria-hidden="true"></i>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Ecoply Ltd</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Sourcing</h3>
+                    <p>We source vehicles directly from manufacturers and trusted partners worldwide.</p>
+                    <button class="btn btn-outline" onclick="openModal('sourcingModal')">Learn More</button>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every vehicle undergoes rigorous inspection and certification processes.</p>
+                    <button class="btn btn-outline" onclick="openModal('qualityModal')">Learn More</button>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Personalized Service</h3>
+                    <p>Our experts provide tailored solutions to match your preferences and needs.</p>
+                    <button class="btn btn-outline" onclick="openModal('serviceModal')">Learn More</button>
+                </div>
             </div>
-            <h3>Real Estate</h3>
-            <p>End-to-end property solutions including acquisition, management, and development.</p>
-            <a class="btn btn-outline" href="real-estate-learn-more.html">Learn More</a>
-          </article>
-
-          <article class="card service-card">
-            <div class="card-icon">
-              <i class="fas fa-shipping-fast fa-2x" aria-hidden="true"></i>
-            </div>
-            <h3>Import & Export</h3>
-            <p>Global logistics and trade facilitation with seamless customs clearance.</p>
-            <a class="btn btn-outline" href="import-export-learn-more.html">Learn More</a>
-          </article>
-
-          <article class="card service-card">
-            <div class="card-icon">
-              <i class="fas fa-seedling fa-2x" aria-hidden="true"></i>
-            </div>
-            <h3>Agribusiness</h3>
-            <p>Sustainable market-driven food strategies and agricultural development.</p>
-            <a class="btn btn-outline" href="agribusiness-learn-more.html">Learn More</a>
-          </article>
         </div>
-        <div class="pager" id="services-pager" aria-label="Services navigation"></div>
-      </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products-section container" aria-labelledby="products-heading">
-      <header class="section-header">
-        <h2 id="products-heading" class="fade-in">Featured Products</h2>
-        <p class="section-subtitle">Discover our premium offerings across all business sectors</p>
-      </header>
+    <!-- Inventory Section -->
+    <section class="inventory" id="inventory">
+        <div class="container">
+            <h2>Featured Inventory</h2>
+            <div class="inventory-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="BMW M5">
+                        <div class="car-badge">New Arrival</div>
+                    </div>
+                    <div class="car-content">
+                        <h3>BMW M5 Competition</h3>
+                        <div class="car-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 8,200 mi</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">$89,999</div>
+                        <div class="car-actions">
+                            <button class="btn btn-primary" onclick="openModal('bmwModal')">View Details</button>
+                            <button class="btn btn-outline" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mercedes-Benz S-Class">
+                        <div class="car-badge">Luxury</div>
+                    </div>
+                    <div class="car-content">
+                        <h3>Mercedes-Benz S-Class</h3>
+                        <div class="car-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 5,400 mi</span>
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                        </div>
+                        <div class="car-price">$112,500</div>
+                        <div class="car-actions">
+                            <button class="btn btn-primary" onclick="openModal('mercedesModal')">View Details</button>
+                            <button class="btn btn-outline" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Audi RS7">
+                        <div class="car-badge">Performance</div>
+                    </div>
+                    <div class="car-content">
+                        <h3>Audi RS7 Sportback</h3>
+                        <div class="car-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 6,800 mi</span>
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        </div>
+                        <div class="car-price">$97,800</div>
+                        <div class="car-actions">
+                            <button class="btn btn-primary" onclick="openModal('audiModal')">View Details</button>
+                            <button class="btn btn-outline" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-primary" onclick="openModal('inventoryModal')">View Full Inventory</button>
+            </div>
+        </div>
+    </section>
 
-      <div class="horizontal-scroll fade-in" id="products-scroll">
-        <!-- Real Estate Products -->
-        <article class="card product-card">
-          <div class="card-image">
-            <img
-              src="https://images.pexels.com/photos/32821643/pexels-photo-32821643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-              alt="Colonial-era house in Eastern Region, Ghana" loading="lazy">
-          </div>
-          <div class="card-content">
-            <h4>Colonial-Era Estate</h4>
-            <p>Charming heritage home nestled in lush greenery with historical significance.</p>
-          </div>
-        </article>
-
-        <article class="card product-card">
-          <div class="card-image">
-            <img
-              src="https://images.pexels.com/photos/8134753/pexels-photo-8134753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-              alt="Beachfront villa in Ghana" loading="lazy">
-          </div>
-          <div class="card-content">
-            <h4>Beachfront Villa</h4>
-            <p>Luxurious coastal property with panoramic ocean views and modern amenities.</p>
-          </div>
-        </article>
-
-        <!-- Additional product cards with same structure -->
-        <article class="card product-card">
-          <div class="card-image">
-            <img
-              src="https://images.pexels.com/photos/7061672/pexels-photo-7061672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-              alt="Modern townhouse Ghana" loading="lazy">
-          </div>
-          <div class="card-content">
-            <h4>Modern Townhouse</h4>
-            <p>Urban living in a well-designed townhouse setting with contemporary finishes.</p>
-          </div>
-        </article>
-
-        <!-- Agribusiness Products -->
-        <article class="card product-card">
-          <div class="card-image">
-            <img
-              src="https://images.pexels.com/photos/31148393/pexels-photo-31148393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-              alt="Cocoa beans drying" loading="lazy">
-          </div>
-          <div class="card-content">
-            <h4>Premium Cocoa Beans</h4>
-            <p>Traditional post-harvest drying under the sun for superior quality cocoa.</p>
-          </div>
-        </article>
-
-        <!-- Import & Export Products -->
-        <article class="card product-card">
-          <div class="card-image">
-            <img
-              src="https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-              alt="Cargo containers at port" loading="lazy">
-          </div>
-          <div class="card-content">
-            <h4>Cargo Logistics</h4>
-            <p>Comprehensive container shipping and distribution services worldwide.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="pager" id="products-pager" aria-label="Products navigation"></div>
+    <!-- Brands Section -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <h2>Premium Brands We Offer</h2>
+            <div class="brands-grid">
+                <div class="brand-card" onclick="openModal('bmwModal')">
+                    <div class="brand-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW">
+                    </div>
+                    <div class="brand-name">BMW</div>
+                </div>
+                
+                <div class="brand-card" onclick="openModal('mercedesModal')">
+                    <div class="brand-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/2048px-Mercedes-Logo.svg.png" alt="Mercedes-Benz">
+                    </div>
+                    <div class="brand-name">Mercedes-Benz</div>
+                </div>
+                
+                <div class="brand-card" onclick="openModal('audiModal')">
+                    <div class="brand-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/2048px-Audi-Logo_2016.svg.png" alt="Audi">
+                    </div>
+                    <div class="brand-name">Audi</div>
+                </div>
+                
+                <div class="brand-card" onclick="openModal('porscheModal')">
+                    <div class="brand-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Porsche_logo.svg/2048px-Porsche_logo.svg.png" alt="Porsche">
+                    </div>
+                    <div class="brand-name">Porsche</div>
+                </div>
+                
+                <div class="brand-card" onclick="openModal('lexusModal')">
+                    <div class="brand-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Lexus_division_logo.svg/2048px-Lexus_division_logo.svg.png" alt="Lexus">
+                    </div>
+                    <div class="brand-name">Lexus</div>
+                </div>
+                
+                <div class="brand-card" onclick="openModal('jaguarModal')">
+                    <div class="brand-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Jaguar_logo_2012.svg/2048px-Jaguar_logo_2012.svg.png" alt="Jaguar">
+                    </div>
+                    <div class="brand-name">Jaguar</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section container" aria-labelledby="testimonials-heading">
-      <header class="section-header">
-        <h2 id="testimonials-heading" class="fade-in">Client Success Stories</h2>
-        <p class="section-subtitle">Hear from businesses we've helped grow and succeed</p>
-      </header>
-
-      <div class="horizontal-scroll fade-in" id="testimonials-scroll">
-        <article class="card testimonial-card">
-          <blockquote>
-            <p>"Ecoply's expertise has propelled our operations worldwide with exceptional strategic guidance."</p>
-          </blockquote>
-          <div class="client">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Portrait of Jane Doe">
-            <div class="client-info">
-              <strong>Jane Doe</strong>
-              <span>CEO of AlphaCorp</span>
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The team at Ecoply Ltd made my car buying experience exceptional. They found the exact model I wanted and handled all the import paperwork seamlessly."</p>
+                    </div>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson">
+                        <div class="client-info">
+                            <strong>Michael Johnson</strong>
+                            <span>Business Executive</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I've purchased three vehicles from Ecoply Ltd over the years. Their attention to detail and customer service keeps me coming back."</p>
+                    </div>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Williams">
+                        <div class="client-info">
+                            <strong>Sarah Williams</strong>
+                            <span>Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The quality of their imported vehicles is unmatched. My Mercedes arrived in perfect condition, exactly as described. Highly recommended!"</p>
+                    </div>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Chen">
+                        <div class="client-info">
+                            <strong>David Chen</strong>
+                            <span>Tech Professional</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </article>
-
-        <article class="card testimonial-card">
-          <blockquote>
-            <p>"Reliable, professional, and globally capable partner for all our trade needs."</p>
-          </blockquote>
-          <div class="client">
-            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Portrait of John Smith">
-            <div class="client-info">
-              <strong>John Smith</strong>
-              <span>MD at BetaTrade</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card testimonial-card">
-          <blockquote>
-            <p>"They delivered beyond expectations—timely execution and precise attention to detail."</p>
-          </blockquote>
-          <div class="client">
-            <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Portrait of Linda Park">
-            <div class="client-info">
-              <strong>Linda Park</strong>
-              <span>COO of NuEdge</span>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="pager" id="testimonials-pager" aria-label="Testimonials navigation"></div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section container" aria-labelledby="contact-heading">
-      <header class="section-header">
-        <h2 id="contact-heading" class="fade-in">Start Your Success Story</h2>
-        <p class="section-subtitle">Let's discuss how we can help achieve your business goals</p>
-      </header>
-
-      <form id="contact-form" class="fade-in contact-form" novalidate>
-        <div class="form-group">
-          <input type="text" name="from_name" id="from_name" placeholder="Full Name" required pattern=".{2,}" />
-          <label for="from_name">Full Name</label>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Visit Our Showroom</h4>
+                            <p>123 Luxury Avenue, Prestige District<br>Metropolis, MP 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567<br>Mon-Sat: 9AM - 7PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>info@ecoplyltd.com<br>sales@ecoplyltd.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Interested In</option>
+                            <option>BMW</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Audi</option>
+                            <option>Porsche</option>
+                            <option>Lexus</option>
+                            <option>Jaguar</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
         </div>
-
-        <div class="form-group">
-          <input type="email" name="reply_to" id="reply_to" placeholder="Email Address" required />
-          <label for="reply_to">Email Address</label>
-        </div>
-
-        <div class="form-group">
-          <input type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="[\d\s\-\+\(\)]{7,}" />
-          <label for="phone">Phone Number</label>
-        </div>
-
-        <div class="form-group">
-          <select name="service" id="service" required>
-            <option value="" disabled selected>Select Service</option>
-            <option value="Real Estate">Real Estate</option>
-            <option value="Import & Export">Import & Export</option>
-            <option value="Agribusiness">Agribusiness</option>
-          </select>
-          <label for="service">Service Interest</label>
-        </div>
-
-        <div class="form-group">
-          <textarea name="message" id="message" placeholder="Tell us about your project or requirements" rows="5"
-            required minlength="10"></textarea>
-          <label for="message">Your Message</label>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-full">Submit Inquiry</button>
-      </form>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <div class="footer-logo">
-            <img src="assets/images/ecoply-logo.png" alt="Ecoply Ltd Logo" width="120" height="40" />
-          </div>
-          <p class="footer-tagline">Connecting Opportunities. Elevating Markets.</p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car"></i>
+                        Ecoply Ltd
+                    </div>
+                    <p class="footer-tagline">Driving Excellence Worldwide</p>
+                    <p>Your trusted partner for premium imported vehicles with unmatched quality and service.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#inventory">Inventory</a></li>
+                        <li><a href="#brands">Brands</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="openModal('importModal')">Vehicle Import</a></li>
+                        <li><a href="#" onclick="openModal('customsModal')">Customs Clearance</a></li>
+                        <li><a href="#" onclick="openModal('financingModal')">Financing</a></li>
+                        <li><a href="#" onclick="openModal('servicingModal')">Vehicle Servicing</a></li>
+                        <li><a href="#" onclick="openModal('warrantyModal')">Warranty</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
+                        <li>Saturday: 10:00 AM - 6:00 PM</li>
+                        <li>Sunday: 12:00 PM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ecoply Ltd. All rights reserved.</p>
+                <nav>
+                    <a href="#" onclick="openModal('privacyModal')">Privacy Policy</a>
+                    <a href="#" onclick="openModal('termsModal')">Terms of Service</a>
+                    <a href="#" onclick="openModal('sitemapModal')">Sitemap</a>
+                </nav>
+            </div>
         </div>
+    </footer>
 
-        <div class="footer-section">
-          <h3>Contact Information</h3>
-          <address>
-            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Plot 007, 69 Trasacco Street, East Legon,
-              Adjiringanor</p>
-            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@ecoply.com">info@ecoply.com</a>
-            </p>
-            <p><i class="fas fa-phone" aria-hidden="true"></i> +233 24 000 0000</p>
-          </address>
+    <!-- Modals -->
+    <div id="inventoryModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('inventoryModal')">&times;</button>
+            <div class="modal-header">
+                <h2>Our Complete Inventory</h2>
+                <p>Explore our extensive collection of premium imported vehicles</p>
+            </div>
+            <div class="modal-body">
+                <p>At Ecoply Ltd, we maintain a diverse inventory of luxury imported vehicles from around the world. Our current selection includes:</p>
+                <ul>
+                    <li>BMW Series (3, 5, 7, X5, X7)</li>
+                    <li>Mercedes-Benz (C-Class, E-Class, S-Class, GLE, GLS)</li>
+                    <li>Audi (A4, A6, A8, Q5, Q7, Q8)</li>
+                    <li>Porsche (911, Cayenne, Panamera, Macan)</li>
+                    <li>Lexus (ES, LS, RX, LX)</li>
+                    <li>Jaguar (XE, XF, F-PACE, I-PACE)</li>
+                </ul>
+                <p>Contact our sales team to schedule a private viewing of any vehicle in our inventory.</p>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-primary" onclick="closeModal('inventoryModal'); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Contact Sales</button>
+            </div>
         </div>
+    </div>
 
-        <div class="footer-section">
-          <h3>Connect With Us</h3>
-          <nav aria-label="Social media links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/ecoply_ltd" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </nav>
+    <div id="testDriveModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('testDriveModal')">&times;</button>
+            <div class="modal-header">
+                <h2>Schedule a Test Drive</h2>
+                <p>Experience the performance and luxury firsthand</p>
+            </div>
+            <div class="modal-body">
+                <form id="testDriveForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Preferred Vehicle</option>
+                            <option>BMW M5 Competition</option>
+                            <option>Mercedes-Benz S-Class</option>
+                            <option>Audi RS7 Sportback</option>
+                            <option>Porsche 911</option>
+                            <option>Lexus LS</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Preferred Time</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Schedule Test Drive</button>
+                </form>
+            </div>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2025 Ecoply Ltd. All rights reserved.</p>
-        <nav aria-label="Legal links">
-          <a href="terms.html">Terms of Service</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="disclaimer.html">Disclaimer</a>
-        </nav>
-      </div>
     </div>
-  </footer>
 
-  <!-- Thank You Modal -->
-  <div id="thankYouModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-    <div class="modal-content">
-      <h2 id="modal-title">Thank You!</h2>
-      <p>Your message has been received. Our team will get back to you shortly.</p>
-      <button class="btn btn-primary close-modal" onclick="closeModal()">Close</button>
+    <div id="bmwModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('bmwModal')">&times;</button>
+            <div class="modal-header">
+                <h2>BMW Excellence</h2>
+                <p>The Ultimate Driving Machine</p>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="BMW" style="width: 100%; border-radius: var(--radius); margin-bottom: 1.5rem;">
+                <p>BMW represents the pinnacle of German engineering and driving pleasure. Our BMW collection includes:</p>
+                <ul>
+                    <li>M Series - High-performance models for the driving enthusiast</li>
+                    <li>7 Series - Ultimate luxury and technological innovation</li>
+                    <li>X Series - Premium SUVs combining space and performance</li>
+                    <li>i Series - Cutting-edge electric vehicles</li>
+                </ul>
+                <p>Each BMW in our inventory undergoes a 150-point inspection and comes with comprehensive warranty coverage.</p>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-primary" onclick="closeModal('bmwModal'); openModal('testDriveModal')">Test Drive a BMW</button>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Cookies Consent Banner -->
-  <div id="cookieBanner" class="cookie-banner" role="alert" aria-labelledby="cookie-heading">
-    <div class="cookie-content">
-      <h3 id="cookie-heading">We Value Your Privacy</h3>
-      <p>
-        We use cookies to improve your experience on our site and show you relevant content.
-        By continuing to browse, you accept our <a href="privacy-policy.html">Privacy Policy</a>.
-      </p>
-      <button id="acceptCookies" class="btn btn-primary">Accept Cookies</button>
-    </div>
-  </div>
+    <!-- Additional modals for other brands and services would follow the same pattern -->
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
