@@ -962,49 +962,53 @@
       color: var(--primary-light);
     }
 
-    /* Page Styles */
-    .page {
+    /* Modal Styles */
+    .modal {
       display: none;
-      padding: 2rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 2000;
+      backdrop-filter: blur(5px);
     }
 
-    .page.active {
-      display: block;
+    .modal-content {
+      position: relative;
+      background: var(--white);
+      margin: 5% auto;
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      max-width: 600px;
+      width: 90%;
+      box-shadow: var(--shadow-lg);
+      animation: modalSlideIn 0.3s ease-out;
     }
 
-    .page-header {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: var(--white);
-      padding: 4rem 0;
-      text-align: center;
-      margin-bottom: 3rem;
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--secondary);
     }
 
-    .page-content {
-      max-width: 900px;
-      margin: 0 auto;
+    .modal-header {
+      margin-bottom: 1.5rem;
     }
 
-    .page-content h2 {
+    .modal-header h2 {
       text-align: left;
-      margin-bottom: 1.5rem;
-    }
-
-    .page-content p {
-      margin-bottom: 1.5rem;
-    }
-
-    .page-content ul {
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-
-    .page-content li {
       margin-bottom: 0.5rem;
     }
 
-    .back-button {
-      margin-top: 2rem;
+    .modal-body {
+      margin-bottom: 2rem;
     }
 
     /* Animations */
@@ -1109,6 +1113,18 @@
       50% {
         transform: scale(1.5);
         opacity: 0.7;
+      }
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -1242,11 +1258,11 @@
 
       <nav>
         <ul>
-          <li><a href="#" onclick="showPage('home')">Home</a></li>
-          <li><a href="#inventory" onclick="showPage('home')">Inventory</a></li>
-          <li><a href="#brands" onclick="showPage('home')">Brands</a></li>
-          <li><a href="#testimonials" onclick="showPage('home')">Testimonials</a></li>
-          <li><a href="#contact" onclick="showPage('home')">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#inventory">Inventory</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -1256,17 +1272,635 @@
     </div>
   </header>
 
-  <!-- Home Page -->
-  <div id="home" class="page active">
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <!-- Multiple Background Images -->
-      <div class="hero-backgrounds">
-        <div class="background-slide bg-1 active"></div>
-        <div class="background-slide bg-2"></div>
-        <div class="background-slide bg-3"></div>
-        <div class="background-slide bg-4"></div>
-        <div class="background-slide bg-5"></div>
-        <div class="background-slide bg-6"></div>
-        <div class="background-slide bg-7"></div>
-        <div
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <!-- Multiple Background Images -->
+    <div class="hero-backgrounds">
+      <div class="background-slide bg-1 active"></div>
+      <div class="background-slide bg-2"></div>
+      <div class="background-slide bg-3"></div>
+      <div class="background-slide bg-4"></div>
+      <div class="background-slide bg-5"></div>
+      <div class="background-slide bg-6"></div>
+      <div class="background-slide bg-7"></div>
+      <div class="background-slide bg-8"></div>
+      <div class="background-slide bg-9"></div>
+      <div class="background-slide bg-10"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+
+      <!-- Sparkle effects -->
+      <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+      <div class="sparkle" style="top: 70%; left: 25%; animation-delay: 1s;"></div>
+      <div class="sparkle" style="top: 40%; left: 75%; animation-delay: 2s;"></div>
+      <div class="sparkle" style="top: 85%; left: 60%; animation-delay: 3s;"></div>
+      <div class="sparkle" style="top: 30%; left: 45%; animation-delay: 4s;"></div>
+
+      <!-- Pulse dots -->
+      <div class="pulse-dot" style="top: 25%; left: 90%;"></div>
+      <div class="pulse-dot" style="top: 90%; left: 10%;"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="container hero-content">
+      <h1>Premium Imported Cars by Ecoply Ltd</h1>
+      <p>Experience luxury, performance, and sophistication with our curated selection of imported vehicles from around
+        the world.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="openModal('inventoryModal')">Browse Inventory</button>
+        <button class="btn btn-secondary" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Ecoply Ltd</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Global Sourcing</h3>
+          <p>We source vehicles directly from manufacturers and trusted partners worldwide.</p>
+          <button class="btn btn-outline" onclick="openModal('sourcingModal')">Learn More</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Quality Assurance</h3>
+          <p>Every vehicle undergoes rigorous inspection and certification processes.</p>
+          <button class="btn btn-outline" onclick="openModal('qualityModal')">Learn More</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Personalized Service</h3>
+          <p>Our experts provide tailored solutions to match your preferences and needs.</p>
+          <button class="btn btn-outline" onclick="openModal('serviceModal')">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inventory Section -->
+  <section class="inventory" id="inventory">
+    <div class="container">
+      <h2>Featured Inventory</h2>
+      <div class="inventory-grid">
+        <div class="car-card">
+          <div class="car-image">
+            <img
+              src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="BMW M5">
+            <div class="car-badge">New Arrival</div>
+          </div>
+          <div class="car-content">
+            <h3>BMW M5 Competition</h3>
+            <div class="car-meta">
+              <span><i class="fas fa-calendar"></i> 2023</span>
+              <span><i class="fas fa-tachometer-alt"></i> 8,200 mi</span>
+              <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-price">$89,999</div>
+            <div class="car-actions">
+              <button class="btn btn-primary" onclick="openModal('bmwModal')">View Details</button>
+              <button class="btn btn-outline" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image">
+            <img
+              src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Mercedes-Benz S-Class">
+            <div class="car-badge">Luxury</div>
+          </div>
+          <div class="car-content">
+            <h3>Mercedes-Benz S-Class</h3>
+            <div class="car-meta">
+              <span><i class="fas fa-calendar"></i> 2023</span>
+              <span><i class="fas fa-tachometer-alt"></i> 5,400 mi</span>
+              <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+            </div>
+            <div class="car-price">$112,500</div>
+            <div class="car-actions">
+              <button class="btn btn-primary" onclick="openModal('mercedesModal')">View Details</button>
+              <button class="btn btn-outline" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image">
+            <img
+              src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Audi RS7">
+            <div class="car-badge">Performance</div>
+          </div>
+          <div class="car-content">
+            <h3>Audi RS7 Sportback</h3>
+            <div class="car-meta">
+              <span><i class="fas fa-calendar"></i> 2023</span>
+              <span><i class="fas fa-tachometer-alt"></i> 6,800 mi</span>
+              <span><i class="fas fa-gas-pump"></i> Petrol</span>
+            </div>
+            <div class="car-price">$97,800</div>
+            <div class="car-actions">
+              <button class="btn btn-primary" onclick="openModal('audiModal')">View Details</button>
+              <button class="btn btn-outline" onclick="openModal('testDriveModal')">Schedule Test Drive</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <button class="btn btn-primary" onclick="openModal('inventoryModal')">View Full Inventory</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section class="brands" id="brands">
+    <div class="container">
+      <h2>Premium Brands We Offer</h2>
+      <div class="brands-grid">
+        <div class="brand-card" onclick="openModal('bmwModal')">
+          <div class="brand-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW">
+          </div>
+          <div class="brand-name">BMW</div>
+        </div>
+
+        <div class="brand-card" onclick="openModal('mercedesModal')">
+          <div class="brand-image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/2048px-Mercedes-Logo.svg.png"
+              alt="Mercedes-Benz">
+          </div>
+          <div class="brand-name">Mercedes-Benz</div>
+        </div>
+
+        <div class="brand-card" onclick="openModal('audiModal')">
+          <div class="brand-image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/2048px-Audi-Logo_2016.svg.png"
+              alt="Audi">
+          </div>
+          <div class="brand-name">Audi</div>
+        </div>
+
+        <div class="brand-card" onclick="openModal('porscheModal')">
+          <div class="brand-image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Porsche_logo.svg/2048px-Porsche_logo.svg.png"
+              alt="Porsche">
+          </div>
+          <div class="brand-name">Porsche</div>
+        </div>
+
+        <div class="brand-card" onclick="openModal('lexusModal')">
+          <div class="brand-image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Lexus_division_logo.svg/2048px-Lexus_division_logo.svg.png"
+              alt="Lexus">
+          </div>
+          <div class="brand-name">Lexus</div>
+        </div>
+
+        <div class="brand-card" onclick="openModal('jaguarModal')">
+          <div class="brand-image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Jaguar_logo_2012.svg/2048px-Jaguar_logo_2012.svg.png"
+              alt="Jaguar">
+          </div>
+          <div class="brand-name">Jaguar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"The team at Ecoply Ltd made my car buying experience exceptional. They found the exact model I wanted
+              and handled all the import paperwork seamlessly."</p>
+          </div>
+          <div class="client">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson">
+            <div class="client-info">
+              <strong>Michael Johnson</strong>
+              <span>Business Executive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"I've purchased three vehicles from Ecoply Ltd over the years. Their attention to detail and customer
+              service keeps me coming back."</p>
+          </div>
+          <div class="client">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Williams">
+            <div class="client-info">
+              <strong>Sarah Williams</strong>
+              <span>Entrepreneur</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"The quality of their imported vehicles is unmatched. My Mercedes arrived in perfect condition, exactly
+              as described. Highly recommended!"</p>
+          </div>
+          <div class="client">
+            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Chen">
+            <div class="client-info">
+              <strong>David Chen</strong>
+              <span>Tech Professional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Visit Our Showroom</h4>
+              <p>123 Luxury Avenue, Prestige District<br>Metropolis, MP 12345</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Call Us</h4>
+              <p>+1 (555) 123-4567<br>Mon-Sat: 9AM - 7PM</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email Us</h4>
+              <p>info@ecoplyltd.com<br>sales@ecoplyltd.com</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Your Phone">
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="" disabled selected>Interested In</option>
+              <option>BMW</option>
+              <option>Mercedes-Benz</option>
+              <option>Audi</option>
+              <option>Porsche</option>
+              <option>Lexus</option>
+              <option>Jaguar</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-car"></i>
+            Ecoply Ltd
+          </div>
+          <p class="footer-tagline">Driving Excellence Worldwide</p>
+          <p>Your trusted partner for premium imported vehicles with unmatched quality and service.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#brands">Brands</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#" onclick="openModal('importModal')">Vehicle Import</a></li>
+            <li><a href="#" onclick="openModal('customsModal')">Customs Clearance</a></li>
+            <li><a href="#" onclick="openModal('financingModal')">Financing</a></li>
+            <li><a href="#" onclick="openModal('servicingModal')">Vehicle Servicing</a></li>
+            <li><a href="#" onclick="openModal('warrantyModal')">Warranty</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Business Hours</h3>
+          <ul class="footer-links">
+            <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
+            <li>Saturday: 10:00 AM - 6:00 PM</li>
+            <li>Sunday: 12:00 PM - 5:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2023 Ecoply Ltd. All rights reserved.</p>
+        <nav>
+          <a href="#" onclick="openModal('privacyModal')">Privacy Policy</a>
+          <a href="#" onclick="openModal('termsModal')">Terms of Service</a>
+          <a href="#" onclick="openModal('sitemapModal')">Sitemap</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="inventoryModal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('inventoryModal')">&times;</button>
+      <div class="modal-header">
+        <h2>Our Complete Inventory</h2>
+        <p>Explore our extensive collection of premium imported vehicles</p>
+      </div>
+      <div class="modal-body">
+        <p>At Ecoply Ltd, we maintain a diverse inventory of luxury imported vehicles from around the world. Our current
+          selection includes:</p>
+        <ul>
+          <li>BMW Series (3, 5, 7, X5, X7)</li>
+          <li>Mercedes-Benz (C-Class, E-Class, S-Class, GLE, GLS)</li>
+          <li>Audi (A4, A6, A8, Q5, Q7, Q8)</li>
+          <li>Porsche (911, Cayenne, Panamera, Macan)</li>
+          <li>Lexus (ES, LS, RX, LX)</li>
+          <li>Jaguar (XE, XF, F-PACE, I-PACE)</li>
+        </ul>
+        <p>Contact our sales team to schedule a private viewing of any vehicle in our inventory.</p>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <button class="btn btn-primary"
+          onclick="closeModal('inventoryModal'); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Contact
+          Sales</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="testDriveModal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('testDriveModal')">&times;</button>
+      <div class="modal-header">
+        <h2>Schedule a Test Drive</h2>
+        <p>Experience the performance and luxury firsthand</p>
+      </div>
+      <div class="modal-body">
+        <form id="testDriveForm">
+          <div class="form-group">
+            <input type="text" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Phone Number" required>
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="" disabled selected>Preferred Vehicle</option>
+              <option>BMW M5 Competition</option>
+              <option>Mercedes-Benz S-Class</option>
+              <option>Audi RS7 Sportback</option>
+              <option>Porsche 911</option>
+              <option>Lexus LS</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="date" required>
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="" disabled selected>Preferred Time</option>
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Schedule Test Drive</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="bmwModal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('bmwModal')">&times;</button>
+      <div class="modal-header">
+        <h2>BMW Excellence</h2>
+        <p>The Ultimate Driving Machine</p>
+      </div>
+      <div class="modal-body">
+        <img
+          src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          alt="BMW" style="width: 100%; border-radius: var(--radius); margin-bottom: 1.5rem;">
+        <p>BMW represents the pinnacle of German engineering and driving pleasure. Our BMW collection includes:</p>
+        <ul>
+          <li>M Series - High-performance models for the driving enthusiast</li>
+          <li>7 Series - Ultimate luxury and technological innovation</li>
+          <li>X Series - Premium SUVs combining space and performance</li>
+          <li>i Series - Cutting-edge electric vehicles</li>
+        </ul>
+        <p>Each BMW in our inventory undergoes a 150-point inspection and comes with comprehensive warranty coverage.
+        </p>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <button class="btn btn-primary" onclick="closeModal('bmwModal'); openModal('testDriveModal')">Test Drive a
+          BMW</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional modals for other brands and services would follow the same pattern -->
+
+  <script>
+    // JavaScript for interactive elements and animations
+    document.addEventListener('DOMContentLoaded', function () {
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Background slideshow functionality
+      const backgrounds = document.querySelectorAll('.background-slide');
+      let currentIndex = 0;
+
+      function showNextBackground() {
+        // Remove active class from current background
+        backgrounds[currentIndex].classList.remove('active');
+
+        // Move to next background
+        currentIndex = (currentIndex + 1) % backgrounds.length;
+
+        // Add active class to new background
+        backgrounds[currentIndex].classList.add('active');
+      }
+
+      // Change background every 4 seconds
+      setInterval(showNextBackground, 4000);
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Form submission handlers
+      document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thank you for your message! Our team will contact you shortly.');
+        this.reset();
+      });
+
+      document.getElementById('testDriveForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Test drive scheduled successfully! We will confirm your appointment via email.');
+        closeModal('testDriveModal');
+        this.reset();
+      });
+
+      // Add random sparkles dynamically
+      function createRandomSparkle() {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.top = Math.random() * 100 + '%';
+        sparkle.style.animationDelay = Math.random() * 5 + 's';
+        document.querySelector('.floating-shapes').appendChild(sparkle);
+
+        // Remove sparkle after animation completes
+        setTimeout(() => {
+          sparkle.remove();
+        }, 3000);
+      }
+
+      // Create new sparkles periodically
+      setInterval(createRandomSparkle, 500);
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.feature-card, .car-card, .testimonial-card, .brand-card, .contact-item, .contact-form').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Modal functions
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function (event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
