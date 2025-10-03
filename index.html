@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Ecoply Ltd – expert real estate, import-export, and sales support with global expertise." />
-  <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
+
   <!-- Primary Meta Tags -->
   <title>Ecoply Ltd – Connecting Opportunities. Elevating Markets.</title>
   <meta name="title" content="Ecoply Ltd – Connecting Opportunities. Elevating Markets.">
@@ -29,332 +29,352 @@
     content="Expert real estate, import-export, and strategic sales support for growing businesses.">
   <meta property="twitter:image" content="https://www.ecoplyltd.com/assets/images/ecoply-preview.jpg">
 
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/images/ecoply-logo.png" type="image/png" />
 
-
-  <!-- Load EmailJS SDK -->
+  <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
-      emailjs.init("-IAyUSdee-IJBRS9p"); // Replace with your actual Public Key
+      emailjs.init("-IAyUSdee-IJBRS9p");
     })();
   </script>
-  <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
 
+  <input type="hidden" name="_next" value="https://www.ecoplyltd.com/thank-you.html" />
 </head>
 
 <body>
-  <header>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
     <div class="nav-container container">
-      <!-- <div class="logo">Ecoply Ltd</div> -->
-      <div class="logo">
-        <img src="assets/images/ecoply-logo.png" alt="Ecoply Ltd Logo" style="height: 40px;" />
-        <!-- <span class="logo-text">Ecoply Ltd</span> -->
+      <div class="logo" aria-label="Ecoply Ltd">
+        <img src="assets/images/ecoply-logo.png" alt="Ecoply Ltd Logo" width="120" height="40" />
       </div>
 
       <nav aria-label="Primary navigation">
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#how-we-work">How We Work</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul role="menubar">
+          <li role="none"><a href="#services" role="menuitem">Services</a></li>
+          <li role="none"><a href="#how-we-work" role="menuitem">How We Work</a></li>
+          <li role="none"><a href="#products" role="menuitem">Products</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- <button class="btn">Get Started</button> -->
-      <button class="btn" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">
+      <button class="btn btn-primary"
+        onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })"
+        aria-label="Get started with Ecoply Ltd">
         Get Started
       </button>
-
     </div>
   </header>
 
-  <main>
-    <section class="hero fade-in" aria-label="Hero section">
-      <div class="hero-bg current"></div>
-      <div class="hero-bg next"></div>
-      <div class="overlay"></div>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero fade-in" aria-labelledby="hero-heading">
+      <div class="hero-bg current" role="presentation"></div>
+      <div class="hero-bg next" role="presentation"></div>
+      <div class="overlay" role="presentation"></div>
+
       <div class="hero-content">
-        <h1>Connecting Opportunities. Elevating Markets.</h1>
+        <h1 id="hero-heading">Connecting Opportunities. Elevating Markets.</h1>
         <p>Your trusted partner in real estate, import-export & sales solutions worldwide.</p>
-        <!-- <button class="btn">Get Started</button> -->
 
-        <button class="btn" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">
-          Get Started
-        </button>
-
+        <div class="hero-actions">
+          <button class="btn btn-primary"
+            onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">
+            Get Started
+          </button>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
+        </div>
       </div>
     </section>
 
-    <!-- Our Services -->
-    <section id="services" class="container">
-      <h2 class="fade-in" style="text-align: center;">Our Services</h2>
+    <!-- Services Section -->
+    <section id="services" class="services-section container" aria-labelledby="services-heading">
+      <header class="section-header">
+        <h2 id="services-heading" class="fade-in">Our Services</h2>
+        <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
+      </header>
+
       <div class="service-cards-wrapper fade-in">
         <div class="fade-in service-cards" id="services-scroll">
-          <article class="card"><i class="fas fa-building fa-2x"></i>
+          <article class="card service-card">
+            <div class="card-icon">
+              <i class="fas fa-building fa-2x" aria-hidden="true"></i>
+            </div>
             <h3>Real Estate</h3>
-            <p>End‑to‑end property solutions.</p><a class="btn" href="real-estate-learn-more.html">Learn More</a>
-
+            <p>End-to-end property solutions including acquisition, management, and development.</p>
+            <a class="btn btn-outline" href="real-estate-learn-more.html">Learn More</a>
           </article>
 
-          <article class="card"><i class="fas fa-shipping-fast fa-2x"></i>
+          <article class="card service-card">
+            <div class="card-icon">
+              <i class="fas fa-shipping-fast fa-2x" aria-hidden="true"></i>
+            </div>
             <h3>Import & Export</h3>
-            <p>Global logistics without hassle.</p><a class="btn" href="import-export-learn-more.html">Learn More</a>
+            <p>Global logistics and trade facilitation with seamless customs clearance.</p>
+            <a class="btn btn-outline" href="import-export-learn-more.html">Learn More</a>
           </article>
-          <article class="card"><i class="fas fa-seedling fa-2x"></i>
+
+          <article class="card service-card">
+            <div class="card-icon">
+              <i class="fas fa-seedling fa-2x" aria-hidden="true"></i>
+            </div>
             <h3>Agribusiness</h3>
-            <p>Sustainable market‑driven food strategies.</p><a class="btn" href="agribusiness-learn-more.html  ">Learn
-              More</a>
+            <p>Sustainable market-driven food strategies and agricultural development.</p>
+            <a class="btn btn-outline" href="agribusiness-learn-more.html">Learn More</a>
           </article>
         </div>
-        <div class="pager" id="services-pager"></div>
+        <div class="pager" id="services-pager" aria-label="Services navigation"></div>
       </div>
     </section>
 
-    <!-- Featured Products -->
-    <section id="products" class="container">
-      <h2 class="fade-in" style="text-align: center;">Featured Products</h2>
+    <!-- Products Section -->
+    <section id="products" class="products-section container" aria-labelledby="products-heading">
+      <header class="section-header">
+        <h2 id="products-heading" class="fade-in">Featured Products</h2>
+        <p class="section-subtitle">Discover our premium offerings across all business sectors</p>
+      </header>
+
       <div class="horizontal-scroll fade-in" id="products-scroll">
-
-        <!--  Real Estate -->
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/32821643/pexels-photo-32821643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Colonial-era house in Eastern Region, Ghana">
-          <h4>Colonial-Era Estate</h4>
-          <p>Charming heritage home nestled in lush greenery.</p>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/8134753/pexels-photo-8134753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Beachfront villa in Ghana">
-          <h4>Beachfront Villa</h4>
-          <p>Luxurious coastal property with ocean views.</p>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/7061672/pexels-photo-7061672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Modern townhouse Ghana">
-          <h4>Modern Townhouse</h4>
-          <p>Urban living in a well-designed townhouse setting.</p>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://www.gardenparkresort.com/images/affordable-hotel-akosombo-garden-903.jpg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Luxury home garden Ghana">
-          <h4>Luxury Garden Home</h4>
-          <p>Spacious greenery and refined architecture.</p>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/19199134/pexels-photo-19199134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Interior modern living room">
-          <h4>Modern Interior View</h4>
-          <p>Stylish living room with contemporary decor.</p>
-        </article>
-
-
-        <!--  Agribusiness -->
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/31148393/pexels-photo-31148393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Cocoa beans drying">
-          <h4>Cocoa Drying Racks</h4>
-          <p>Traditional post-harvest drying under the sun.</p>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/10615954/pexels-photo-10615954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Cashew">
-          <h4>Cashew Farm</h4>
-          <p>Cashew fruit in a tropical setting.</p>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/11568567/pexels-photo-11568567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Coconut Plantation">
-          <h4>Coconut Plantation</h4>
-          <p>A well maintained plantation.</p>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/28359724/pexels-photo-28359724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Rice paddies">
-          <h4>Irrigated Rice Field</h4>
-          <p>Flooded paddies ready for cultivation.</p>
-        </article>
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Greenhouse Farm">
-          <h4>Greenhouse Farming</h4>
-          <p>Controlled-environment vegetable production.</p>
-        </article>
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/1100636/pexels-photo-1100636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Palm plantation">
-          <h4>Palm Plantation</h4>
-          <p>Expansive palm oil farm in West Africa.</p>
-        </article>
-
-
-        <!--  Import & Export -->
-
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Cargo containers at port">
-          <h4>Cargo Logistics</h4>
-          <p>Stacked containers ready for distribution.</p>
-        </article>
-        <article class="card">
-          <img
-            src="https://images.pexels.com/photos/4483609/pexels-photo-4483609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-            alt="Warehouse pallets ">
-          <h4>Export Warehouse</h4>
-          <p>Packaged goods awaiting shipment.</p>
-        </article>
-
-        <!-- Pager -->
-
-        <div class="pager" id="products-pager"></div>
-      </div>
-    </section>
-
-
-
-    <div class="pager" id="products-pager"></div>
-    </div>
-    </section>
-
-
-    <section class="container">
-      <!-- <h2 class="fade-in">What Our Clients Say</h2> -->
-      <h2 class="fade-in" style="text-align: center;">What Our Clients Say</h2>
-      <div class="horizontal-scroll fade-in" id="testimonials-scroll">
-        <article class="card testimonial">
-          <p>"Ecoply's expertise has propelled our operations worldwide."</p>
-          <div class="client"><img src="https://randomuser.me/api/portraits/women/68.jpg"
-              alt="Jane Doe"><span><strong>Jane Doe</strong>, CEO of AlphaCorp</span></div>
-        </article>
-        <article class="card testimonial">
-          <p>"Reliable, professional, and globally capable."</p>
-          <div class="client"><img src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="John Smith"><span><strong>John Smith</strong>, MD at BetaTrade</span></div>
-        </article>
-        <article class="card testimonial">
-          <p>"They delivered beyond expectations—timely and precise."</p>
-          <div class="client"><img src="https://randomuser.me/api/portraits/women/52.jpg"
-              alt="Linda Park"><span><strong>Linda Park</strong>, COO of NuEdge</span></div>
-        </article>
-        <article class="card testimonial">
-          <p>"We rely on Ecoply for every major trade decision."</p>
-          <div class="client"><img src="https://randomuser.me/api/portraits/men/39.jpg"
-              alt="Derek Young"><span><strong>Derek Young</strong>, VP Logistics</span></div>
-        </article>
-        <article class="card testimonial">
-          <p>"A valuable partner for our African expansion strategy."</p>
-          <div class="client"><img src="https://randomuser.me/api/portraits/men/61.jpg"
-              alt="Kwame Mensah"><span><strong>Kwame Mensah</strong>, Director, GlobalTrade GH</span>
+        <!-- Real Estate Products -->
+        <article class="card product-card">
+          <div class="card-image">
+            <img
+              src="https://images.pexels.com/photos/32821643/pexels-photo-32821643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+              alt="Colonial-era house in Eastern Region, Ghana" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h4>Colonial-Era Estate</h4>
+            <p>Charming heritage home nestled in lush greenery with historical significance.</p>
           </div>
         </article>
-        <article class="card testimonial">
-          <p>"The support team was responsive and helpful every step."</p>
-          <div class="client"><img src="https://randomuser.me/api/portraits/women/25.jpg"
-              alt="Amina Dogo"><span><strong>Amina Dogo</strong>, Export Manager</span></div>
+
+        <article class="card product-card">
+          <div class="card-image">
+            <img
+              src="https://images.pexels.com/photos/8134753/pexels-photo-8134753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+              alt="Beachfront villa in Ghana" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h4>Beachfront Villa</h4>
+            <p>Luxurious coastal property with panoramic ocean views and modern amenities.</p>
+          </div>
         </article>
-        <div class="pager" id="testimonials-pager"></div>
+
+        <!-- Additional product cards with same structure -->
+        <article class="card product-card">
+          <div class="card-image">
+            <img
+              src="https://images.pexels.com/photos/7061672/pexels-photo-7061672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+              alt="Modern townhouse Ghana" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h4>Modern Townhouse</h4>
+            <p>Urban living in a well-designed townhouse setting with contemporary finishes.</p>
+          </div>
+        </article>
+
+        <!-- Agribusiness Products -->
+        <article class="card product-card">
+          <div class="card-image">
+            <img
+              src="https://images.pexels.com/photos/31148393/pexels-photo-31148393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+              alt="Cocoa beans drying" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h4>Premium Cocoa Beans</h4>
+            <p>Traditional post-harvest drying under the sun for superior quality cocoa.</p>
+          </div>
+        </article>
+
+        <!-- Import & Export Products -->
+        <article class="card product-card">
+          <div class="card-image">
+            <img
+              src="https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
+              alt="Cargo containers at port" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h4>Cargo Logistics</h4>
+            <p>Comprehensive container shipping and distribution services worldwide.</p>
+          </div>
+        </article>
       </div>
+
+      <div class="pager" id="products-pager" aria-label="Products navigation"></div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section container" aria-labelledby="testimonials-heading">
+      <header class="section-header">
+        <h2 id="testimonials-heading" class="fade-in">Client Success Stories</h2>
+        <p class="section-subtitle">Hear from businesses we've helped grow and succeed</p>
+      </header>
 
-    <section class="contact container">
-      <h2 class="fade-in">Let’s Work Together</h2>
+      <div class="horizontal-scroll fade-in" id="testimonials-scroll">
+        <article class="card testimonial-card">
+          <blockquote>
+            <p>"Ecoply's expertise has propelled our operations worldwide with exceptional strategic guidance."</p>
+          </blockquote>
+          <div class="client">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Portrait of Jane Doe">
+            <div class="client-info">
+              <strong>Jane Doe</strong>
+              <span>CEO of AlphaCorp</span>
+            </div>
+          </div>
+        </article>
 
-      <form id="contact-form" class="fade-in" novalidate>
-        <input type="text" name="from_name" id="from_name" placeholder="Full Name" required pattern=".{2,}" />
-        <input type="email" name="reply_to" id="reply_to" placeholder="Email Address" required />
-        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="[\d\s\-\+\(\)]{7,}" />
-        <select name="service" id="service" required>
-          <option value="" disabled selected>Select Service</option>
-          <option>Real Estate</option>
-          <option>Import & Export</option>
-          <option>Agribusiness</option>
-        </select>
-        <textarea name="message" id="message" placeholder="Your message" rows="5" required minlength="10"></textarea>
-        <button type="submit" class="btn">Submit Inquiry</button>
+        <article class="card testimonial-card">
+          <blockquote>
+            <p>"Reliable, professional, and globally capable partner for all our trade needs."</p>
+          </blockquote>
+          <div class="client">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Portrait of John Smith">
+            <div class="client-info">
+              <strong>John Smith</strong>
+              <span>MD at BetaTrade</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card testimonial-card">
+          <blockquote>
+            <p>"They delivered beyond expectations—timely execution and precise attention to detail."</p>
+          </blockquote>
+          <div class="client">
+            <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Portrait of Linda Park">
+            <div class="client-info">
+              <strong>Linda Park</strong>
+              <span>COO of NuEdge</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="pager" id="testimonials-pager" aria-label="Testimonials navigation"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section container" aria-labelledby="contact-heading">
+      <header class="section-header">
+        <h2 id="contact-heading" class="fade-in">Start Your Success Story</h2>
+        <p class="section-subtitle">Let's discuss how we can help achieve your business goals</p>
+      </header>
+
+      <form id="contact-form" class="fade-in contact-form" novalidate>
+        <div class="form-group">
+          <input type="text" name="from_name" id="from_name" placeholder="Full Name" required pattern=".{2,}" />
+          <label for="from_name">Full Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="reply_to" id="reply_to" placeholder="Email Address" required />
+          <label for="reply_to">Email Address</label>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="[\d\s\-\+\(\)]{7,}" />
+          <label for="phone">Phone Number</label>
+        </div>
+
+        <div class="form-group">
+          <select name="service" id="service" required>
+            <option value="" disabled selected>Select Service</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Import & Export">Import & Export</option>
+            <option value="Agribusiness">Agribusiness</option>
+          </select>
+          <label for="service">Service Interest</label>
+        </div>
+
+        <div class="form-group">
+          <textarea name="message" id="message" placeholder="Tell us about your project or requirements" rows="5"
+            required minlength="10"></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Submit Inquiry</button>
       </form>
     </section>
+  </main>
 
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="assets/images/ecoply-logo.png" alt="Ecoply Ltd Logo" width="120" height="40" />
+          </div>
+          <p class="footer-tagline">Connecting Opportunities. Elevating Markets.</p>
+        </div>
 
+        <div class="footer-section">
+          <h3>Contact Information</h3>
+          <address>
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Plot 007, 69 Trasacco Street, East Legon,
+              Adjiringanor</p>
+            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@ecoply.com">info@ecoply.com</a>
+            </p>
+            <p><i class="fas fa-phone" aria-hidden="true"></i> +233 24 000 0000</p>
+          </address>
+        </div>
 
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <nav aria-label="Social media links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/ecoply_ltd" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </nav>
+        </div>
+      </div>
 
-
-
-
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p>
-          <strong>Ecoply Ltd</strong> &bull; Plot 007, 69 Trasacco Street, East Legon, Adjiringanor &bull;
-          <a href="mailto:info@ecoply.com">info@ecoply.com</a> &bull; +233 24 000 0000
-        </p>
-        <!-- Social Media Navigations -->
-        <nav aria-label="Social media links">
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/ecoply_ltd" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-        </nav>
-        <!-- Terms and Conditions -->
-        <p>
-          &copy; 2025 Ecoply Ltd &bull;
-          <a href="terms.html">Terms of Service</a> &bull;
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ecoply Ltd. All rights reserved.</p>
+        <nav aria-label="Legal links">
+          <a href="terms.html">Terms of Service</a>
           <a href="privacy-policy.html">Privacy Policy</a>
           <a href="disclaimer.html">Disclaimer</a>
-        </p>
-      </div>
-    </footer>
-
-
-    <script src="script.js"></script>
-
-    <!-- Thank You Modal -->
-    <div id="thankYouModal" class="modal">
-      <div class="modal-content">
-        <h2> Thank You!</h2>
-        <p>Your message has been received. Our team will get back to you shortly.</p>
-        <button class="close-modal" onclick="closeModal()">Close</button>
+        </nav>
       </div>
     </div>
+  </footer>
 
-    <!-- Cookies Content Banner -->
-    <div id="cookieBanner" class="cookie-banner">
+  <!-- Thank You Modal -->
+  <div id="thankYouModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-content">
+      <h2 id="modal-title">Thank You!</h2>
+      <p>Your message has been received. Our team will get back to you shortly.</p>
+      <button class="btn btn-primary close-modal" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Cookies Consent Banner -->
+  <div id="cookieBanner" class="cookie-banner" role="alert" aria-labelledby="cookie-heading">
+    <div class="cookie-content">
+      <h3 id="cookie-heading">We Value Your Privacy</h3>
       <p>
-        We use cookies to improve your experience on our site. By continuing, you accept our
-        <a href="privacy-policy.html">Privacy Policy</a>.
+        We use cookies to improve your experience on our site and show you relevant content.
+        By continuing to browse, you accept our <a href="privacy-policy.html">Privacy Policy</a>.
       </p>
-      <button id="AcceptCookies">Accept</button>
+      <button id="acceptCookies" class="btn btn-primary">Accept Cookies</button>
     </div>
+  </div>
 
-</body>
-
-</html>
-
-
+  <script src="script.js"></script>
 </body>
 
 </html>
