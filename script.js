@@ -1,140 +1,120 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Hero slideshow logic
-  const images = [
-    "https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg",
-    "https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg",
-    "https://images.pexels.com/photos/3861970/pexels-photo-3861970.jpeg",
-    "https://images.pexels.com/photos/7108701/pexels-photo-7108701.jpeg",
-    "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
-    "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
-    "https://images.pexels.com/photos/185576/pexels-photo-185576.jpeg",
-    "https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg",
-    "https://images.pexels.com/photos/1004682/pexels-photo-1004682.jpeg",
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-    "https://images.pexels.com/photos/3775121/pexels-photo-3775121.jpeg",
-    "https://images.pexels.com/photos/843266/pexels-photo-843266.jpeg",
-  ];
-
-  let currentIndex = 0;
-  const hero = document.querySelector(".hero");
-  const [bg1, bg2] = hero.querySelectorAll(".hero-bg");
-
-  bg1.style.backgroundImage = `url('${images[0]}')`;
-  bg2.style.backgroundImage = `url('${images[1]}')`;
-  bg1.classList.add("current");
-  bg2.classList.remove("current");
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    const nextIndex = (currentIndex + 1) % images.length;
-
-    bg1.classList.toggle("current");
-    bg2.classList.toggle("current");
-
-    if (bg1.classList.contains("current")) {
-      bg2.style.backgroundImage = `url('${images[nextIndex]}')`;
+// JavaScript for interactive elements and animations
+document.addEventListener("DOMContentLoaded", function () {
+  // Header scroll effect
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 100) {
+      header.classList.add("scrolled");
     } else {
-      bg1.style.backgroundImage = `url('${images[nextIndex]}')`;
-    }
-  }, 5000);
-
-  // Scroll pager logic
-  function setupScrollPager(scrollEl, pagerEl) {
-    const cards = scrollEl.querySelectorAll(".card");
-    const dots = [];
-
-    cards.forEach((card, i) => {
-      const dot = document.createElement("div");
-      dot.className = "dot";
-      dot.addEventListener("click", () => {
-        card.scrollIntoView({ behavior: "smooth", inline: "start" });
-      });
-      pagerEl.appendChild(dot);
-      dots.push(dot);
-    });
-
-    function updateActiveDot() {
-      let idx = 0;
-      const scrollLeft = scrollEl.scrollLeft;
-      cards.forEach((card, i) => {
-        if (card.offsetLeft <= scrollLeft + 20) idx = i;
-      });
-      dots.forEach((dot) => dot.classList.remove("active"));
-      dots[idx].classList.add("active");
-    }
-
-    scrollEl.addEventListener("scroll", () =>
-      window.requestAnimationFrame(updateActiveDot)
-    );
-    updateActiveDot();
-  }
-
-  setupScrollPager(
-    document.querySelector(".service-cards"),
-    document.getElementById("services-pager")
-  );
-
-  // Contact form and modal
-  const form = document.getElementById("contact-form");
-  const submitButton = form.querySelector("button[type='submit']");
-  const thankYouModal = document.getElementById("thankYouModal");
-
-  form.addEventListener("submit", function (e) {
-    if (!form.checkValidity()) {
-      e.preventDefault();
-      form.reportValidity();
-      return; // stop the process if invalid
-    }
-
-    e.preventDefault();
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
-
-    if (typeof emailjs !== "undefined") {
-      emailjs.sendForm("service_z957ggi", "template_ke6fp2j", form).then(
-        function (response) {
-          console.log(" Email sent!", response.status, response.text);
-          form.reset();
-          submitButton.disabled = false;
-          submitButton.textContent = "Submit Inquiry";
-          thankYouModal.style.display = "block";
-          document.getElementById("success-msg").style.display = "block";
-        },
-        function (error) {
-          console.error("❌ Email failed to send:", error);
-          alert(
-            "Oops! Something went wrong. Please try again or contact us at info@ecoplyltd.com."
-          );
-          submitButton.disabled = false;
-          submitButton.textContent = "Submit Inquiry";
-        }
-      );
-    } else {
-      alert("Email service is temporarily unavailable.");
-      submitButton.disabled = false;
-      submitButton.textContent = "Submit Inquiry";
+      header.classList.remove("scrolled");
     }
   });
 
-  window.closeModal = function () {
-    thankYouModal.style.display = "none";
+  // Background slideshow functionality
+  const backgrounds = document.querySelectorAll(".background-slide");
+  let currentIndex = 0;
+
+  function showNextBackground() {
+    // Remove active class from current background
+    backgrounds[currentIndex].classList.remove("active");
+
+    // Move to next background
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+
+    // Add active class to new background
+    backgrounds[currentIndex].classList.add("active");
+  }
+
+  // Change background every 4 seconds
+  setInterval(showNextBackground, 4000);
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll("nav a").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // Form submission handlers
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you for your message! Our team will contact you shortly.");
+    this.reset();
+  });
+
+  document.getElementById("testDriveForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert(
+      "Test drive scheduled successfully! We will confirm your appointment via email."
+    );
+    closeModal("testDriveModal");
+    this.reset();
+  });
+
+  // Add random sparkles dynamically
+  function createRandomSparkle() {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.style.left = Math.random() * 100 + "%";
+    sparkle.style.top = Math.random() * 100 + "%";
+    sparkle.style.animationDelay = Math.random() * 5 + "s";
+    document.querySelector(".floating-shapes").appendChild(sparkle);
+
+    // Remove sparkle after animation completes
+    setTimeout(() => {
+      sparkle.remove();
+    }, 3000);
+  }
+
+  // Create new sparkles periodically
+  setInterval(createRandomSparkle, 500);
+
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
   };
 
-  //  Cookie banner logic
-  const cookieBanner = document.getElementById("cookieBanner");
-  const acceptBtn = document.getElementById("AcceptCookies");
-
-  if (cookieBanner && acceptBtn) {
-    if (!localStorage.getItem("cookiesAccepted")) {
-      cookieBanner.style.display = "flex";
-    }
-
-    acceptBtn.addEventListener("click", () => {
-      localStorage.setItem("cookiesAccepted", "true");
-      cookieBanner.classList.add("hide");
-      setTimeout(() => {
-        cookieBanner.style.display = "none";
-      }, 400); // Match transition
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
     });
-  }
+  }, observerOptions);
+
+  // Observe elements for animation
+  document
+    .querySelectorAll(
+      ".feature-card, .car-card, .testimonial-card, .brand-card, .contact-item, .contact-form"
+    )
+    .forEach((el) => {
+      observer.observe(el);
+    });
 });
+
+// Modal functions
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+
+// Close modal when clicking outside
+window.onclick = function (event) {
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
+  }
+};
