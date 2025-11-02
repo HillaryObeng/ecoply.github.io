@@ -125,13 +125,6 @@
             box-shadow: var(--shadow);
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-        }
-
         .logo {
             display: flex;
             align-items: center;
@@ -143,10 +136,20 @@
         }
 
         .logo-img {
-            height: 60px;
+            height: 45px;
+            /* Reduced from 60px to prevent layout issues */
             width: auto;
             transition: var(--transition);
         }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            /* Adjust if needed */
+        }
+
 
         .logo:hover .logo-img {
             transform: scale(1.05);
